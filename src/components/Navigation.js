@@ -6,7 +6,7 @@ import logoImg from "../assets/HorizontalLogo.svg";
 
 const Navigation = () => {
   return (
-    <nav className="bg-white fixed w-full top-0 border-b border-gray-200">
+    <nav style={{ backgroundColor: "#F3F3FF" }} className="w-full top-0 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="https://flowbite.com/"
@@ -17,14 +17,22 @@ const Navigation = () => {
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
-            className="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             style={{
-              backgroundColor: "#073863",
-              borderRadius: "10px",
-              padding: "20px",
-              border: "0.5px solid #4486BD",
-              boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
+              backgroundColor: "#3C3C8E",
+              borderRadius: "30px",
+              // padding: " 9.67px 12.89px 9.67px 12.89px",
+              paddingRight: "30.89px",
+              paddingLeft: "30.89px",
+              foontSize: "12px",
+              paddingTop: "9.67px",
+              paddingBottom: "9.67px",
+              border: "5px solid #D0D0FF",
+              boxShadow: "0 0 5px rgba(0, 0, 0, 0.5)",
               color: "#ffffff",
+              gap: "6.45px",
+              width: "Fixed (128.94px)",
+              height: "Hug (37.34px)",
             }}
           >
             {" "}
@@ -56,11 +64,15 @@ const Navigation = () => {
             </svg>
           </button>
         </div>
-        <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+        <div
+          className="items-center 
+        justify-between hidden w-full 
+        md:flex md:w-auto md:order-1"
+        >
           <ul
             style={{
-              backgroundColor: "#ffffff",
               color: "#073863",
+              backgroundColor: "#F3F3FF",
             }}
             className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 "
           >
@@ -73,7 +85,31 @@ const Navigation = () => {
                   color: "#073863",
                 }}
               >
-                Home
+                Find a job
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                aria-current="page"
+                style={{
+                  color: "#073863",
+                }}
+              >
+                About us
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                aria-current="page"
+                style={{
+                  color: "#073863",
+                }}
+              >
+                Community
               </a>
             </li>
             <li>
@@ -84,7 +120,7 @@ const Navigation = () => {
                   color: "#073863",
                 }}
               >
-                About
+                Employers
               </a>
             </li>
             <li>
@@ -95,7 +131,7 @@ const Navigation = () => {
                   color: "#073863",
                 }}
               >
-                Services
+                Pricing
               </a>
             </li>
             <li>
@@ -106,7 +142,7 @@ const Navigation = () => {
                   color: "#073863",
                 }}
               >
-                Contact
+                Contact Us
               </a>
             </li>
           </ul>
