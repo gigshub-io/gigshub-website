@@ -9,7 +9,7 @@ const TitleComponent = () => {
     // gap: "24px",
     color: "#1E1E53",
     fontFamily: "DM Sans",
-    fontSize: "67px", // You can adjust the font size as needed
+    fontSize: "79px", // You can adjust the font size as needed
     fontWeight: 700,
   };
 
