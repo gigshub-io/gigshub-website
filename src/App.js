@@ -1,17 +1,14 @@
-import "./App.css";
-import "./tailwind.css";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="/" index element={<Home />} />
+      </Route>
+    </Routes>
   );
 }
 

@@ -24,7 +24,7 @@ const Navigation = () => {
               // padding: " 9.67px 12.89px 9.67px 12.89px",
               paddingRight: "30.89px",
               paddingLeft: "30.89px",
-              foontSize: "12px",
+              fontSize: "12px",
               paddingTop: "9.67px",
               paddingBottom: "9.67px",
               border: "5px solid #D0D0FF",

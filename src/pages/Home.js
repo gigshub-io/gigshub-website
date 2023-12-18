@@ -1,6 +1,5 @@
 // Home.js
 import React from "react";
-import Navigation from "../components/Navigation";
 import TitleComponent from "../components/Title";
 import firstImage from "../assets/first-image.png";
 import secondImage from "../assets/second-image.png";
@@ -17,7 +16,6 @@ const Home = () => {
         flexDirection: "column",
       }}
     >
-      <Navigation />
       <div
         style={{
           display: "flex",
@@ -85,12 +83,12 @@ const Home = () => {
                 <img
                   style={{ margin: "10px", width: "256px", height: "252px" }}
                   src={firstImage}
-                  alt="First Image"
+                  // alt="First Image"
                 />
                 <img
                   style={{ margin: "10px", width: "256px", height: "252px" }}
                   src={secondImage}
-                  alt="Second Image"
+                  // alt="Second Image"
                 />
               </div>
               <div
@@ -100,12 +98,12 @@ const Home = () => {
                 <img
                   style={{ margin: "10px", width: "256px", height: "252px" }}
                   src={thirdImage}
-                  alt="First Image"
+                  // alt="First Image"
                 />
                 <img
                   style={{ margin: "10px", width: "256px", height: "252px" }}
                   src={fourthImage}
-                  alt="Second Image"
+                  // alt="Second Image"
                 />
               </div>
             </div>
