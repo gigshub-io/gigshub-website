@@ -1,7 +1,11 @@
 import React from "react";
 import logoImg from "../assets/HorizontalLogo.svg";
 import { Outlet } from "react-router-dom";
-import "../tailwind.css";
+import { Button } from "./Button";
+
+const Footer = () => {
+  return <footer style={{ backgroundColor: "#1E1E53" }}>FOOTER</footer>;
+};
 
 export default function Layout() {
   return (
@@ -10,21 +14,7 @@ export default function Layout() {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <img src={logoImg} className="h-8" alt="Logo" />
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button
-              type="button"
-              className="bg-purple rounded-full px-[30.89px] py-[9.67px] text-xs border-4"
-              style={{
-                // border: "solid #D0D0FF",
-                boxShadow: "0 0 5px rgba(0, 0, 0, 0.5)",
-                color: "#ffffff",
-                gap: "6.45px",
-                width: "Fixed (128.94px)",
-                height: "Hug (37.34px)",
-              }}
-            >
-              Get Started
-            </button>
-
+            <Button>Get Started</Button>
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
@@ -136,7 +126,7 @@ export default function Layout() {
         </div>
       </nav>
       <Outlet />
-      <footer style={{ backgroundColor: "#1E1E53" }}>FOOTER</footer>
+      <Footer />
     </div>
   );
 }
