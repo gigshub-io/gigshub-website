@@ -13,7 +13,7 @@ export const Navigation = () => {
           <Button>Get Started</Button>
         </div>
         <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 bg-off-white">
+          <ul className="flex flex-row font-sans font-normal leading-6 rounded-lg gap-9 text-sm bg-off-white">
             <li>
               <NavLink>Find a job</NavLink>
             </li>

@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
-import logoImg from "../../assets/HorizontalLogo.svg";
+import logoPrimary from "../../assets/HorizontalLogo.svg";
+import logoInverted from "../../assets/logo-pale-purple.svg";
 
-export const Logo = () => (
+/**
+ * @param { kind: "primary" | "inverted" }
+ * @returns
+ */
+export const Logo = ({ kind = "primary" }) => (
   <Link to="/">
-    <img src={logoImg} className="h-8" alt="Logo" />
+    <img
+      src={kind === "primary" ? logoPrimary : logoInverted}
+      className="h-8"
+      alt="GigsHub Logo"
+    />
   </Link>
 );

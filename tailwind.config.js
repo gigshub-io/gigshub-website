@@ -8,6 +8,7 @@ module.exports = {
         purple: "#3C3C8E",
         "pale-purple": "#D0D0FF",
         white: "#ffffff",
+        "dark-purple": "#1E1E53",
       },
       padding: {
         button: "30px 10px",
@@ -19,6 +20,12 @@ module.exports = {
       },
       boxShadow: {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
+      },
+      width: {
+        container: "1200px",
+      },
+      fontFamily: {
+        sans: ["DM Sans", "sans-serif"],
       },
     },
   },
