@@ -29,7 +29,7 @@ const Home = () => {
             flexDirection: "column",
           }}
         >
-          <div style={{ display: "flex", marginTop: "50px", width: "1259px" }}>
+          <div style={{ display: "flex", marginTop: "50px", width: "1260px" }}>
             <div
               style={{
                 display: "flex",
