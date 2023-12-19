@@ -18,19 +18,19 @@ export const Navigation = () => {
               <NavLink>Find a job</NavLink>
             </li>
             <li>
-              <NavLink>About us</NavLink>
+              <NavLink to="/aboutUs">About us</NavLink>
             </li>
             <li>
-              <NavLink>Community</NavLink>
+              <NavLink to="/community">Community</NavLink>
             </li>
             <li>
-              <NavLink>Employers</NavLink>
+              <NavLink to="/employers">Employers</NavLink>
             </li>
             <li>
-              <NavLink>Pricing</NavLink>
+              <NavLink to="/pricing">Pricing</NavLink>
             </li>
             <li>
-              <NavLink>Contact Us</NavLink>
+              <NavLink to="/contactUs">Contact Us</NavLink>
             </li>
           </ul>
         </div>
