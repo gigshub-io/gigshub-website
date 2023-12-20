@@ -50,16 +50,16 @@ export const Footer = () => {
         </div>
         <div>
           <div className="flex flex-col gap-4 text-sm">
-            <label className="text-pale-purple">Subscribe</label>
+            <label className="text-off-white">Subscribe</label>
             <div className="flex flex-row gap-4">
               <input
                 type="text"
                 value={emailSubs}
                 onChange={handleInputChange}
-                className="rounded-full w-60 h-14"
-                placeholder=" Your email here"
+                className="rounded-full w-60 h-14 "
+                placeholder="Your email here"
               ></input>
-              <Button className="w-44">Send</Button>
+              <Button kind="transparent">Send</Button>
             </div>
           </div>
         </div>

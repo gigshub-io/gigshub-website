@@ -9,7 +9,7 @@ export const NavLink = ({ children, to, kind = "primary" }) => {
   return (
     <Link
       to={to}
-      className={kind === "primary" ? "text-dark-purple" : "text-pale-purple"}
+      className={kind === "primary" ? "text-dark-purple" : "text-off-white"}
     >
       {children}
     </Link>
