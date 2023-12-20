@@ -6,7 +6,7 @@ import { Logo } from "../Logo/Logo.jsx";
 
 export const Navigation = () => {
   return (
-    <nav className="w-full h-20 bg-off-white px-32 flex items-center justify-between">
+    <nav className="w-full h-20 bg-off-white px-36 flex items-center justify-between">
       <Logo />
       <div className="items-center justify-between">
         <ul className="flex flex-row font-sans font-normal leading-6 rounded-lg gap-9 text-base bg-off-white">

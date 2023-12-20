@@ -24,7 +24,7 @@ module.exports = {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
       },
       width: {
-        container: "1440px",
+        container: "1400px",
         textContainer: "550px",
         imageContainer: "256px",
       },

@@ -13,8 +13,8 @@ export const Footer = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-16 max-w-screen mx-auto bg-dark-purple py-20">
-      <div className="flex flex-row w-container justify-between">
+    <div className="flex flex-col items-center gap-16 w-full bg-dark-purple py-20 px-36">
+      <div className="flex flex-row w-full justify-between">
         <div className="flex flex-col gap-8">
           <Logo kind="inverted" />
           <ul className="flex flex-row flex-start font-sans font-normal leading-6 rounded-lg gap-8 text-base">
@@ -68,7 +68,7 @@ export const Footer = () => {
           </text>
         </div>
       </div>
-      <div className="flex flex-col w-container gap-8">
+      <div className="flex flex-col w-full gap-8">
         <hr />
         <div className="flex flex-row justify-between">
           <div className="flex flex-row gap-6">
