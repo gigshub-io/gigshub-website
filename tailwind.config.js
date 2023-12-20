@@ -9,6 +9,7 @@ module.exports = {
         "pale-purple": "#D0D0FF",
         white: "#ffffff",
         "dark-purple": "#1E1E53",
+        "dark-grey": "#505050",
       },
       padding: {
         button: "30px 10px",
@@ -22,7 +23,7 @@ module.exports = {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
       },
       width: {
-        container: "1200px",
+        container: "1440px",
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"],
