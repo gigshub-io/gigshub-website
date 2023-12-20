@@ -9,7 +9,7 @@ import { Button } from "../components/Button/Button";
 
 const Home = () => {
   return (
-    <div className="flex flex-col max-w-screen bg-off-white">
+    <div className="flex flex-col w-full bg-off-white p-16">
       <div className="flex justify-center">
         <div className="flex flex-col">
           <div className="flex">
