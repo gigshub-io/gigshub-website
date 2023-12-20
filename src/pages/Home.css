@@ -1,6 +1,4 @@
-/* Home.css  */
-
-body {
+/* body {
   margin: 0;
   padding: 0;
 }
@@ -42,7 +40,7 @@ body {
 }
 
 .title {
-  /* TitleComponent styles go here */
+  TitleComponent styles go here
 }
 
 .paragraph {
@@ -82,6 +80,6 @@ body {
   margin: 10px;
   width: 256px;
   height: 252px;
-}
+} */
 
 /* Add more styles as needed

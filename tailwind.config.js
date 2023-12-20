@@ -10,6 +10,7 @@ module.exports = {
         white: "#ffffff",
         "dark-purple": "#1E1E53",
         "dark-grey": "#505050",
+        "light-purple": "#7575E5",
       },
       padding: {
         button: "30px 10px",
@@ -24,6 +25,14 @@ module.exports = {
       },
       width: {
         container: "1440px",
+        textContainer: "550px",
+        imageContainer: "256px",
+      },
+      height: {
+        imageContainer: "252px",
+      },
+      lineHeight: {
+        textHero: "5.375rem",
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"],
