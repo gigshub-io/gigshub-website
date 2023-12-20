@@ -61,7 +61,7 @@ export const Footer = () => {
             <Button kind="transparent">Send</Button>
           </div>
           <text className="text-off-white text-xs font-normal font-sans">
-            By subscribing you agree to with our{" "}
+            By subscribing you agree with our{" "}
             <a className="underline" href>
               Privacy Policy
             </a>
