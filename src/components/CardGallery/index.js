@@ -1,1 +1,1 @@
-import { CardGallery } from "./Footer";
+export { CardGallery } from "./CardGallery";

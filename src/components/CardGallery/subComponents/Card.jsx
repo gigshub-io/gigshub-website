@@ -5,7 +5,7 @@ export const Card = ({ heading, children, link }) => {
   return (
     <div className="w-card flex flex-col gap-3 h-card p-7 bg-dark-blue rounded-2xl">
       <div>
-        <img src={checkIcon} />
+        <img src={checkIcon} alt="Check Icon" />
       </div>
       <p className="text-off-white text-lg font-sans font-bold tracking-wide">
         {heading}
@@ -16,7 +16,7 @@ export const Card = ({ heading, children, link }) => {
       <div>
         <a
           className="font-sans underline text-off-white text-base font-bold tracking-wide"
-          href
+          href={link}
         >
           Read more
         </a>

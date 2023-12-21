@@ -25,12 +25,12 @@ module.exports = {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
       },
       width: {
-        container: "1400px",
+        container: "1200px",
         textContainer: "550px",
         imageContainer: "256px",
-        cardsContainer: "1118px",
-        headingCardsContainer: "768px",
+        headingContainer: "768px",
         card: "346px",
+        stepContainer: "528px",
       },
       height: {
         imageContainer: "252px",
