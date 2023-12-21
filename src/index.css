@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer component {
+  .button {
+    background-color: theme("colors.purple");
+    border-radius: theme("rounded.full");
+    padding: theme("padding.button");
+    font-size: theme("text.xs");
+    border-width: theme("border.[5px]");
+    border-style: theme("border-solid");
+    border-color: theme("border-pale-purple");
+    box-shadow: theme("shadow-button");
+  }
+} */
