@@ -1,0 +1,1 @@
+import { CardGallery } from "./Footer";

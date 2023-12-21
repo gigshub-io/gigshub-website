@@ -6,11 +6,12 @@ import thirdImage from "../assets/third-image.png";
 import fourthImage from "../assets/fourth-image.png";
 import relumeLogo from "../assets/relume-logo.png";
 import webflowLogo from "../assets/webflow-logo.png";
+import { CardGallery } from "../components/CardGallery/CardGallery";
 import { Button } from "../components/Button/Button";
 
 const Home = () => {
   return (
-    <div className="flex flex-col w-full bg-off-white px-36 py-16 gap-36">
+    <div className="flex flex-col w-full bg-off-white px-36 py-16 gap-24">
       <div className="flex flex-row justify-between">
         <div className="flex flex-col gap-6 w-textContainer mt-16">
           <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wide">
@@ -52,19 +53,20 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center gap-5">
+      <div className="flex flex-col items-center gap-5 py-10">
         <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
           Trusted by the world's best companies
         </p>
         <div className="flex flex-row gap-12">
-          <img src={webflowLogo} alt="People laughing with pcs" className="" />
-          <img src={relumeLogo} alt="People laughing with pcs" className="" />
-          <img src={webflowLogo} alt="People laughing with pcs" className="" />
-          <img src={relumeLogo} alt="People laughing with pcs" className="" />
-          <img src={webflowLogo} alt="People laughing with pcs" className="" />
-          <img src={relumeLogo} alt="People laughing with pcs" className="" />
+          <img src={webflowLogo} alt="People laughing with pcs" />
+          <img src={relumeLogo} alt="People laughing with pcs" />
+          <img src={webflowLogo} alt="People laughing with pcs" />
+          <img src={relumeLogo} alt="People laughing with pcs" />
+          <img src={webflowLogo} alt="People laughing with pcs" />
+          <img src={relumeLogo} alt="People laughing with pcs" />
         </div>
       </div>
+      <CardGallery />
     </div>
   );
 };
