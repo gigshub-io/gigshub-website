@@ -7,9 +7,11 @@ import fourthImage from "../assets/fourth-image.svg";
 import relumeLogo from "../assets/relume-logo.png";
 import webflowLogo from "../assets/webflow-logo.png";
 import { CardGallery } from "../components/CardGallery";
-import { Button } from "../components/Button/Button";
-import { Steps } from "../components/Steps.jsx/Steps";
+import { Button } from "../components/Button";
+import { Steps } from "../components/Steps.jsx";
 import { Container } from "../components/Container";
+import { TestimonialCarousel } from "../components/TestimonialCarousel/TestimonialCarousel.jsx";
+import { CtaBanner } from "../components/CtaBanner/CtaBanner.jsx";
 
 const Home = () => {
   return (
@@ -71,6 +73,8 @@ const Home = () => {
         </div>
         <CardGallery />
         <Steps />
+        <TestimonialCarousel />
+        <CtaBanner />
       </div>
     </Container>
   );

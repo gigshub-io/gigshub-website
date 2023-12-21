@@ -31,10 +31,12 @@ module.exports = {
         headingContainer: "768px",
         card: "346px",
         stepContainer: "528px",
+        testimonialContainer: "834px",
       },
       height: {
         imageContainer: "252px",
         card: "241px",
+        testimonialContainer: "400px",
       },
       lineHeight: {
         textHero: "5.375rem",
@@ -42,6 +44,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"],
+      },
+      borderRadius: {
+        ctaBanner: "32px",
       },
     },
   },

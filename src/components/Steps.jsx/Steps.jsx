@@ -5,7 +5,7 @@ export const Steps = () => {
   return (
     <div className="flex flex-col items-center gap-32 pb-20">
       <div className="flex flex-col gap-6 w-headingContainer">
-        <p className="font-sans text-5xl font-normal leading-7 text-dark-purple leading-headingCardsContainer text-center tracking-wider">
+        <p className="font-sans text-5xl font-bold leading-7 text-dark-purple leading-headingCardsContainer text-center tracking-wider">
           A better way to job search
         </p>
         <p className="font-sans text-lg font-normal leading-7 text-dark-purple text-center tracking-wider">
