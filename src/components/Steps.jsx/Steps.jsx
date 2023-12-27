@@ -1,19 +1,14 @@
 import React from "react";
 import step from "../../assets/step.png";
+import { Heading } from "../Heading";
 
 export const Steps = () => {
+  const titleText = "A better way to job search";
+  const descriptionText =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.";
   return (
     <div className="flex flex-col items-center gap-32 pb-20">
-      <div className="flex flex-col gap-6 w-headingContainer">
-        <p className="font-sans text-5xl font-bold leading-7 text-dark-purple leading-headingCardsContainer text-center tracking-wider">
-          A better way to job search
-        </p>
-        <p className="font-sans text-lg font-normal leading-7 text-dark-purple text-center tracking-wider">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-        </p>
-      </div>
+      <Heading title={titleText} description={descriptionText} />
       <div className="flex flex-col gap-10">
         <div className="flex flex-row justify-between gap-24">
           <div>

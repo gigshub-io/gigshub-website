@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import avatarImage from "../../assets/avatar-image.png";
+import { Heading } from "../Heading";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,43 +10,37 @@ import "swiper/css/pagination";
 
 const slides = [
   {
-    testimonial:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero.",
+    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
     avatar: avatarImage,
     name: "Name 1",
     description: "Position, Company",
   },
   {
-    testimonial:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero.",
+    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
     avatar: avatarImage,
     name: "Name 2",
     description: "Position, Company",
   },
   {
-    testimonial:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero.",
+    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
     avatar: avatarImage,
     name: "Name 3",
     description: "Position, Company",
   },
   {
-    testimonial:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero.",
+    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
     avatar: avatarImage,
     name: "Name 4",
     description: "Position, Company",
   },
   {
-    testimonial:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero.",
+    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
     avatar: avatarImage,
     name: "Name 5",
     description: "Position, Company",
   },
   {
-    testimonial:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero.",
+    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
     avatar: avatarImage,
     name: "Name 6",
     description: "Position, Company",
@@ -53,35 +48,16 @@ const slides = [
 ];
 
 export const TestimonialCarousel = () => {
-  // const [activeStep, setActiveStep] = React.useState(0);
-  // const maxSteps = slides.length;
-
-  // const handleNext = () => {
-  //   setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  // };
-
-  // const handleBack = () => {
-  //   setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  // };
-
-  // const handleStepChange = (step) => {
-  //   setActiveStep(step);
-  // };
-
+  const titleText = "Join thousands of satisfied customers";
+  const descriptionText =
+    "Don't just take our word for it. Hear what our customers have to say about their experience with Gigs Hub.";
   return (
-    <div className="items-center" style={{ margin: "0 -100px" }}>
-      {/* <div className="flex flex-col gap-6 w-headingContainer">
-        <p className="font-sans text-5xl font-bold leading-7 text-dark-purple leading-headingCardsContainer text-center tracking-wide">
-          Join thousands of <br />
-          satisfied customers
-        </p>
-        <p className="font-sans text-lg font-normal leading-7 text-dark-purple text-center tracking-wide">
-          Don't just take our word for it. Hear what our customers have to say
-          about <br />
-          their experience with Gigs Hub.
-        </p>
-      </div> */}
-      {/* <div className="flex flex-row gap-11 box-border overflow-hidden w-full h-testimonialContainer"> */}
+    <div className="m-0 -ml-100">
+      <Heading
+        title={titleText}
+        description={descriptionText}
+        className="mb-10"
+      />
       <Swiper
         spaceBetween={44}
         slidesPerView={"auto"}
@@ -114,7 +90,6 @@ export const TestimonialCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* </div> */}
     </div>
   );
 };
