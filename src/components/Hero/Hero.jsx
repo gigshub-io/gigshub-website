@@ -4,10 +4,11 @@ import secondImage from "../../assets/second-image.png";
 import thirdImage from "../../assets/third-image.png";
 import fourthImage from "../../assets/fourth-image.svg";
 import { Button } from "../Button";
+import { Container } from "../Container";
 
 export const Hero = () => {
   return (
-    <div>
+    <Container>
       <div className="flex flex-row justify-between">
         <div className="flex flex-col gap-6 w-textContainer mt-16">
           <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wide">
@@ -49,6 +50,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };

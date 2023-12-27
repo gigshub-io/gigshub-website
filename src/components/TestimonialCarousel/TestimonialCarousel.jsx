@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import avatarImage from "../../assets/avatar-image.png";
 import { Heading } from "../Heading";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "./swiper-style.css";
 
 const slides = [
   {
@@ -52,7 +52,7 @@ export const TestimonialCarousel = () => {
   const descriptionText =
     "Don't just take our word for it. Hear what our customers have to say about their experience with Gigs Hub.";
   return (
-    <div className="m-0 -ml-100">
+    <div className="relative">
       <Heading
         title={titleText}
         description={descriptionText}
@@ -70,10 +70,11 @@ export const TestimonialCarousel = () => {
         modules={[Navigation, Pagination]}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
+        className="my-0 -mx-24"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="!w-testimonialContainer">
-            <div className="w-testimonialContainer overflow-x-auto snap-mandatory scroll-smooth bg-pale-purple rounded-2xl py-20 px-36">
+            <div className="bg-pale-purple rounded-2xl py-20 px-36">
               <div className="flex flex-col gap-11 items-center">
                 <p className="text-center font-sans font-bold text-dark-purple text-lg leading-7 tracking-wide">
                   {slide.testimonial}

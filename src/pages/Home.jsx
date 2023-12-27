@@ -10,16 +10,14 @@ import { SocialProof } from "../components/SocialProof/SocialProof.jsx";
 
 const Home = () => {
   return (
-    <Container>
-      <div className="flex flex-col w-full py-16 gap-24">
-        <Hero />
-        <SocialProof />
-        <CardGallery />
-        <Steps />
-        <TestimonialCarousel />
-        <CtaBanner />
-      </div>
-    </Container>
+    <div className="flex flex-col w-full py-16 gap-32 mb-12">
+      <Hero />
+      <SocialProof />
+      <CardGallery />
+      <Steps />
+      <TestimonialCarousel />
+      <CtaBanner />
+    </div>
   );
 };
 
