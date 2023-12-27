@@ -32,6 +32,7 @@ module.exports = {
         card: "346px",
         stepContainer: "528px",
         testimonialContainer: "834px",
+        ctaBannerImage: "660px",
       },
       height: {
         imageContainer: "252px",
