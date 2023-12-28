@@ -1,5 +1,6 @@
 import React from "react";
 
-export default function JobSeekers() {
-  return <div>JobSeekers</div>;
-}
+const JobSeekers = () => {
+  return <div>Hello</div>;
+};
+export default JobSeekers;

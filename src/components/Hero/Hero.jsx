@@ -23,31 +23,27 @@ export const Hero = () => {
             <Button>Get Hired</Button>
           </div>
         </div>
-        <div className="flex flex-row gap-2.5">
-          <div className="flex flex-col gap-2.5">
-            <img
-              src={firstImage}
-              alt="Purple rectangle"
-              className="h-imageContainer w-imageContainer"
-            />
-            <img
-              src={thirdImage}
-              alt="Girl laughing with pc"
-              className="h-imageContainer w-imageContainer"
-            />
-          </div>
-          <div className="flex flex-col gap-2.5">
-            <img
-              src={secondImage}
-              alt="People laughing with pcs"
-              className="h-imageContainer w-imageContainer"
-            />
-            <img
-              src={fourthImage}
-              alt="Purple rectangle"
-              className="h-imageContainer w-imageContainer"
-            />
-          </div>
+        <div className="grid-cols-2 gap-2.5 col-span-3">
+          <img
+            src={firstImage}
+            alt="Purple rectangle"
+            className="h-imageContainer w-imageContainer"
+          />
+          <img
+            src={thirdImage}
+            alt="Girl laughing with pc"
+            className="h-imageContainer w-imageContainer"
+          />
+          <img
+            src={secondImage}
+            alt="People laughing with pcs"
+            className="h-imageContainer w-imageContainer"
+          />
+          <img
+            src={fourthImage}
+            alt="Purple rectangle"
+            className="h-imageContainer w-imageContainer"
+          />
         </div>
       </div>
     </Container>

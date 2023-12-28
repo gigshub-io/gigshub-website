@@ -4,6 +4,57 @@ import { Button } from "../Button";
 import { NavLink } from "./subComponents/NavLink.jsx";
 import { Container } from "../Container";
 import { Logo } from "../Logo";
+import { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
+const menuItems = [
+  {
+    label: "ddd",
+    to: "/skdjnskj",
+  },
+];
+
+const NavMenu = ({ children }) => {
+  return (
+    <Menu as="div" className="relative inline-block text-left group">
+      <Menu.Button className="flex flex-row text-dark-purple cursor-pointer">
+        {children}
+        <ChevronDownIcon
+          className="-mr-1 h-5 w-5 text-dark-purple"
+          aria-hidden="true"
+        />
+      </Menu.Button>
+
+      <Menu.Items
+        static
+        className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none group-hover:block hidden"
+      >
+        <div className="py-1">
+          {menuItems.map((item) => (
+            <Menu.Item>
+              {({ active }) => (
+                <NavLink
+                  to={item.to}
+                  className={classNames(
+                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                    "block px-4 py-2 text-sm"
+                  )}
+                >
+                  {item.label}
+                </NavLink>
+              )}
+            </Menu.Item>
+          ))}
+        </div>
+      </Menu.Items>
+    </Menu>
+  );
+};
 
 export const Navigation = () => {
   return (
@@ -13,7 +64,7 @@ export const Navigation = () => {
         <div className="items-center justify-between">
           <ul className="flex flex-row font-sans font-normal leading-6 rounded-lg gap-9 text-base bg-off-white">
             <li>
-              <NavLink>Find a job</NavLink>
+              <NavMenu>Find a Job</NavMenu>
             </li>
             <li>
               <NavLink to="/aboutUs">About us</NavLink>

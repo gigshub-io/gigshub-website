@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
  * @returns
  */
 
-export const NavLink = ({ children, to, kind = "primary" }) => {
+export const NavLink = ({ children, to, kind = "primary", className }) => {
   return (
     <Link
       to={to}
-      className={kind === "primary" ? "text-dark-purple" : "text-off-white"}
+      className={`${className} ${
+        kind === "primary" ? "text-dark-purple" : "text-off-white"
+      }`}
     >
       {children}
     </Link>
