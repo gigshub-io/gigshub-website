@@ -1,8 +1,5 @@
 import React from "react";
-import firstImage from "../../assets/first-image.svg";
-import secondImage from "../../assets/second-image.png";
-import thirdImage from "../../assets/third-image.png";
-import fourthImage from "../../assets/fourth-image.svg";
+import homeHeroImg from "../../assets/home-hero-image.png";
 import { Button } from "../Button";
 import { Container } from "../Container";
 
@@ -24,26 +21,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className="grid-cols-2 gap-2.5 col-span-3">
-          <img
-            src={firstImage}
-            alt="Purple rectangle"
-            className="h-imageContainer w-imageContainer"
-          />
-          <img
-            src={thirdImage}
-            alt="Girl laughing with pc"
-            className="h-imageContainer w-imageContainer"
-          />
-          <img
-            src={secondImage}
-            alt="People laughing with pcs"
-            className="h-imageContainer w-imageContainer"
-          />
-          <img
-            src={fourthImage}
-            alt="Purple rectangle"
-            className="h-imageContainer w-imageContainer"
-          />
+          <img src={homeHeroImg} />
         </div>
       </div>
     </Container>

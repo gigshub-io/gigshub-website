@@ -7,7 +7,7 @@ import Community from "./pages/Community";
 import Employers from "./pages/Employers";
 import Pricing from "./pages/Pricing";
 import ContactUs from "./pages/ContactUs";
-import Freelancers from "./pages/Freekancers";
+import Freelancers from "./pages/Freelancers";
 import JobSeekers from "./pages/JobSeekers";
 
 function App() {

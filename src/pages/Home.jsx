@@ -10,7 +10,7 @@ import { SocialProof } from "../components/SocialProof/SocialProof.jsx";
 
 const Home = () => {
   return (
-    <div className="flex flex-col w-full py-16 gap-32 mb-12">
+    <div className="flex flex-col w-full py-16 gap-32 mb-12 bg-off-white">
       <Hero />
       <SocialProof />
       <CardGallery />
