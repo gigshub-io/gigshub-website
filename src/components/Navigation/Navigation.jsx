@@ -1,28 +1,39 @@
 // Navigation.js
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../Button";
 import { NavLink } from "./subComponents/NavLink.jsx";
 import { Container } from "../Container";
 import { Logo } from "../Logo";
-import { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
+import { Menu } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { classNames } from "../../utils/classNames.js";
 
 const menuItems = [
   {
-    label: "ddd",
-    to: "/skdjnskj",
+    label: "Freelancers",
+    to: "/freelancers",
   },
+  { label: "Job Seekers", to: "/jobSeekers" },
 ];
 
 const NavMenu = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => setIsOpen(false);
+  const handleOpen = () => setIsOpen(true);
+  const handleToggle = () => setIsOpen((prev) => !prev);
+
   return (
-    <Menu as="div" className="relative inline-block text-left group">
-      <Menu.Button className="flex flex-row text-dark-purple cursor-pointer">
+    <Menu
+      as="div"
+      className="relative inline-block text-left"
+      onMouseLeave={handleClose}
+    >
+      <Menu.Button
+        className="flex flex-row text-dark-purple cursor-pointer"
+        onMouseOver={handleOpen}
+        onClick={handleToggle}
+      >
         {children}
         <ChevronDownIcon
           className="-mr-1 h-5 w-5 text-dark-purple"
@@ -32,22 +43,21 @@ const NavMenu = ({ children }) => {
 
       <Menu.Items
         static
-        className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none group-hover:block hidden"
+        className={classNames(
+          "absolute right-0 z-10 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none h-auto",
+          isOpen ? "block" : "hidden"
+        )}
       >
         <div className="py-1">
-          {menuItems.map((item) => (
-            <Menu.Item>
-              {({ active }) => (
-                <NavLink
-                  to={item.to}
-                  className={classNames(
-                    active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                    "block px-4 py-2 text-sm"
-                  )}
-                >
-                  {item.label}
-                </NavLink>
-              )}
+          {menuItems.map((item, index) => (
+            <Menu.Item key={index}>
+              <NavLink
+                onClick={handleClose}
+                to={item.to}
+                className="block px-4 py-2 text-sm"
+              >
+                {item.label}
+              </NavLink>
             </Menu.Item>
           ))}
         </div>
