@@ -6,9 +6,9 @@ import { Container } from "../Container";
 export const Hero = () => {
   return (
     <Container>
-      <div className="flex flex-row justify-between">
-        <div className="flex flex-col gap-6 w-textContainer mt-16">
-          <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wide">
+      <div className="flex flex-row justify-between mt-2 items-center">
+        <div className="flex flex-col gap-6 w-textContainer">
+          <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
             Turbocharge your job search with{" "}
             <span className="text-light-purple">GigsHub</span>
           </div>
@@ -20,7 +20,7 @@ export const Hero = () => {
             <Button>Get Hired</Button>
           </div>
         </div>
-        <div className="grid-cols-2 gap-2.5 col-span-3">
+        <div>
           <img src={homeHeroImg} />
         </div>
       </div>
