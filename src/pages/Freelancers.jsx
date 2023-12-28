@@ -14,7 +14,7 @@ export default function Freelancers() {
         <div className="flex flex-row justify-between items-center">
           <div className="flex flex-col gap-6 w-textContainer">
             <div className="bg-pale-purple p-2 rounded-full font-sans text-base font-semibold leading-7 text-dark-purple max-w-56 text-center">
-              Gigs Hub for Freelancers
+              GigsHub for Freelancers
             </div>
             <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
               <span className="text-light-purple">Freelancing</span> just got

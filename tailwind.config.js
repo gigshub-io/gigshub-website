@@ -37,6 +37,7 @@ module.exports = {
         card: "241px",
         testimonialContainer: "400px",
         heroImage: "500px",
+        aboutUsBanner: "800px",
       },
       lineHeight: {
         textHero: "5.375rem",
