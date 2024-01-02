@@ -24,7 +24,7 @@ module.exports = {
       width: {
         container: "1200px",
         textContainer: "550px",
-        textContainer2: "1000px",
+        textContainer2: "800px",
         shortTextContainer: "480px",
         headingContainer: "768px",
         card: "346px",
@@ -43,6 +43,7 @@ module.exports = {
       lineHeight: {
         textHero: "5.375rem",
         headingCardsContainer: "3.6rem",
+        aboutUsBanner: "3rem",
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"],
