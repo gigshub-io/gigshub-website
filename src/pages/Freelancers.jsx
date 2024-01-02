@@ -7,17 +7,17 @@ import { Container } from "../components/Container";
 import { CardGallery } from "../components/CardGallery";
 import { TestimonialCarousel } from "../components/TestimonialCarousel/TestimonialCarousel";
 
-export default function JobSeekers() {
+export default function Freelancers() {
   return (
     <div className="flex flex-col w-full py-16 gap-32 mb-12 bg-off-white items-center">
       <Container>
         <div className="flex flex-row justify-between items-center">
           <div className="flex flex-col gap-6 w-textContainer">
             <div className="bg-pale-purple p-2 rounded-full font-sans text-base font-semibold leading-7 text-dark-purple max-w-56 text-center">
-              GigsHub for Job Seekers
+              GigsHub for Freelancers
             </div>
             <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
-              <span className="text-light-purple">Job Seeking</span> just got
+              <span className="text-light-purple">Freelancing</span> just got
               easier with us
             </div>
             <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
@@ -70,7 +70,7 @@ export default function JobSeekers() {
         <img src={freelancersSubHeroImg} alt="SubHero" />
         <div className="flex flex-col gap-6 w-textContainer">
           <div className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide">
-            Helping <span className="text-light-purple">job seekers</span>
+            Helping <span className="text-light-purple">freelancers</span>
           </div>
           <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
