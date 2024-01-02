@@ -24,6 +24,7 @@ module.exports = {
       width: {
         container: "1200px",
         textContainer: "550px",
+        textContainer2: "1000px",
         shortTextContainer: "480px",
         headingContainer: "768px",
         card: "346px",
