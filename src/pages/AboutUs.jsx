@@ -2,6 +2,11 @@ import React from "react";
 import { Container } from "../components/Container";
 import aboutUsImg from "../assets/aboutus-image.png";
 import aboutUsImg2 from "../assets/aboutus-image2.png";
+import { Heading } from "../components/Heading/Heading";
+import teamPic from "../assets/team-pic.png";
+import socialMediaIcon from "../assets/linkedin-vector.png";
+import socialMediaIcon2 from "../assets/twitter-vector.png";
+import socialMediaIcon3 from "../assets/web-vector.png";
 
 export default function AboutUs() {
   return (
@@ -83,6 +88,74 @@ export default function AboutUs() {
           <img src={aboutUsImg2} alt="Hero" />
         </Container>
       </div>
+      <Container className="flex flex-col gap-20">
+        <Heading
+          title="Meet the team"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        />
+        <div className="flex flex-row gap-12">
+          <div className="flex flex-col items-center gap-6 w-teamImage">
+            <img src={teamPic} alt="Team" />
+            <div className="flex flex-col gap-1 items-center">
+              <div className="font-sans text-xl font-semibold text-dark-purple">
+                Full name
+              </div>
+              <div className="font-sans text-lg font-normal text-dark-purple">
+                Job title
+              </div>
+            </div>
+            <div className="font-sans text-base font-normal text-dark-purple text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.
+            </div>
+            <div className="flex flex-row gap-3.5">
+              <img src={socialMediaIcon} alt="Linkedin Icon" />
+              <img src={socialMediaIcon2} alt="Twitter Icon" />
+              <img src={socialMediaIcon3} alt="Web Icon" />
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-6 w-teamImage">
+            <img src={teamPic} alt="Team" />
+            <div className="flex flex-col gap-1 items-center">
+              <div className="font-sans text-xl font-semibold text-dark-purple">
+                Full name
+              </div>
+              <div className="font-sans text-lg font-normal text-dark-purple">
+                Job title
+              </div>
+            </div>
+            <div className="font-sans text-base font-normal text-dark-purple text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.
+            </div>
+            <div className="flex flex-row gap-3.5">
+              <img src={socialMediaIcon} alt="Linkedin Icon" />
+              <img src={socialMediaIcon2} alt="Twitter Icon" />
+              <img src={socialMediaIcon3} alt="Web Icon" />
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-6 w-teamImage">
+            <img src={teamPic} alt="Team" />
+            <div className="flex flex-col gap-1 items-center">
+              <div className="font-sans text-xl font-semibold text-dark-purple">
+                Full name
+              </div>
+              <div className="font-sans text-lg font-normal text-dark-purple">
+                Job title
+              </div>
+            </div>
+            <div className="font-sans text-base font-normal text-dark-purple text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.
+            </div>
+            <div className="flex flex-row gap-3.5">
+              <img src={socialMediaIcon} alt="Linkedin Icon" />
+              <img src={socialMediaIcon2} alt="Twitter Icon" />
+              <img src={socialMediaIcon3} alt="Web Icon" />
+            </div>
+          </div>
+        </div>
+      </Container>
     </div>
   );
 }

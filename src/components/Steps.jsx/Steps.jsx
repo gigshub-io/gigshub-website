@@ -10,7 +10,11 @@ export const Steps = () => {
   return (
     <Container>
       <div className="flex flex-col items-center gap-32">
-        <Heading title={titleText} description={descriptionText} />
+        <Heading
+          title={titleText}
+          description={descriptionText}
+          alignment="center"
+        />
         <div className="flex flex-col gap-10">
           <div className="flex flex-row justify-between gap-24">
             <div>
