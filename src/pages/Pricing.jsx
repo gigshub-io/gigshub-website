@@ -1,16 +1,51 @@
 import React from "react";
 import { useState } from "react";
 import { Heading } from "../components/Heading/Heading";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+import { Container } from "../components/Container";
+import { PricingCard } from "../components/PricingCard";
 
 export default function Pricing() {
-  const [isSelected, setIsSelected] = useState(false);
+  const [isBillingAnnual, setIsBillingAnnual] = useState(false);
+
+  // Insert info of each plan here
+  const plans = [
+    {
+      name: "Basic Plan",
+      monthlyPrice: "19",
+      annualPrice: "228",
+      features: [
+        "Feature text goes here",
+        "Feature text goes here",
+        "Feature text goes here",
+      ],
+    },
+    {
+      name: "Standard Plan",
+      monthlyPrice: "29",
+      annualPrice: "348",
+      features: [
+        "Feature text goes here",
+        "Feature text goes here",
+        "Feature text goes here",
+      ],
+    },
+    {
+      name: "Unlimited Plan",
+      monthlyPrice: "49",
+      annualPrice: "588",
+      features: [
+        "Feature text goes here",
+        "Feature text goes here",
+        "Feature text goes here",
+      ],
+    },
+  ];
 
   const handleBillingSelection = () => {
-    setIsSelected((prev) => !prev);
+    setIsBillingAnnual((prev) => !prev);
   };
   return (
-    <div>
+    <Container>
       <div className="flex flex-col items-center py-28 gap-6">
         <Heading
           title="Pricing plans"
@@ -25,10 +60,10 @@ export default function Pricing() {
             <button
               onClick={handleBillingSelection}
               className={`${
-                isSelected
+                !isBillingAnnual
                   ? "text-off-white bg-dark-purple"
                   : "text-dark-purple bg-off-white"
-              } inline-flex items-center rounded-l-md px-6 py-3 ring-1 ring-inset ring-dark-purple hover:bg-dark-purple hover:text-off-white focus:z-20 focus:outline-offset-0 w-pricingButtons h-12`}
+              } inline-flex items-center rounded-l-md px-6 py-3 ring-1 ring-inset ring-dark-purple hover:bg-pale-purple hover:text-dark-purple focus:z-20 focus:outline-offset-0 w-pricingButtons h-12`}
             >
               Monthly billing
             </button>
@@ -36,16 +71,27 @@ export default function Pricing() {
             <button
               onClick={handleBillingSelection}
               className={`${
-                !isSelected
+                isBillingAnnual
                   ? "text-off-white bg-dark-purple"
                   : "text-dark-purple bg-off-white"
-              } inline-flex items-center rounded-r-md px-6 py-3 text-dark-purple ring-1 ring-inset ring-dark-purple hover:bg-dark-purple hover:text-off-white focus:z-20 focus:outline-offset-0 w-pricingButtons h-12`}
+              } inline-flex items-center rounded-r-md px-6 py-3 text-dark-purple ring-1 ring-inset ring-dark-purple hover:bg-pale-purple hover:text-dark-purple focus:z-20 focus:outline-offset-0 w-pricingButtons h-12`}
             >
               Annual billing
             </button>
           </div>
         </div>
       </div>
-    </div>
+      <div className="flex flex-row gap-8">
+        {plans.map((plan, index) => (
+          <PricingCard
+            key={index}
+            planName={plan.name}
+            planPrice={isBillingAnnual ? plan.annualPrice : plan.monthlyPrice}
+            billingType={isBillingAnnual ? "annual" : "monthly"}
+            planFeatures={plan.features}
+          />
+        ))}
+      </div>
+    </Container>
   );
 }

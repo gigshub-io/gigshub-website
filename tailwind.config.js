@@ -12,6 +12,7 @@ module.exports = {
         "dark-grey": "#505050",
         "light-purple": "#7575E5",
         "dark-blue": "#2C2C70",
+        "lime-green": "#D7F77C",
       },
       padding: {
         button: "30px 10px",
@@ -35,6 +36,7 @@ module.exports = {
         teamImage: "400px",
         socialMediaIcon: "24px",
         pricingButtons: "160px",
+        pricingCard: "416px",
       },
       height: {
         imageContainer: "252px",
