@@ -5,6 +5,8 @@ import { Container } from "../components/Container";
 import { PricingCard } from "../components/PricingCard";
 import { SocialProof } from "../components/SocialProof";
 import { CardGallery } from "../components/CardGallery/CardGallery";
+import { CtaBanner } from "../components/CtaBanner/CtaBanner";
+import ctaImage from "../assets/pricing-hero-image.png";
 
 export default function Pricing() {
   const [isBillingAnnual, setIsBillingAnnual] = useState(false);
@@ -47,7 +49,7 @@ export default function Pricing() {
     setIsBillingAnnual((prev) => !prev);
   };
   return (
-    <div className="flex flex-col w-full py-16 gap-20 mb-12 bg-off-white items-center">
+    <div className="flex flex-col w-full py-6 gap-40 mb-12 bg-off-white items-center">
       <Container>
         <div className="flex flex-col items-center py-28 gap-6">
           <Heading
@@ -98,6 +100,7 @@ export default function Pricing() {
       </Container>
       <SocialProof />
       <CardGallery />
+      <CtaBanner backgroundColor="purple" image={ctaImage} />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { TestimonialCarousel } from "../components/TestimonialCarousel/Testimoni
 import { CtaBanner } from "../components/CtaBanner/CtaBanner.jsx";
 import { Hero } from "../components/Hero/Hero.jsx";
 import { SocialProof } from "../components/SocialProof/SocialProof.jsx";
+import ctaImage from "../assets/cta-banner.png";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
       <CardGallery />
       <Steps />
       <TestimonialCarousel />
-      <CtaBanner />
+      <CtaBanner backgroundColor="light-purple" image={ctaImage} />
     </div>
   );
 };
