@@ -9,14 +9,16 @@ export const Heading = ({
   description,
   className,
   alignment = "start",
+  textSize = "5xl",
+  gap = "6",
 }) => {
   return (
     <div className={`flex ${className} justify-${alignment}`}>
       <div
-        className={`flex flex-col gap-6 w-headingContainer text-${alignment}`}
+        className={`flex flex-col gap-${gap} w-headingContainer text-${alignment}`}
       >
         <p
-          className={`font-sans text-5xl font-bold leading-7 text-dark-purple leading-headingCardsContainer tracking-wide`}
+          className={`font-sans text-${textSize} font-bold leading-7 text-dark-purple leading-headingCardsContainer tracking-wide`}
         >
           {title}
         </p>

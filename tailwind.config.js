@@ -34,6 +34,7 @@ module.exports = {
         heroImage: "500px",
         teamImage: "400px",
         socialMediaIcon: "24px",
+        pricingButtons: "160px",
       },
       height: {
         imageContainer: "252px",
