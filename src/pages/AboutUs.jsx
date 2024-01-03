@@ -3,10 +3,6 @@ import { Container } from "../components/Container";
 import aboutUsImg from "../assets/aboutus-image.png";
 import aboutUsImg2 from "../assets/aboutus-image2.png";
 import { Heading } from "../components/Heading/Heading";
-import teamPic from "../assets/team-pic.png";
-import socialMediaIcon from "../assets/linkedin-vector.png";
-import socialMediaIcon2 from "../assets/twitter-vector.png";
-import socialMediaIcon3 from "../assets/web-vector.png";
 import { TeamMember } from "../components/TeamMember";
 
 export default function AboutUs() {
