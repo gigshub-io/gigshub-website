@@ -7,8 +7,38 @@ import teamPic from "../assets/team-pic.png";
 import socialMediaIcon from "../assets/linkedin-vector.png";
 import socialMediaIcon2 from "../assets/twitter-vector.png";
 import socialMediaIcon3 from "../assets/web-vector.png";
+import { TeamMember } from "../components/TeamMember";
 
 export default function AboutUs() {
+  const team = [
+    {
+      fullName: "Full Name",
+      jobTitle: "Job Title",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      linkedInProfile: "https://www.linkedin.com/",
+      twitterProfile: "https://twitter.com/",
+      webPage: "https://www.google.com/",
+    },
+    {
+      fullName: "Full Name",
+      jobTitle: "Job Title",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      linkedInProfile: "https://www.linkedin.com/",
+      twitterProfile: "https://twitter.com/",
+      webPage: "https://www.google.com/",
+    },
+    {
+      fullName: "Full Name",
+      jobTitle: "Job Title",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      linkedInProfile: "https://www.linkedin.com/",
+      twitterProfile: "https://twitter.com/",
+      webPage: "https://www.google.com/",
+    },
+  ];
   return (
     <div className="flex flex-col w-full py-16 gap-20 mb-12 bg-off-white items-center">
       <Container className="flex flex-col gap-20 items-center">
@@ -94,66 +124,17 @@ export default function AboutUs() {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
         <div className="flex flex-row gap-12">
-          <div className="flex flex-col items-center gap-6 w-teamImage">
-            <img src={teamPic} alt="Team" />
-            <div className="flex flex-col gap-1 items-center">
-              <div className="font-sans text-xl font-semibold text-dark-purple">
-                Full name
-              </div>
-              <div className="font-sans text-lg font-normal text-dark-purple">
-                Job title
-              </div>
-            </div>
-            <div className="font-sans text-base font-normal text-dark-purple text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
-            </div>
-            <div className="flex flex-row gap-3.5">
-              <img src={socialMediaIcon} alt="Linkedin Icon" />
-              <img src={socialMediaIcon2} alt="Twitter Icon" />
-              <img src={socialMediaIcon3} alt="Web Icon" />
-            </div>
-          </div>
-          <div className="flex flex-col items-center gap-6 w-teamImage">
-            <img src={teamPic} alt="Team" />
-            <div className="flex flex-col gap-1 items-center">
-              <div className="font-sans text-xl font-semibold text-dark-purple">
-                Full name
-              </div>
-              <div className="font-sans text-lg font-normal text-dark-purple">
-                Job title
-              </div>
-            </div>
-            <div className="font-sans text-base font-normal text-dark-purple text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
-            </div>
-            <div className="flex flex-row gap-3.5">
-              <img src={socialMediaIcon} alt="Linkedin Icon" />
-              <img src={socialMediaIcon2} alt="Twitter Icon" />
-              <img src={socialMediaIcon3} alt="Web Icon" />
-            </div>
-          </div>
-          <div className="flex flex-col items-center gap-6 w-teamImage">
-            <img src={teamPic} alt="Team" />
-            <div className="flex flex-col gap-1 items-center">
-              <div className="font-sans text-xl font-semibold text-dark-purple">
-                Full name
-              </div>
-              <div className="font-sans text-lg font-normal text-dark-purple">
-                Job title
-              </div>
-            </div>
-            <div className="font-sans text-base font-normal text-dark-purple text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
-            </div>
-            <div className="flex flex-row gap-3.5">
-              <img src={socialMediaIcon} alt="Linkedin Icon" />
-              <img src={socialMediaIcon2} alt="Twitter Icon" />
-              <img src={socialMediaIcon3} alt="Web Icon" />
-            </div>
-          </div>
+          {team.map((teamMember, index) => (
+            <TeamMember
+              key={index}
+              fullName={teamMember.fullName}
+              jobTitle={teamMember.jobTitle}
+              description={teamMember.description}
+              linkedInProfile={teamMember.linkedInProfile}
+              twitterProfile={teamMember.twitterProfile}
+              webPage={teamMember.webPage}
+            />
+          ))}
         </div>
       </Container>
     </div>

@@ -55,12 +55,14 @@ export const TestimonialCarousel = () => {
   return (
     <section>
       <Container>
-        <Heading
-          title={titleText}
-          description={descriptionText}
-          className="mb-10"
-          alignment="center"
-        />
+        <div className="flex flex-col items-center gap-32">
+          <Heading
+            title={titleText}
+            description={descriptionText}
+            className="mb-10"
+            alignment="center"
+          />
+        </div>
       </Container>
       <Swiper
         spaceBetween={44}

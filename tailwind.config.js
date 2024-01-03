@@ -33,6 +33,7 @@ module.exports = {
         ctaBannerImage: "660px",
         heroImage: "500px",
         teamImage: "400px",
+        socialMediaIcon: "24px",
       },
       height: {
         imageContainer: "252px",
