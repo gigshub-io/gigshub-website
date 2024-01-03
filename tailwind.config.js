@@ -56,6 +56,9 @@ module.exports = {
       borderRadius: {
         ctaBanner: "32px",
       },
+      listStyleImage: {
+        checkmark: 'url("assets/check-icon2.svg")',
+      },
     },
   },
   variants: {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../Button/Button";
 
 export const PricingCard = ({
   planName,
@@ -25,16 +26,24 @@ export const PricingCard = ({
         </div>
       </div>
       <hr className="border-dark-purple mt-8" />
-      <div className="flex flex-col w-full py-8">
-        <div>
-          <div>Includes</div>
-          <ul>
+      <div className="flex flex-col py-8">
+        <div className="flex flex-col gap-6">
+          <div className="font-sans text-base font-medium tracking-wide text-dark-purple">
+            Includes:
+          </div>
+          <ul className="flex flex-col ml-6 gap-4 list-image-checkmark">
             {planFeatures.map((feature, index) => (
-              <li key={index}>{feature}</li>
+              <li
+                className="pl-4 font-sans text-base font-normal tracking-wide text-dark-purple"
+                key={index}
+              >
+                {feature}
+              </li>
             ))}
           </ul>
         </div>
       </div>
+      <Button className="mt-12">Submit</Button>
     </div>
   );
 };
