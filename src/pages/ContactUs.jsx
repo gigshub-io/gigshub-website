@@ -12,7 +12,7 @@ export default function ContactUs() {
     phoneNumber: "",
     message: "",
   });
-  const checkbox = document.getElementById("terms");
+  const [termsChecked, setTermsChecked] = useState(false);
   const handleFirstNameChange = (event) => {
     const value = event.target.value;
     setNewUser({ ...newUser, firstName: value });
@@ -33,12 +33,20 @@ export default function ContactUs() {
     const value = event.target.value;
     setNewUser({ ...newUser, message: value });
   };
-  const handleCheckboxChange = (event) => {};
+  const handleCheckboxChange = (event) => {
+    if (event.target.checked) setTermsChecked(true);
+  };
   const handleSubmit = (event) => {
-    if (newUser.firstName && newUser.lastName && newUser.email) {
+    if (
+      newUser.firstName &&
+      newUser.lastName &&
+      newUser.email &&
+      termsChecked
+    ) {
       console.log(newUser);
-    } else {
-      alert("Please, fill in the required fields!");
+    } else if (!termsChecked) alert("Please, accept Terms os Service.");
+    else {
+      alert("Please, fill in the required fields.");
     }
   };
   return (
