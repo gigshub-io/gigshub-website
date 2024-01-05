@@ -9,6 +9,7 @@ import Pricing from "./pages/Pricing";
 import ContactUs from "./pages/ContactUs";
 import Freelancers from "./pages/Freelancers";
 import JobSeekers from "./pages/JobSeekers";
+import TermsOfService from "./pages/TermsOfService.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/employers" index element={<Employers />} />
         <Route path="/pricing" index element={<Pricing />} />
         <Route path="/contactUs" index element={<ContactUs />} />
+        <Route path="/termsOfService" index element={<TermsOfService />} />
       </Route>
     </Routes>
   );

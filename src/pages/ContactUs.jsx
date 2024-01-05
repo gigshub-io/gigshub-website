@@ -12,7 +12,7 @@ export default function ContactUs() {
     phoneNumber: "",
     message: "",
   });
-
+  const checkbox = document.getElementById("terms");
   const handleFirstNameChange = (event) => {
     const value = event.target.value;
     setNewUser({ ...newUser, firstName: value });
@@ -32,6 +32,14 @@ export default function ContactUs() {
   const handleMessageChange = (event) => {
     const value = event.target.value;
     setNewUser({ ...newUser, message: value });
+  };
+  const handleCheckboxChange = (event) => {};
+  const handleSubmit = (event) => {
+    if (newUser.firstName && newUser.lastName && newUser.email) {
+      console.log(newUser);
+    } else {
+      alert("Please, fill in the required fields!");
+    }
   };
   return (
     <div className="flex flex-row gap-20">
@@ -76,73 +84,91 @@ export default function ContactUs() {
         <div className="flex flex-col gap-6">
           <div className="flex flex-row gap-6">
             <div className="flex flex-col gap-2">
-              <label className="font-sans font-normal text-base text-dark-purple tracking-wide">
+              <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 First name *
+                <input
+                  required
+                  type="text"
+                  value={newUser.firstName}
+                  onChange={handleFirstNameChange}
+                  className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
+                ></input>
               </label>
-              <input
-                required
-                type="text"
-                value={newUser.firstName}
-                onChange={handleFirstNameChange}
-                className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
-              ></input>
             </div>
             <div className="flex flex-col gap-2">
-              <label className="font-sans font-normal text-base text-dark-purple tracking-wide">
+              <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 Last name *
+                <input
+                  required
+                  type="text"
+                  value={newUser.lastName}
+                  onChange={handleLastNameChange}
+                  className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
+                ></input>
               </label>
-              <input
-                required
-                type="text"
-                value={newUser.lastName}
-                onChange={handleLastNameChange}
-                className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
-              ></input>
             </div>
           </div>
           <div className="flex flex-row gap-6">
             <div className="flex flex-col gap-2">
-              <label className="font-sans font-normal text-base text-dark-purple tracking-wide">
+              <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 Email *
+                <input
+                  required
+                  type="email"
+                  value={newUser.email}
+                  onChange={handleEmailChange}
+                  className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
+                ></input>
               </label>
-              <input
-                required
-                type="email"
-                value={newUser.email}
-                onChange={handleEmailChange}
-                className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
-              ></input>
             </div>
             <div className="flex flex-col gap-2">
-              <label className="font-sans font-normal text-base text-dark-purple tracking-wide">
+              <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 Phone number
+                <input
+                  placeholder="(__) ___-____"
+                  type="tel"
+                  value={newUser.phoneNumber}
+                  onChange={handlePhoneChange}
+                  className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
+                ></input>
               </label>
-              <input
-                placeHolder="(__) ___-____"
-                type="tel"
-                value={newUser.phoneNumber}
-                onChange={handlePhoneChange}
-                className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
-              ></input>
             </div>
           </div>
           <div className="flex flex-row gap-6 content-start">
             <div className="flex flex-col gap-2">
-              <label className="font-sans font-normal text-base text-dark-purple tracking-wide">
+              <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 Message
+                <textarea
+                  required
+                  type="text"
+                  value={newUser.message}
+                  onChange={handleMessageChange}
+                  className="border-2 border-light-purple rounded-lg p-3 w-contactUsForm h-contactUsMessage bg-transparent"
+                  placeholder="Type your message here..."
+                ></textarea>
               </label>
-              <textarea
-                required
-                type="text"
-                value={newUser.message}
-                onChange={handleMessageChange}
-                className="border-2 border-light-purple rounded-lg p-3 w-contactUsForm h-contactUsMessage bg-transparent"
-                placeHolder="Type your message here..."
-              ></textarea>
             </div>
           </div>
         </div>
-        <Button>Submit</Button>
+        <label className="flex flex-row font-sans text-sm font-normal text-dark-purple">
+          <input
+            required
+            className="mr-2 accent-light-purple"
+            type="checkbox"
+            onChange={handleCheckboxChange}
+            id="terms"
+          ></input>
+          I accept the
+          <a
+            href="TermsOfService"
+            target="_blank"
+            rel="noreferrer"
+            className="ml-1 font-bold underline"
+          >
+            Terms
+          </a>
+        </label>
+        <Button onClick={handleSubmit}>Submit</Button>
       </form>
     </div>
   );
