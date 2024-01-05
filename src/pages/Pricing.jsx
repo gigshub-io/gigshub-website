@@ -4,9 +4,10 @@ import { Heading } from "../components/Heading/Heading";
 import { Container } from "../components/Container";
 import { PricingCard } from "../components/PricingCard";
 import { SocialProof } from "../components/SocialProof";
-import { CardGallery } from "../components/CardGallery/CardGallery";
-import { CtaBanner } from "../components/CtaBanner/CtaBanner";
-import ctaImage from "../assets/pricing-hero-image.png";
+import { CardGallery } from "../components/CardGallery";
+import { CtaBanner } from "../components/CtaBanner";
+import { Faq } from "../components/Faq";
+import ctaImage from "../assets/pricing-cta-banner.png";
 
 export default function Pricing() {
   const [isBillingAnnual, setIsBillingAnnual] = useState(false);
@@ -100,7 +101,8 @@ export default function Pricing() {
       </Container>
       <SocialProof />
       <CardGallery />
-      <CtaBanner backgroundColor="purple" image={ctaImage} />
+      <Faq />
+      <CtaBanner className="bg-purple" image={ctaImage} />
     </div>
   );
 }

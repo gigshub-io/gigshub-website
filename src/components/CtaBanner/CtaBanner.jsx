@@ -2,11 +2,11 @@ import React from "react";
 import { Button } from "../Button";
 import { Container } from "../Container";
 
-export const CtaBanner = ({ backgroundColor, image }) => {
+export const CtaBanner = ({ className, image }) => {
   return (
     <Container>
       <div
-        className={`flex flex-row bg-${backgroundColor} rounded-ctaBanner h-testimonialContainer py-20 px-16 relative overflow-hidden`}
+        className={`flex flex-row rounded-ctaBanner h-testimonialContainer py-20 px-16 relative overflow-hidden ${className}`}
       >
         <div className="flex flex-col gap-5 w-shortTextContainer">
           <div className="font-sans text-3xl font-bold text-off-white tracking-wide">

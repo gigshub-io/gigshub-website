@@ -2,7 +2,6 @@
 import React from "react";
 import { CardGallery } from "../components/CardGallery";
 import { Steps } from "../components/Steps.jsx";
-import { Container } from "../components/Container";
 import { TestimonialCarousel } from "../components/TestimonialCarousel/TestimonialCarousel.jsx";
 import { CtaBanner } from "../components/CtaBanner/CtaBanner.jsx";
 import { Hero } from "../components/Hero/Hero.jsx";
@@ -17,7 +16,7 @@ const Home = () => {
       <CardGallery />
       <Steps />
       <TestimonialCarousel />
-      <CtaBanner backgroundColor="light-purple" image={ctaImage} />
+      <CtaBanner className="bg-light-purple" image={ctaImage} />
     </div>
   );
 };
