@@ -1,24 +1,60 @@
+import React from "react";
+import { Container } from "../Container";
+import { Accordion } from "./subComponents";
 export const Faq = () => {
-  const FaQuestions = [{}];
+  const FaQuestions = [
+    {
+      question: "Question goes here",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    },
+    {
+      question: "Question goes here",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    },
+    {
+      question: "Question goes here",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    },
+    {
+      question: "Question goes here",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    },
+    {
+      question: "Question goes here",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    },
+    {
+      question: "Question goes here",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    },
+  ];
   return (
-    <div className="flex flex row">
-      <div className="">
-        <div>Frequently asked questions</div>
+    <Container>
+      <div className="flex flex-row justify-between gap-20">
+        <div className="flex flex-col gap-6 w-heroImage">
+          <div className="font-sans font-semibold text-dark-purple text-5xl tracking-wide leading-headingCardsContainer">
+            Frequently asked questions
+          </div>
+          <div className="font-sans font-normal text-dark-purple text-lg tracking-wide leading-7">
+            Frequently asked questions ordered by popularity. Remember that if
+            the visitor has not committed to the call to action, they may still
+            have questions (doubts) that can be answered.
+          </div>
+        </div>
         <div>
-          Frequently asked questions ordered by popularity. Remember that if the
-          visitor has not committed to the call to action, they may still have
-          questions (doubts) that can be answered.
+          {FaQuestions.map((faquestion, index) => (
+            <Accordion key="index" title={faquestion.question}>
+              {faquestion.answer}
+            </Accordion>
+          ))}
         </div>
       </div>
-      <div>
-        <div>Question text goes here</div>
-        <div>Question text goes here</div>
-        <div>Question text goes here</div>
-        <div>Question text goes here</div>
-        <div>Question text goes here</div>
-        <div>Question text goes here</div>
-        <div>Question text goes here</div>
-      </div>
-    </div>
+    </Container>
   );
 };

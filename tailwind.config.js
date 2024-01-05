@@ -37,6 +37,7 @@ module.exports = {
         socialMediaIcon: "24px",
         pricingButtons: "160px",
         pricingCard: "416px",
+        accordion: "730px",
       },
       height: {
         imageContainer: "252px",
