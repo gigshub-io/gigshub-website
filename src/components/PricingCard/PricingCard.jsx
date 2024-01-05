@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../Button/Button";
+import checkMark from "../../assets/check-icon2.svg";
 
 export const PricingCard = ({
   planName,
@@ -31,12 +32,13 @@ export const PricingCard = ({
           <div className="font-sans text-base font-medium tracking-wide text-dark-purple">
             Includes:
           </div>
-          <ul className="flex flex-col ml-6 gap-4 list-image-checkmark">
+          <ul className="flex flex-col gap-4">
             {planFeatures.map((feature, index) => (
               <li
-                className="pl-4 font-sans text-base font-normal tracking-wide text-dark-purple"
+                className="flex flex-row gap-4 font-sans text-base font-normal tracking-wide text-dark-purple"
                 key={index}
               >
+                <img src={checkMark} alt="Check mark" />
                 {feature}
               </li>
             ))}

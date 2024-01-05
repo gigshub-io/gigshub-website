@@ -50,7 +50,7 @@ export default function Pricing() {
     setIsBillingAnnual((prev) => !prev);
   };
   return (
-    <div className="flex flex-col w-full py-6 gap-40 mb-12 bg-off-white items-center">
+    <div className="flex flex-col w-full gap-40 mb-12 bg-off-white items-center">
       <Container>
         <div className="flex flex-col items-center py-28 gap-6">
           <Heading

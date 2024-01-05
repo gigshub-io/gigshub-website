@@ -10,6 +10,7 @@ module.exports = {
         white: "#ffffff",
         "dark-purple": "#1E1E53",
         "dark-grey": "#505050",
+        "washed-purple": "#ADADFF",
         "light-purple": "#7575E5",
         "dark-blue": "#2C2C70",
         "lime-green": "#D7F77C",
@@ -38,6 +39,8 @@ module.exports = {
         pricingButtons: "160px",
         pricingCard: "416px",
         accordion: "730px",
+        contactUsForm: "620px",
+        input: "300px",
       },
       height: {
         imageContainer: "252px",
@@ -45,6 +48,7 @@ module.exports = {
         testimonialContainer: "400px",
         heroImage: "500px",
         aboutUsBanner: "800px",
+        contactUsMessage: "180px",
       },
       lineHeight: {
         textHero: "5.375rem",
