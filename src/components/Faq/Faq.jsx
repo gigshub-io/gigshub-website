@@ -4,32 +4,32 @@ import { Accordion } from "./subComponents";
 export const Faq = () => {
   const FaQuestions = [
     {
-      question: "Question goes here",
+      question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
     },
     {
-      question: "Question goes here",
+      question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
     },
     {
-      question: "Question goes here",
+      question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
     },
     {
-      question: "Question goes here",
+      question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
     },
     {
-      question: "Question goes here",
+      question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
     },
     {
-      question: "Question goes here",
+      question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
     },
@@ -49,7 +49,7 @@ export const Faq = () => {
         </div>
         <div>
           {FaQuestions.map((faquestion, index) => (
-            <Accordion key="index" title={faquestion.question}>
+            <Accordion key={index} title={faquestion.question}>
               {faquestion.answer}
             </Accordion>
           ))}
