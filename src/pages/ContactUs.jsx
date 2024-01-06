@@ -43,7 +43,7 @@ export default function ContactUs() {
       newUser.email &&
       termsChecked
     ) {
-      console.log(newUser);
+      console.log(newUser); // nodemailer
     } else if (!termsChecked) alert("Please, accept Terms os Service.");
     else {
       alert("Please, fill in the required fields.");

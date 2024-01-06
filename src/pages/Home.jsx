@@ -1,7 +1,7 @@
 // Home.js
 import React from "react";
 import { CardGallery } from "../components/CardGallery";
-import { Steps } from "../components/Steps.jsx";
+import { Steps } from "../components/Steps";
 import { TestimonialCarousel } from "../components/TestimonialCarousel/TestimonialCarousel.jsx";
 import { CtaBanner } from "../components/CtaBanner/CtaBanner.jsx";
 import { Hero } from "../components/Hero/Hero.jsx";

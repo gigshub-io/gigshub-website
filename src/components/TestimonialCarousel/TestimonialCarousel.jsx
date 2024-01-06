@@ -53,7 +53,7 @@ export const TestimonialCarousel = () => {
   const descriptionText =
     "Don't just take our word for it. Hear what our customers have to say about their experience with Gigs Hub.";
   return (
-    <section>
+    <section className="overflow-hidden">
       <Container>
         <div className="flex flex-col items-center gap-32">
           <Heading
