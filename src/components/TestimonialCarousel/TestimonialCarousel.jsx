@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./swiper-style.css";
+import { Container } from "../Container";
 
 const slides = [
   {
@@ -52,12 +53,17 @@ export const TestimonialCarousel = () => {
   const descriptionText =
     "Don't just take our word for it. Hear what our customers have to say about their experience with Gigs Hub.";
   return (
-    <div className="relative">
-      <Heading
-        title={titleText}
-        description={descriptionText}
-        className="mb-10"
-      />
+    <section className="overflow-hidden">
+      <Container>
+        <div className="flex flex-col items-center gap-32">
+          <Heading
+            title={titleText}
+            description={descriptionText}
+            className="mb-10"
+            alignment="center"
+          />
+        </div>
+      </Container>
       <Swiper
         spaceBetween={44}
         slidesPerView={"auto"}
@@ -91,6 +97,6 @@ export const TestimonialCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 };

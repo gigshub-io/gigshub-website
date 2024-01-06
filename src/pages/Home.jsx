@@ -1,12 +1,12 @@
 // Home.js
 import React from "react";
 import { CardGallery } from "../components/CardGallery";
-import { Steps } from "../components/Steps.jsx";
-import { Container } from "../components/Container";
+import { Steps } from "../components/Steps";
 import { TestimonialCarousel } from "../components/TestimonialCarousel/TestimonialCarousel.jsx";
 import { CtaBanner } from "../components/CtaBanner/CtaBanner.jsx";
 import { Hero } from "../components/Hero/Hero.jsx";
 import { SocialProof } from "../components/SocialProof/SocialProof.jsx";
+import ctaImage from "../assets/cta-banner.png";
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
       <CardGallery />
       <Steps />
       <TestimonialCarousel />
-      <CtaBanner />
+      <CtaBanner className="bg-light-purple" image={ctaImage} />
     </div>
   );
 };

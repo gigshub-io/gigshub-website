@@ -10,8 +10,10 @@ module.exports = {
         white: "#ffffff",
         "dark-purple": "#1E1E53",
         "dark-grey": "#505050",
+        "washed-purple": "#ADADFF",
         "light-purple": "#7575E5",
         "dark-blue": "#2C2C70",
+        "lime-green": "#D7F77C",
       },
       padding: {
         button: "30px 10px",
@@ -24,6 +26,7 @@ module.exports = {
       width: {
         container: "1200px",
         textContainer: "550px",
+        textContainer2: "800px",
         shortTextContainer: "480px",
         headingContainer: "768px",
         card: "346px",
@@ -31,6 +34,13 @@ module.exports = {
         testimonialContainer: "834px",
         ctaBannerImage: "660px",
         heroImage: "500px",
+        teamImage: "400px",
+        socialMediaIcon: "24px",
+        pricingButtons: "160px",
+        pricingCard: "416px",
+        accordion: "730px",
+        contactUsForm: "620px",
+        input: "300px",
       },
       height: {
         imageContainer: "252px",
@@ -38,16 +48,21 @@ module.exports = {
         testimonialContainer: "400px",
         heroImage: "500px",
         aboutUsBanner: "800px",
+        contactUsMessage: "180px",
       },
       lineHeight: {
         textHero: "5.375rem",
         headingCardsContainer: "3.6rem",
+        aboutUsBanner: "3rem",
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"],
       },
       borderRadius: {
         ctaBanner: "32px",
+      },
+      listStyleImage: {
+        checkmark: 'url("assets/check-icon2.svg")',
       },
     },
   },

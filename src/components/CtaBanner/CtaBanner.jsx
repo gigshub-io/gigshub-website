@@ -1,12 +1,13 @@
 import React from "react";
 import { Button } from "../Button";
-import ctaImage from "../../assets/cta-banner.png";
 import { Container } from "../Container";
 
-export const CtaBanner = () => {
+export const CtaBanner = ({ className, image }) => {
   return (
     <Container>
-      <div className="flex flex-row bg-light-purple rounded-ctaBanner h-testimonialContainer py-20 px-16 relative overflow-hidden">
+      <div
+        className={`flex flex-row rounded-ctaBanner h-testimonialContainer py-20 px-16 relative overflow-hidden ${className}`}
+      >
         <div className="flex flex-col gap-5 w-shortTextContainer">
           <div className="font-sans text-3xl font-bold text-off-white tracking-wide">
             Call to action that invites the visitor to get started
@@ -20,7 +21,7 @@ export const CtaBanner = () => {
           </div>
         </div>
         <img
-          src={ctaImage}
+          src={image}
           alt="Cta Banner"
           className="absolute right-0 bottom-0"
         />

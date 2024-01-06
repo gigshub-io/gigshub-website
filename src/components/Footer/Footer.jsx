@@ -62,12 +62,12 @@ export const Footer = () => {
               ></input>
               <Button kind="transparent">Send</Button>
             </div>
-            <text className="text-off-white text-xs font-normal font-sans">
+            <p className="text-off-white text-xs font-normal font-sans">
               By subscribing you agree with our{" "}
               <a className="underline" href>
                 Privacy Policy
               </a>
-            </text>
+            </p>
           </div>
         </div>
         <div className="flex flex-col w-full gap-8">
