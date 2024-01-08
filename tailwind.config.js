@@ -44,6 +44,7 @@ module.exports = {
         contactUsForm: "620px",
         input: "300px",
         featuredBlogPost: "970px",
+        blogPostCard: "470px",
       },
       height: {
         imageContainer: "252px",
@@ -52,6 +53,7 @@ module.exports = {
         heroImage: "500px",
         aboutUsBanner: "800px",
         contactUsMessage: "180px",
+        blogPostCard: "300px",
       },
       lineHeight: {
         textHero: "5.375rem",

@@ -21,7 +21,7 @@ export default function Blog() {
   };
 
   return (
-    <Container className="py-24 flex flex-col gap-20">
+    <Container className="py-20 flex flex-col gap-20">
       <div className="flex flex-col gap-6">
         <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider w-textContainer3">
           A bunch of <span className="text-light-purple">educational</span>{" "}
