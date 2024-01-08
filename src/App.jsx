@@ -16,14 +16,16 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" index element={<Home />} />
-        <Route path="/freelancers" index element={<Freelancers />} />
-        <Route path="/jobSeekers" index element={<JobSeekers />} />
-        <Route path="/aboutUs" index element={<AboutUs />} />
-        <Route path="/community" index element={<Community />} />
-        <Route path="/blog" index element={<Blog />} />
-        <Route path="/pricing" index element={<Pricing />} />
-        <Route path="/contactUs" index element={<ContactUs />} />
-        <Route path="/termsOfService" index element={<TermsOfService />} />
+        <Route path="/freelancers" element={<Freelancers />} />
+        <Route path="/jobSeekers" element={<JobSeekers />} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/blog" element={<Blog />}>
+          <Route path=":category" element={<Blog />} />
+        </Route>
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/termsOfService" element={<TermsOfService />} />
       </Route>
     </Routes>
   );

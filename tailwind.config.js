@@ -14,6 +14,7 @@ module.exports = {
         "light-purple": "#7575E5",
         "dark-blue": "#2C2C70",
         "lime-green": "#D7F77C",
+        "semi-dark-purple": "#4D4DAB",
       },
       padding: {
         button: "30px 10px",
@@ -27,6 +28,7 @@ module.exports = {
         container: "1200px",
         textContainer: "550px",
         textContainer2: "800px",
+        textContainer3: "830px",
         shortTextContainer: "480px",
         headingContainer: "768px",
         card: "346px",
