@@ -83,7 +83,7 @@ export const Navigation = () => {
               <NavLink to="/community">Community</NavLink>
             </li>
             <li>
-              <NavLink to="/employers">Employers</NavLink>
+              <NavLink to="/blog">Blog</NavLink>
             </li>
             <li>
               <NavLink to="/pricing">Pricing</NavLink>
