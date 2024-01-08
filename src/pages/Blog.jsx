@@ -1,23 +1,25 @@
 import React from "react";
 import { Container } from "../components/Container";
-import { Route, Routes, useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { CategorySection } from "../components/BlogPosts/CategorySection";
 
-const Category = () => {
-  const { category } = useParams();
-  console.log("category", category);
-  return <div>{category}</div>;
-};
+const blogCategories = [
+  { id: "job-search-advice", label: "Job search advice" },
+  { id: "resume-tips", label: "Resume tips" },
+  { id: "career-advice", label: "Career advice" },
+  { id: "education", label: "Education" },
+  { id: "documentation", label: "Documentation" },
+  { id: "user-guides", label: "User guides" },
+];
 
 export default function Blog() {
-  const blogCategories = [
-    "View all",
-    "Job search advice",
-    "Resume tips",
-    "Career advice",
-    "Education",
-    "Documentation",
-    "User guides",
-  ];
+  const navigate = useNavigate();
+  const { category } = useParams();
+
+  const handleClick = (category) => {
+    navigate(`${category}`);
+  };
+
   return (
     <Container className="py-24 flex flex-col gap-20">
       <div className="flex flex-col gap-6">
@@ -37,16 +39,18 @@ export default function Blog() {
           </div>
           <ul className="flex flex-col">
             {blogCategories.map((category, index) => (
-              <li className="flex py-3 px-4 font-sans text-base font-normal text-dark-purple">
-                {category}
+              <li
+                className="flex py-3 px-4 font-sans text-base font-normal text-dark-purple"
+                onClick={(event) => handleClick(category.id)}
+                key={index}
+              >
+                {category.label}
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <Routes>
-            <Route path=":category" element={<Category />} />
-          </Routes>
+          <CategorySection id={category} />
         </div>
       </div>
     </Container>

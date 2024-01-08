@@ -43,6 +43,7 @@ module.exports = {
         accordion: "730px",
         contactUsForm: "620px",
         input: "300px",
+        featuredBlogPost: "970px",
       },
       height: {
         imageContainer: "252px",
