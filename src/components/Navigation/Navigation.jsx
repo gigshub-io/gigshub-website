@@ -72,7 +72,7 @@ export const Navigation = () => {
       <nav className="w-full h-20 flex items-center justify-between">
         <Logo />
         <div className="items-center justify-between">
-          <ul className="flex flex-row font-sans font-normal leading-6 rounded-lg gap-9 text-base bg-off-white">
+          <ul className="flex flex-row font-sans font-normal leading-6 rounded-lg gap-16 text-base bg-off-white">
             <li>
               <NavMenu>Find a Job</NavMenu>
             </li>

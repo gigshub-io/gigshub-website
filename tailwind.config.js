@@ -25,7 +25,8 @@ module.exports = {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
       },
       width: {
-        container: "1200px",
+        containerLg: "1400px",
+        containerMd: "1200px",
         textContainer: "550px",
         textContainer2: "800px",
         textContainer3: "830px",
@@ -45,6 +46,7 @@ module.exports = {
         input: "300px",
         featuredBlogPost: "970px",
         blogPostCard: "470px",
+        blogCategoriesMenu: "200px",
       },
       height: {
         imageContainer: "252px",

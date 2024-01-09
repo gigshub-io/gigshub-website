@@ -37,7 +37,7 @@ export default function AboutUs() {
   ];
   return (
     <div className="flex flex-col w-full py-16 gap-20 mb-12 bg-off-white items-center">
-      <Container className="flex flex-col gap-20 items-center">
+      <Container className="flex flex-col gap-20 items-center w-containerMd">
         <div className="flex flex-row gap-20 items-center">
           <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
             A little bit <span className="text-light-purple">about</span> us at
@@ -114,12 +114,12 @@ export default function AboutUs() {
           <img src={aboutUsImg2} alt="Hero" />
         </Container>
       </div>
-      <Container className="flex flex-col gap-20">
+      <Container className="flex flex-col gap-20 items-start">
         <Heading
           title="Meet the team"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
-        <div className="flex flex-row gap-12">
+        <div className="flex flex-row w-full justify-between">
           {team.map((teamMember, index) => (
             <TeamMember
               key={index}
