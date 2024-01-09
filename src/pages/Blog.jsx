@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "../components/Container";
+import { Button } from "../components/Button";
 import { useParams, useNavigate } from "react-router-dom";
 import { CategorySection } from "../components/BlogPosts/CategorySection";
 import { classNames } from "../utils/classNames";
@@ -67,14 +68,19 @@ export default function Blog() {
           <CategorySection id={category} />
         </div>
       </div>
-      <div className="flex flex-col gap-12">
-        <div className="font-sans text-5xl font-bold text-dark-purple">
-          Latest posts
-        </div>
+      <div className="flex flex-col gap-20">
         <div className="flex flex-row justify-between">
-          {latestPosts.map((post, index) => (
-            <LatestPostCard post={post} key={index} />
-          ))}
+          <div className="font-sans text-5xl font-bold text-dark-purple">
+            Latest posts
+          </div>
+          <Button size="smal">View all</Button>
+        </div>
+        <div>
+          <div className="flex flex-row justify-between">
+            {latestPosts.map((post, index) => (
+              <LatestPostCard post={post} key={index} />
+            ))}
+          </div>
         </div>
       </div>
     </Container>

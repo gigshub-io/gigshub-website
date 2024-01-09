@@ -4,13 +4,15 @@ import arrowRightIcon from "../../assets/arrow-right-icon.svg";
 export const LatestPostCard = ({ post }) => {
   return (
     <div className="w-blogPostCard">
-      <div className="flex flex-row gap-6">
-        <img
-          src={require(`../../assets/${post.image}`)}
-          alt="BlogPost"
-          className="rounded-lg w-full h-full object-contain"
-        />
-        <div className="flex flex-col gap-6 items-start">
+      <div className="flex flex-row gap-8">
+        <div className="flex rounded-lg overflow-hidden w-blogPostCardHorImg">
+          <img
+            src={require(`../../assets/${post.image}`)}
+            alt="BlogPost"
+            className="object-cover"
+          />
+        </div>
+        <div className="flex flex-col gap-6 items-start w-blogPostCardHorTxt">
           <div className="flex flex-row gap-4">
             <div className="flex bg-washed-purple px-3 py-1 rounded-full font-sans text-sm font-medium leading-7 text-dark-purple">
               {post.categoryLabel}
@@ -18,7 +20,7 @@ export const LatestPostCard = ({ post }) => {
             <div className="flex items-center font-sans text-sm font-semibold leading-7 text-dark-purple">{`${post.readingDuration} min read`}</div>
           </div>
           <div className="flex flex-col gap-2.5">
-            <div className="font-sans text-3xl font-semibold leading-7 text-dark-purple text-start tracking-wide">
+            <div className="font-sans text-2xl font-semibold leading-7 text-dark-purple text-start tracking-wide">
               {post.title}
             </div>
             <div className="flex font-sans text-base font-normal leading-7 text-dark-purple text-start">

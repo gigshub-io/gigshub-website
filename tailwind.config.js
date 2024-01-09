@@ -47,7 +47,10 @@ module.exports = {
         featuredBlogPost: "970px",
         blogPostCardVer: "470px",
         blogPostCardHor: "632px",
+        blogPostCardHorImg: "300px",
+        blogPostCardHorTxt: "300px",
         blogCategoriesMenu: "240px",
+        arrowDownWhite: "32px",
       },
       height: {
         imageContainer: "252px",
@@ -57,6 +60,8 @@ module.exports = {
         aboutUsBanner: "800px",
         contactUsMessage: "180px",
         blogPostCardVer: "300px",
+        blogPostCardHorImg: "250px",
+        arrowDownWhite: "32px",
       },
       lineHeight: {
         textHero: "5.375rem",
