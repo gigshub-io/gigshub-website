@@ -3,13 +3,15 @@ import arrowRightIcon from "../../assets/arrow-right-icon.svg";
 
 export const Card = ({ post }) => {
   return (
-    <div className="w-blogPostCard">
-      <div className="flex flex-col gap-6">
-        <img
-          src={require(`../../assets/${post.image}`)}
-          alt="BlogPost"
-          className="rounded-lg w-full h-full object-contain"
-        />
+    <div className="w-blogPostCardVer">
+      <div className="flex flex-col gap-6 justify-center">
+        <div className="flex rounded-lg w-blogPostCardVer h-blogPostCardVer overflow-hidden">
+          <img
+            src={require(`../../assets/${post.image}`)}
+            alt="BlogPost"
+            className="object-cover"
+          />
+        </div>
         <div className="flex flex-col gap-6 items-start">
           <div className="flex flex-row gap-4">
             <div className="flex bg-washed-purple px-3 py-1 rounded-full font-sans text-sm font-medium leading-7 text-dark-purple">

@@ -25,7 +25,7 @@ module.exports = {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
       },
       width: {
-        containerLg: "1400px",
+        containerLg: "1300px",
         containerMd: "1200px",
         textContainer: "550px",
         textContainer2: "800px",
@@ -45,8 +45,9 @@ module.exports = {
         contactUsForm: "620px",
         input: "300px",
         featuredBlogPost: "970px",
-        blogPostCard: "470px",
-        blogCategoriesMenu: "200px",
+        blogPostCardVer: "470px",
+        blogPostCardHor: "632px",
+        blogCategoriesMenu: "240px",
       },
       height: {
         imageContainer: "252px",
@@ -55,7 +56,7 @@ module.exports = {
         heroImage: "500px",
         aboutUsBanner: "800px",
         contactUsMessage: "180px",
-        blogPostCard: "300px",
+        blogPostCardVer: "300px",
       },
       lineHeight: {
         textHero: "5.375rem",

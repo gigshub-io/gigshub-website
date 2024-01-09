@@ -3,11 +3,15 @@ import blogPosts from "./blogPosts.json";
 import arrowRightIcon from "../../assets/arrow-right-icon.svg";
 import { Card } from "./Card";
 
-export const CategorySection = ({ id }) => {
+export const CategorySection = ({ id = "view-all" }) => {
+  const getRandomSort = () => {
+    return Math.random() - 0.5;
+  };
+
   const filteredPosts =
     id !== "view-all"
       ? blogPosts.filter((post) => post.categoryId === id)
-      : blogPosts;
+      : blogPosts.sort(getRandomSort);
 
   let featuredPost;
 

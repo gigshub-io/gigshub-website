@@ -4,7 +4,7 @@ import arrowRightIcon from "../../assets/arrow-right-icon.svg";
 export const LatestPostCard = ({ post }) => {
   return (
     <div className="w-blogPostCard">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-row gap-6">
         <img
           src={require(`../../assets/${post.image}`)}
           alt="BlogPost"

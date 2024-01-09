@@ -49,13 +49,14 @@ export default function Blog() {
             {blogCategories.map(({ id, label }, index) => (
               <li
                 className={classNames(
-                  "flex py-3 px-4 font-sans text-base font-normal rounded-md",
+                  "flex py-3 px-4 font-sans text-base font-normal rounded-md hover:text-washed-purple",
                   id === category
                     ? "bg-semi-dark-purple text-off-white"
                     : "bg-transparent text-dark-purple"
                 )}
                 onClick={(event) => handleClick(id)}
                 key={index}
+                role="button"
               >
                 {label}
               </li>
@@ -70,9 +71,11 @@ export default function Blog() {
         <div className="font-sans text-5xl font-bold text-dark-purple">
           Latest posts
         </div>
-        {latestPosts.map((post, index) => (
-          <LatestPostCard post={post} key={index} />
-        ))}
+        <div className="flex flex-row justify-between">
+          {latestPosts.map((post, index) => (
+            <LatestPostCard post={post} key={index} />
+          ))}
+        </div>
       </div>
     </Container>
   );

@@ -37,7 +37,7 @@ export default function AboutUs() {
   ];
   return (
     <div className="flex flex-col w-full py-16 gap-20 mb-12 bg-off-white items-center">
-      <Container className="flex flex-col gap-20 items-center w-containerMd">
+      <Container className="flex flex-col gap-20 items-center">
         <div className="flex flex-row gap-20 items-center">
           <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
             A little bit <span className="text-light-purple">about</span> us at
