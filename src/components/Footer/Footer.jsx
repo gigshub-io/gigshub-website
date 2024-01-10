@@ -82,14 +82,11 @@ export const Footer = () => {
               </a>
               <a
                 className="underline text-off-white text-sm font-normal font-sans"
-                href
+                href="/termsOfService"
               >
                 Terms of Service
               </a>
-              <a
-                className="underline text-off-white text-sm font-normal font-sans"
-                href
-              >
+              <a className="underline text-off-white text-sm font-normal font-sans">
                 Cookies Settings
               </a>
             </div>

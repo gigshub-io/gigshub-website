@@ -10,6 +10,7 @@ import ContactUs from "./pages/ContactUs";
 import Freelancers from "./pages/Freelancers";
 import JobSeekers from "./pages/JobSeekers";
 import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         </Route>
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/termsOfService" element={<TermsOfService />} />
       </Route>
     </Routes>
