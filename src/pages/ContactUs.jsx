@@ -11,40 +11,35 @@ export default function ContactUs() {
     email: "",
     phoneNumber: "",
     message: "",
+    termsChecked: false,
   });
-  const [termsChecked, setTermsChecked] = useState(false);
-  const handleFirstNameChange = (event) => {
-    const value = event.target.value;
-    setNewUser({ ...newUser, firstName: value });
+  const handleChange = (event) => {
+    const { name, value, type, checked } = event.target;
+
+    setNewUser((prevUserData) => ({
+      ...prevUserData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   };
-  const handleLastNameChange = (event) => {
-    const value = event.target.value;
-    setNewUser({ ...newUser, lastName: value });
+
+  let message = {
+    from: "GigsHub <isadora.caputo@gmail.com>",
+    to: `${newUser.firstName} <${newUser.lastName}>`,
+    subject: "Fromageria Tesilli: Recebemos o seu pedido!",
+    html: `<h2><b>Olá ${newUser.firstName}!</b></h2>
+    <p>We have received your e-mail.</p>`,
   };
-  const handleEmailChange = (event) => {
-    const value = event.target.value;
-    setNewUser({ ...newUser, email: value });
-  };
-  const handlePhoneChange = (event) => {
-    const value = event.target.value;
-    setNewUser({ ...newUser, phoneNumber: value });
-  };
-  const handleMessageChange = (event) => {
-    const value = event.target.value;
-    setNewUser({ ...newUser, message: value });
-  };
-  const handleCheckboxChange = (event) => {
-    if (event.target.checked) setTermsChecked(true);
-  };
+
+  // const info = await transporter.sendMail(message);
   const handleSubmit = (event) => {
     if (
       newUser.firstName &&
       newUser.lastName &&
       newUser.email &&
-      termsChecked
+      newUser.termsChecked
     ) {
       console.log(newUser); // nodemailer
-    } else if (!termsChecked) alert("Please, accept Terms os Service.");
+    } else if (!newUser.termsChecked) alert("Please, accept Terms os Service.");
     else {
       alert("Please, fill in the required fields.");
     }
@@ -97,8 +92,9 @@ export default function ContactUs() {
                 <input
                   required
                   type="text"
+                  name="firstName"
                   value={newUser.firstName}
-                  onChange={handleFirstNameChange}
+                  onChange={handleChange}
                   className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
                 ></input>
               </label>
@@ -109,8 +105,9 @@ export default function ContactUs() {
                 <input
                   required
                   type="text"
+                  name="lastName"
                   value={newUser.lastName}
-                  onChange={handleLastNameChange}
+                  onChange={handleChange}
                   className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
                 ></input>
               </label>
@@ -123,8 +120,9 @@ export default function ContactUs() {
                 <input
                   required
                   type="email"
+                  name="email"
                   value={newUser.email}
-                  onChange={handleEmailChange}
+                  onChange={handleChange}
                   className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
                 ></input>
               </label>
@@ -135,8 +133,9 @@ export default function ContactUs() {
                 <input
                   placeholder="(__) ___-____"
                   type="tel"
+                  name="phoneNumber"
                   value={newUser.phoneNumber}
-                  onChange={handlePhoneChange}
+                  onChange={handleChange}
                   className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
                 ></input>
               </label>
@@ -149,8 +148,9 @@ export default function ContactUs() {
                 <textarea
                   required
                   type="text"
+                  name="message"
                   value={newUser.message}
-                  onChange={handleMessageChange}
+                  onChange={handleChange}
                   className="border-2 border-light-purple rounded-lg p-3 w-contactUsForm h-contactUsMessage bg-transparent"
                   placeholder="Type your message here..."
                 ></textarea>
@@ -163,7 +163,8 @@ export default function ContactUs() {
             required
             className="mr-2 accent-light-purple"
             type="checkbox"
-            onChange={handleCheckboxChange}
+            name="termsChecked"
+            onChange={handleChange}
             id="terms"
           ></input>
           I accept the
@@ -176,6 +177,7 @@ export default function ContactUs() {
             Terms
           </a>
         </label>
+        <div>{console.log(newUser)}</div>
         <Button onClick={handleSubmit}>Submit</Button>
       </form>
     </div>

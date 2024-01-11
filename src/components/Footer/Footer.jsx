@@ -64,7 +64,7 @@ export const Footer = () => {
             </div>
             <p className="text-off-white text-xs font-normal font-sans">
               By subscribing you agree with our{" "}
-              <a className="underline" href>
+              <a className="underline" href="/privacyPolicy">
                 Privacy Policy
               </a>
             </p>

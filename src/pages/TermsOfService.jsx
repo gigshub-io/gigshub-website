@@ -29,7 +29,7 @@ export default function TermsOfService() {
               <li
                 className={classNames(
                   "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
-                  ""
+                  "active:bg-washed-purple focus:outline-none focus:ring focus:ring-violet-300"
                 )}
                 role="button"
               >
