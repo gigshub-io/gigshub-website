@@ -1,233 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { classNames } from "../utils/classNames";
 import { TextDisplay } from "../components/TextDisplay/TextDisplay";
 import { Container } from "../components/Container";
 
-const privacYPolicyText = [
-  {
-    heading: "Heading 1",
-    type: 1,
-    children: [
-      {
-        heading: "Heading 2",
-        type: 2,
-        children: [
-          {
-            heading: "Heading 3",
-            type: 3,
-            children: [
-              {
-                heading: "Heading 4",
-                type: 4,
-                children: [
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading: "Heading 6", type: 6 },
-                      { heading: "Heading 6", type: 6 },
-                    ],
-                  },
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                ],
-              },
-              {
-                heading: "Heading 4",
-                type: 4,
-                children: [
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            heading: "Heading 3",
-            type: 3,
-            children: [
-              {
-                heading: "Heading 4",
-                type: 4,
-                children: [
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                ],
-              },
-              {
-                heading: "Heading 4",
-                type: 4,
-                children: [
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading: "Heading 6", type: 6 },
-                      { heading: "Heading 6", type: 6 },
-                    ],
-                  },
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        heading: "Heading 2",
-        type: 2,
-        children: [
-          {
-            heading: "Heading 3",
-            type: 3,
-            children: [
-              {
-                heading: "Heading 4",
-                type: 4,
-                children: [
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading: "Heading 6", type: 6 },
-                      { heading: "Heading 6", type: 6 },
-                    ],
-                  },
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                ],
-              },
-              {
-                heading: "Heading 4",
-                type: 4,
-                children: [
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-          {
-            heading: "Heading 3",
-            type: 3,
-            children: [
-              {
-                heading: "Heading 4",
-                type: 4,
-                children: [
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                ],
-              },
-              {
-                heading: "Heading 4",
-                type: 4,
-                children: [
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading: "Heading 6", type: 6 },
-                      { heading: "Heading 6", type: 6 },
-                    ],
-                  },
-                  {
-                    heading: "Heading 5",
-                    type: 5,
-                    children: [
-                      { heading6: "Heading 6" },
-                      { heading6: "Heading 6" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-];
-
 export default function PrivacyPolicy() {
   return (
     <Container className="flex py-20 flex-col gap-60">
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between ">
         <div className="font-sans text-7xl font-bold text-dark-purple">
           Privacy Policy
         </div>
@@ -241,69 +20,66 @@ export default function PrivacyPolicy() {
         </div>
       </div>
       <div className="flex flex-row justify-between">
-        <div className="flex flex-col gap-6 w-blogCategoriesMenu">
-          <div className="font-sans text-2xl font-bold text-dark-purple">
-            Table of contents
+        <div>
+          <div className="flex flex-col gap-6 w-blogCategoriesMenu sticky top-10">
+            <div className="font-sans text-2xl font-bold text-dark-purple">
+              Table of contents
+            </div>
+            <ul className="flex flex-col">
+              <li
+                className={classNames(
+                  "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
+                  ""
+                )}
+                role="button"
+              >
+                <a href="#heading1">Heading 1</a>
+              </li>
+              <li
+                className={classNames(
+                  "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
+                  "ml-6"
+                )}
+                role="button"
+              >
+                <a href="#heading2">Heading 2</a>
+              </li>
+              <li
+                className={classNames(
+                  "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
+                  "ml-12"
+                )}
+                role="button"
+              >
+                <a href="#heading3">Heading 3</a>
+              </li>
+              <li
+                className={classNames(
+                  "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
+                  "ml-24"
+                )}
+                role="button"
+              >
+                <a href="#heading4">Heading 4</a>
+              </li>
+              <li
+                className={classNames(
+                  "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
+                  "ml-32"
+                )}
+                role="button"
+              >
+                <a href="#heading5">Heading 5</a>
+              </li>
+            </ul>
           </div>
-          <ul className="flex flex-col">
-            <li
-              className={classNames(
-                "flex py-3 font-sans text-base font-normal rounded-md hover:text-washed-purple",
-                "text-semi-dark-purple"
-              )}
-              // onClick={(event) => handleClick(type)}
-              role="button"
-            >
-              Heading 1
-            </li>
-            <li
-              className={classNames(
-                "flex py-3 font-sans text-base font-normal rounded-md hover:text-washed-purple",
-                "text-semi-dark-purple ml-6"
-              )}
-              // onClick={(event) => handleClick(type)}
-              role="button"
-            >
-              Heading 2
-            </li>
-            <li
-              className={classNames(
-                "flex py-3 font-sans text-base font-normal rounded-md hover:text-washed-purple",
-                "text-semi-dark-purple ml-12"
-              )}
-              // onClick={(event) => handleClick(type)}
-              role="button"
-            >
-              Heading 3
-            </li>
-            <li
-              className={classNames(
-                "flex py-3 font-sans text-base font-normal rounded-md hover:text-washed-purple",
-                "text-semi-dark-purple ml-24"
-              )}
-              // onClick={(event) => handleClick(type)}
-              role="button"
-            >
-              Heading 4
-            </li>
-            <li
-              className={classNames(
-                "flex py-3 font-sans text-base font-normal rounded-md hover:text-washed-purple",
-                "text-semi-dark-purple ml-32"
-              )}
-              // onClick={(event) => handleClick(type)}
-              role="button"
-            >
-              Heading 5
-            </li>
-          </ul>
         </div>
         <div className="flex flex-col gap-8 w-headingContainer">
-          <TextDisplay headingType={1} />
-          <TextDisplay headingType={2} />
-          <TextDisplay headingType={3} />
-          <TextDisplay headingType={4} />
-          <TextDisplay headingType={5} />
+          <TextDisplay headingType={1} id="heading1" />
+          <TextDisplay headingType={2} id="heading2" />
+          <TextDisplay headingType={3} id="heading3" />
+          <TextDisplay headingType={4} id="heading4" />
+          <TextDisplay headingType={5} id="heading5" />
         </div>
       </div>
     </Container>

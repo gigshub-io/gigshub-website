@@ -26,23 +26,39 @@ const headingClasses = {
 };
 
 export const TextDisplay = ({
+  id,
   headingType,
   headingText,
   paragraphText,
   ...rest
 }) => {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5" id={id}>
       <p
         className={`${headingClasses[headingType].heading}`}
       >{`Heading ${headingType}`}</p>
-      <p className={`${headingClasses[headingType].paragraph}`}>
-        Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis
-        at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce
-        augue enim. Quis at habitant diam at. Suscipit tristique risus, at
-        donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales
-        id est ac volutpat.
-      </p>
+      <div className="flex flex-col gap-6">
+        <p className={`${headingClasses[headingType].paragraph}`}>
+          Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat
+          mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis
+          fusce augue enim. Quis at habitant diam at. Suscipit tristique risus,
+          at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet
+          sodales id est ac volutpat.
+        </p>
+        <p className={`${headingClasses[headingType].paragraph}`}>
+          Tristique odio senectus nam posuere ornare leo metus, ultricies.
+          Blandit duis ultricies vulputate morbi feugiat cras placerat elit.
+          Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit
+          accumsan. Cursus viverra aenean magna risus elementum faucibus
+          molestie pellentesque. Arcu ultricies sed mauris vestibulum.
+        </p>
+        <p className={`${headingClasses[headingType].paragraph}`}>
+          Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id
+          scelerisque est ultricies ultricies. Duis est sit sed leo nisl,
+          blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at
+          scelerisque amet nulla purus habitasse.
+        </p>
+      </div>
     </div>
   );
 };
