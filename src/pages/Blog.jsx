@@ -23,7 +23,7 @@ const latestPosts = blogPosts
 
 export default function Blog() {
   const navigate = useNavigate();
-  const { category } = useParams();
+  const { category = "view-all" } = useParams();
 
   const handleClick = (category) => {
     navigate(`${category}`);

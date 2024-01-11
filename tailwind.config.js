@@ -51,6 +51,7 @@ module.exports = {
         blogPostCardHorTxt: "300px",
         blogCategoriesMenu: "240px",
         arrowDownWhite: "32px",
+        paragraph: "620px",
       },
       height: {
         imageContainer: "252px",

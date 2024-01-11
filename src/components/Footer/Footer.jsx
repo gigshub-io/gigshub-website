@@ -76,7 +76,7 @@ export const Footer = () => {
             <div className="flex flex-row gap-6">
               <a
                 className="underline text-off-white text-sm font-normal font-sans"
-                href
+                href="/privacyPolicy"
               >
                 Privacy Policy
               </a>
