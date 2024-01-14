@@ -7,7 +7,7 @@ import { Logo } from "../Logo";
 import { Menu } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { classNames } from "../../utils/classNames.js";
-import dropDownIcon from "../../assets/dropdown-icon.svg";
+import dropDownIcon from "../../assets/hamburguer-icon.svg";
 
 const menuItems = [
   {
@@ -70,10 +70,10 @@ const NavMenu = ({ children }) => {
 export const Navigation = () => {
   return (
     <Container>
-      <nav className="md:flex md:flex-row h-20 items-center justify-between">
+      <nav className="flex flex-row py-6 px-6 items-center justify-between">
         <Logo />
-        <div className="hidden lg:flex items-center justify-between">
-          <ul className="lg:flex-row font-sans font-normal leading-6 rounded-lg gap-16 text-base bg-off-white">
+        <div className="hidden md:flex">
+          <ul className="md:flex md:flex-row font-sans font-normal leading-6 rounded-lg gap-16 text-base bg-off-white">
             <li>
               <NavMenu>Find a Job</NavMenu>
             </li>
@@ -94,11 +94,16 @@ export const Navigation = () => {
             </li>
           </ul>
         </div>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div className="hidden md:flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <Button size="small" padding="longText" kind="primary">
             Get Started
           </Button>
         </div>
+        <img
+          className="md:hidden w-8 h-8"
+          src={dropDownIcon}
+          alt="Dropdown menu icon"
+        />
       </nav>
     </Container>
   );

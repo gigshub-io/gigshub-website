@@ -25,8 +25,11 @@ module.exports = {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
       },
       width: {
-        containerLg: "1300px",
-        containerMd: "1200px",
+        conatinerSm: "640px",
+        containerMd: "768px",
+        containerLg: "1024px",
+        containerXl: "1280px",
+        container2xl: "1536px",
         textContainer: "550px",
         textContainer2: "800px",
         textContainer3: "830px",
