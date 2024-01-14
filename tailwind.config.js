@@ -25,7 +25,7 @@ module.exports = {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
       },
       width: {
-        conatinerSm: "640px",
+        containerSm: "640px",
         containerMd: "768px",
         containerLg: "1024px",
         containerXl: "1280px",

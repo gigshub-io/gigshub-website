@@ -8,6 +8,7 @@ import { Menu } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { classNames } from "../../utils/classNames.js";
 import dropDownIcon from "../../assets/hamburguer-icon.svg";
+import closeIcon from "../../assets/close-icon.svg";
 
 const menuItems = [
   {
@@ -67,13 +68,27 @@ const NavMenu = ({ children }) => {
   );
 };
 
-export const Navigation = () => {
+export const Navigation = ({ dropDownMenu }) => {
+  const { dropDownIsOpen, handleDropDownMenu, closeDropDownMenu } =
+    dropDownMenu;
   return (
     <Container>
-      <nav className="flex flex-row py-6 px-6 items-center justify-between">
-        <Logo />
-        <div className="hidden md:flex">
-          <ul className="md:flex md:flex-row font-sans font-normal leading-6 rounded-lg gap-16 text-base bg-off-white">
+      <nav className="flex flex-col lg:flex-row py-6 px-6 gap-12 lg:items-center justify-between">
+        <div className="flex flex-row justify-between">
+          <Logo onClickFunction={closeDropDownMenu} />
+          <img
+            className={"lg:hidden w-8 h-8"}
+            src={!dropDownIsOpen ? dropDownIcon : closeIcon}
+            alt="Dropdown menu icon"
+            onClick={handleDropDownMenu}
+            role="button"
+          />
+        </div>
+        <div className={dropDownIsOpen ? "flex justify-left" : "hidden"}>
+          <ul
+            className="flex h-full flex-col font-sans font-bold leading-6 gap-6 text-xl bg-off-white"
+            onClick={closeDropDownMenu}
+          >
             <li>
               <NavMenu>Find a Job</NavMenu>
             </li>
@@ -94,16 +109,33 @@ export const Navigation = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden md:flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div className="hidden lg:flex justify-center">
+          <ul className="lg:flex lg:flex-row font-sans font-normal leading-6 lg:max-xl:gap-10 gap-16 text-base bg-off-white">
+            <li>
+              <NavMenu>Find a Job</NavMenu>
+            </li>
+            <li>
+              <NavLink to="/aboutUs">About us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/community">Community</NavLink>
+            </li>
+            <li>
+              <NavLink to="/blog/view-all">Blog</NavLink>
+            </li>
+            <li>
+              <NavLink to="/pricing">Pricing</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contactUs">Contact Us</NavLink>
+            </li>
+          </ul>
+        </div>
+        <div className="hidden lg:flex">
           <Button size="small" padding="longText" kind="primary">
             Get Started
           </Button>
         </div>
-        <img
-          className="md:hidden w-8 h-8"
-          src={dropDownIcon}
-          alt="Dropdown menu icon"
-        />
       </nav>
     </Container>
   );
