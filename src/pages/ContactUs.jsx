@@ -30,24 +30,35 @@ export default function ContactUs() {
     <p>We have received your e-mail.</p>`,
   };
 
-  // const info = await transporter.sendMail(message);
   const handleSubmit = (event) => {
-    if (
-      newUser.firstName &&
-      newUser.lastName &&
-      newUser.email &&
-      newUser.termsChecked
-    ) {
-      console.log(newUser); // nodemailer
-    } else if (!newUser.termsChecked) alert("Please, accept Terms os Service.");
-    else {
-      alert("Please, fill in the required fields.");
-    }
+    console.log(event);
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!newUser.firstName) {
+    //   alert("Please, fill in the required fields.");
+    //   return;
+    // }
+    // if (!newUser.lastName) {
+    //   alert("Please, fill in the required fields.");
+    //   return;
+    // }
+    // if (!emailRegex.test(newUser.email)) {
+    //   alert("Invalid e-mail");
+    //   return;
+    // }
+    // if (!newUser.termsChecked) {
+    //   alert("Please, accept Terms of Service.");
+    //   return;
+    // }
+    // handleSubmit
   };
+
   return (
     <div className="flex flex-row gap-20">
       <img src={contactUsImg} alt="Contact us" />
-      <form className="flex flex-col px-14 py-20 gap-6 w-contactUsForm items-start">
+      <form
+        className="flex flex-col px-14 py-20 gap-6 w-contactUsForm items-start"
+        onSubmit={handleSubmit}
+      >
         <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
           Dont't be shy, say <span className="text-light-purple">hello!</span>
         </div>
@@ -146,7 +157,6 @@ export default function ContactUs() {
               <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 Message
                 <textarea
-                  required
                   type="text"
                   name="message"
                   value={newUser.message}
@@ -177,8 +187,7 @@ export default function ContactUs() {
             Terms
           </a>
         </label>
-        <div>{console.log(newUser)}</div>
-        <Button onClick={handleSubmit}>Submit</Button>
+        <Button type="submit">Submit</Button>
       </form>
     </div>
   );

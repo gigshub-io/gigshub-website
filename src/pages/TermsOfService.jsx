@@ -1,9 +1,15 @@
-import React from "react";
-import { Container } from "../components/Container";
-import { TextDisplay } from "../components/TextDisplay/TextDisplay";
+import React, { useCallback } from "react";
+import { useLocation } from "react-router";
 import { classNames } from "../utils/classNames";
+import { TextDisplay } from "../components/TextDisplay/TextDisplay";
+import { Container } from "../components/Container";
 
 export default function TermsOfService() {
+  let location = useLocation();
+  const isLinkSelected = useCallback(
+    (id) => location.hash && `#${id}` === location.hash,
+    [location]
+  );
   return (
     <Container className="flex py-20 flex-col gap-60">
       <div className="flex flex-row justify-between ">
@@ -28,8 +34,9 @@ export default function TermsOfService() {
             <ul className="flex flex-col">
               <li
                 className={classNames(
-                  "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
-                  "active:bg-washed-purple focus:outline-none focus:ring focus:ring-violet-300"
+                  "flex p-3 font-sans text-lg font-normal rounded-md text-dark-purple",
+                  isLinkSelected("heading1") &&
+                    "bg-semi-dark-purple text-off-white"
                 )}
                 role="button"
               >
@@ -37,8 +44,9 @@ export default function TermsOfService() {
               </li>
               <li
                 className={classNames(
-                  "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
-                  "ml-6"
+                  "flex p-3 font-sans text-lg font-normal rounded-md text-dark-purple ml-6",
+                  isLinkSelected("heading2") &&
+                    "bg-semi-dark-purple text-off-white"
                 )}
                 role="button"
               >
@@ -46,8 +54,9 @@ export default function TermsOfService() {
               </li>
               <li
                 className={classNames(
-                  "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
-                  "ml-12"
+                  "flex p-3 font-sans text-lg font-normal rounded-md text-dark-purple ml-12",
+                  isLinkSelected("heading3") &&
+                    "bg-semi-dark-purple text-off-white"
                 )}
                 role="button"
               >
@@ -55,8 +64,9 @@ export default function TermsOfService() {
               </li>
               <li
                 className={classNames(
-                  "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
-                  "ml-24"
+                  "flex p-3 font-sans text-lg font-normal rounded-md text-dark-purple ml-24",
+                  isLinkSelected("heading4") &&
+                    "bg-semi-dark-purple text-off-white"
                 )}
                 role="button"
               >
@@ -64,8 +74,9 @@ export default function TermsOfService() {
               </li>
               <li
                 className={classNames(
-                  "flex py-3 font-sans text-lg font-normal rounded-md text-dark-purple",
-                  "ml-32"
+                  "flex p-3 font-sans text-lg font-normal rounded-md text-dark-purple ml-32",
+                  isLinkSelected("heading5") &&
+                    "bg-semi-dark-purple text-off-white"
                 )}
                 role="button"
               >
