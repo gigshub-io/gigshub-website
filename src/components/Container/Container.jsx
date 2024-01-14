@@ -1,3 +1,5 @@
 export const Container = ({ children, className = "" }) => {
-  return <div className={`w-containerLg m-auto ${className}`}>{children}</div>;
+  return (
+    <div className={`md:w-containerLg md:m-auto ${className}`}>{children}</div>
+  );
 };

@@ -69,7 +69,7 @@ const NavMenu = ({ children }) => {
 export const Navigation = () => {
   return (
     <Container>
-      <nav className="w-full h-20 flex items-center justify-between">
+      <nav className="md:flex md:flex-row h-20 items-center justify-between">
         <Logo />
         <div className="items-center justify-between">
           <ul className="flex flex-row font-sans font-normal leading-6 rounded-lg gap-16 text-base bg-off-white">
