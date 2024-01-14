@@ -11,7 +11,7 @@ export const Logo = ({ kind = "primary", className, onClickFunction }) => (
   <Link to="/">
     <img
       src={kind === "primary" ? logoPrimary : logoInverted}
-      className={classNames("h-9", className)}
+      className={classNames("h-logo", className)}
       alt="GigsHub Logo"
       onClick={onClickFunction}
     />

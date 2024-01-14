@@ -25,11 +25,6 @@ module.exports = {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
       },
       width: {
-        containerSm: "640px",
-        containerMd: "768px",
-        containerLg: "1024px",
-        containerXl: "1280px",
-        container2xl: "1536px",
         textContainer: "550px",
         textContainer2: "800px",
         textContainer3: "830px",
@@ -57,6 +52,7 @@ module.exports = {
         paragraph: "620px",
       },
       height: {
+        logo: "34px",
         imageContainer: "252px",
         card: "241px",
         testimonialContainer: "400px",

@@ -1,9 +1,3 @@
 export const Container = ({ children, className = "" }) => {
-  return (
-    <div
-      className={`sm:w-containerSm md:w-containerMd lg:w-containerLg xl:w-containerXl 2xl:w-container2xl m-auto ${className}`}
-    >
-      {children}
-    </div>
-  );
+  return <div className={`w-full max-w-7xl ${className}`}>{children}</div>;
 };

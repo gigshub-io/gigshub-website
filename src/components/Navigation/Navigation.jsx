@@ -110,7 +110,7 @@ export const Navigation = ({ dropDownMenu }) => {
           </ul>
         </div>
         <div className="hidden lg:flex justify-center">
-          <ul className="lg:flex lg:flex-row font-sans font-normal leading-6 lg:max-xl:gap-10 gap-16 text-base bg-off-white">
+          <ul className="lg:flex lg:flex-row font-sans font-normal leading-6 lg:max-xl:gap-8 gap-16 text-base bg-off-white">
             <li>
               <NavMenu>Find a Job</NavMenu>
             </li>
