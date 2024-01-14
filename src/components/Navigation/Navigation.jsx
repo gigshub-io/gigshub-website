@@ -7,6 +7,7 @@ import { Logo } from "../Logo";
 import { Menu } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { classNames } from "../../utils/classNames.js";
+import dropDownIcon from "../../assets/dropdown-icon.svg";
 
 const menuItems = [
   {
@@ -71,8 +72,8 @@ export const Navigation = () => {
     <Container>
       <nav className="md:flex md:flex-row h-20 items-center justify-between">
         <Logo />
-        <div className="items-center justify-between">
-          <ul className="flex flex-row font-sans font-normal leading-6 rounded-lg gap-16 text-base bg-off-white">
+        <div className="hidden lg:flex items-center justify-between">
+          <ul className="lg:flex-row font-sans font-normal leading-6 rounded-lg gap-16 text-base bg-off-white">
             <li>
               <NavMenu>Find a Job</NavMenu>
             </li>
