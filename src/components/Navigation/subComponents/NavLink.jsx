@@ -18,8 +18,9 @@ export const NavLink = ({
       {...rest}
       to={to}
       className={classNames(
-        kind === "primary" ? "text-dark-purple" : "text-off-white",
-        "hover:text-purple",
+        kind === "primary"
+          ? "text-dark-purple hover:text-purple"
+          : "text-off-white hover:text-washed-purple",
         className
       )}
     >

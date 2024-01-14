@@ -11,48 +11,54 @@ export default function ContactUs() {
     email: "",
     phoneNumber: "",
     message: "",
+    termsChecked: false,
   });
-  const [termsChecked, setTermsChecked] = useState(false);
-  const handleFirstNameChange = (event) => {
-    const value = event.target.value;
-    setNewUser({ ...newUser, firstName: value });
+  const handleChange = (event) => {
+    const { name, value, type, checked } = event.target;
+
+    setNewUser((prevUserData) => ({
+      ...prevUserData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   };
-  const handleLastNameChange = (event) => {
-    const value = event.target.value;
-    setNewUser({ ...newUser, lastName: value });
+
+  let message = {
+    from: "GigsHub <isadora.caputo@gmail.com>",
+    to: `${newUser.firstName} <${newUser.lastName}>`,
+    subject: "Fromageria Tesilli: Recebemos o seu pedido!",
+    html: `<h2><b>Olá ${newUser.firstName}!</b></h2>
+    <p>We have received your e-mail.</p>`,
   };
-  const handleEmailChange = (event) => {
-    const value = event.target.value;
-    setNewUser({ ...newUser, email: value });
-  };
-  const handlePhoneChange = (event) => {
-    const value = event.target.value;
-    setNewUser({ ...newUser, phoneNumber: value });
-  };
-  const handleMessageChange = (event) => {
-    const value = event.target.value;
-    setNewUser({ ...newUser, message: value });
-  };
-  const handleCheckboxChange = (event) => {
-    if (event.target.checked) setTermsChecked(true);
-  };
+
   const handleSubmit = (event) => {
-    if (
-      newUser.firstName &&
-      newUser.lastName &&
-      newUser.email &&
-      termsChecked
-    ) {
-      console.log(newUser); // nodemailer
-    } else if (!termsChecked) alert("Please, accept Terms os Service.");
-    else {
-      alert("Please, fill in the required fields.");
-    }
+    console.log(event);
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!newUser.firstName) {
+    //   alert("Please, fill in the required fields.");
+    //   return;
+    // }
+    // if (!newUser.lastName) {
+    //   alert("Please, fill in the required fields.");
+    //   return;
+    // }
+    // if (!emailRegex.test(newUser.email)) {
+    //   alert("Invalid e-mail");
+    //   return;
+    // }
+    // if (!newUser.termsChecked) {
+    //   alert("Please, accept Terms of Service.");
+    //   return;
+    // }
+    // handleSubmit
   };
+
   return (
     <div className="flex flex-row gap-20">
       <img src={contactUsImg} alt="Contact us" />
-      <form className="flex flex-col px-14 py-20 gap-6 w-contactUsForm items-start">
+      <form
+        className="flex flex-col px-14 py-20 gap-6 w-contactUsForm items-start"
+        onSubmit={handleSubmit}
+      >
         <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
           Dont't be shy, say <span className="text-light-purple">hello!</span>
         </div>
@@ -97,8 +103,9 @@ export default function ContactUs() {
                 <input
                   required
                   type="text"
+                  name="firstName"
                   value={newUser.firstName}
-                  onChange={handleFirstNameChange}
+                  onChange={handleChange}
                   className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
                 ></input>
               </label>
@@ -109,8 +116,9 @@ export default function ContactUs() {
                 <input
                   required
                   type="text"
+                  name="lastName"
                   value={newUser.lastName}
-                  onChange={handleLastNameChange}
+                  onChange={handleChange}
                   className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
                 ></input>
               </label>
@@ -123,8 +131,9 @@ export default function ContactUs() {
                 <input
                   required
                   type="email"
+                  name="email"
                   value={newUser.email}
-                  onChange={handleEmailChange}
+                  onChange={handleChange}
                   className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
                 ></input>
               </label>
@@ -135,8 +144,9 @@ export default function ContactUs() {
                 <input
                   placeholder="(__) ___-____"
                   type="tel"
+                  name="phoneNumber"
                   value={newUser.phoneNumber}
-                  onChange={handlePhoneChange}
+                  onChange={handleChange}
                   className="border-2 border-light-purple rounded-lg p-3 w-input bg-transparent"
                 ></input>
               </label>
@@ -147,10 +157,10 @@ export default function ContactUs() {
               <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 Message
                 <textarea
-                  required
                   type="text"
+                  name="message"
                   value={newUser.message}
-                  onChange={handleMessageChange}
+                  onChange={handleChange}
                   className="border-2 border-light-purple rounded-lg p-3 w-contactUsForm h-contactUsMessage bg-transparent"
                   placeholder="Type your message here..."
                 ></textarea>
@@ -163,7 +173,8 @@ export default function ContactUs() {
             required
             className="mr-2 accent-light-purple"
             type="checkbox"
-            onChange={handleCheckboxChange}
+            name="termsChecked"
+            onChange={handleChange}
             id="terms"
           ></input>
           I accept the
@@ -176,7 +187,7 @@ export default function ContactUs() {
             Terms
           </a>
         </label>
-        <Button onClick={handleSubmit}>Submit</Button>
+        <Button type="submit">Submit</Button>
       </form>
     </div>
   );

@@ -4,7 +4,7 @@ import { classNames } from "../utils/classNames";
 import { TextDisplay } from "../components/TextDisplay/TextDisplay";
 import { Container } from "../components/Container";
 
-export default function TermsOfService() {
+export default function PrivacyPolicy() {
   let location = useLocation();
   const isLinkSelected = useCallback(
     (id) => location.hash && `#${id}` === location.hash,
@@ -14,7 +14,7 @@ export default function TermsOfService() {
     <Container className="flex py-20 flex-col gap-60">
       <div className="flex flex-row justify-between ">
         <div className="font-sans text-7xl font-bold text-dark-purple">
-          Terms of Service
+          Privacy Policy
         </div>
         <div className="flex flex-col font-sans text-lg font-normal text-dark-purple w-paragraph">
           <span className="font-bold mb-8">

@@ -1,39 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "../Container";
 import { Accordion } from "./subComponents";
 export const Faq = () => {
-  const FaQuestions = [
+  const [faQuestions, setFaQuestions] = useState([
     {
       question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+      isOpen: false,
     },
     {
       question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+      isOpen: false,
     },
     {
       question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+      isOpen: false,
     },
     {
       question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+      isOpen: false,
     },
     {
       question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+      isOpen: false,
     },
     {
       question: "Question text goes here",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+      isOpen: false,
     },
-  ];
+  ]);
+
+  const handleChange = (questionIndex) => {
+    console.log(questionIndex);
+    const updatedFaQuestions = faQuestions.map((faQuestion, index) => ({
+      ...faQuestion,
+      isOpen: questionIndex === index ? !faQuestion.isOpen : false,
+    }));
+    setFaQuestions(updatedFaQuestions);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === " " || event.key === "Enter") {
+      handleChange();
+    }
+  };
+
   return (
     <Container>
       <div className="flex flex-row justify-between gap-20">
@@ -48,8 +70,15 @@ export const Faq = () => {
           </div>
         </div>
         <div>
-          {FaQuestions.map((faquestion, index) => (
-            <Accordion key={index} title={faquestion.question}>
+          {faQuestions.map((faquestion, index) => (
+            <Accordion
+              isOpen={faquestion.isOpen}
+              handleChange={handleChange}
+              handleKeyDown={handleKeyDown}
+              key={index}
+              questionIndex={index}
+              title={faquestion.question}
+            >
               {faquestion.answer}
             </Accordion>
           ))}

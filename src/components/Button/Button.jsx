@@ -18,13 +18,14 @@ export const Button = ({
   onClick,
   size = "medium",
   kind = "primary",
+  type = "button",
   className,
   ...rest
 }) => {
   return (
     <button
       {...rest}
-      type="button"
+      type={type}
       onClick={onClick}
       className={`rounded-full border-[5px] border-solid border-pale-purple shadow-button text-white py-3 px-9 ${sizeClasses[size]} ${colorClasses[kind]} ${className}`}
     >

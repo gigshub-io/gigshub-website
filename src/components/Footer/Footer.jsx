@@ -64,7 +64,7 @@ export const Footer = () => {
             </div>
             <p className="text-off-white text-xs font-normal font-sans">
               By subscribing you agree with our{" "}
-              <a className="underline" href>
+              <a className="underline" href="/privacyPolicy">
                 Privacy Policy
               </a>
             </p>
@@ -76,20 +76,17 @@ export const Footer = () => {
             <div className="flex flex-row gap-6">
               <a
                 className="underline text-off-white text-sm font-normal font-sans"
-                href
+                href="/privacyPolicy"
               >
                 Privacy Policy
               </a>
               <a
                 className="underline text-off-white text-sm font-normal font-sans"
-                href
+                href="/termsOfService"
               >
                 Terms of Service
               </a>
-              <a
-                className="underline text-off-white text-sm font-normal font-sans"
-                href
-              >
+              <a className="underline text-off-white text-sm font-normal font-sans">
                 Cookies Settings
               </a>
             </div>

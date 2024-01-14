@@ -33,8 +33,8 @@ export default function Freelancers() {
           </div>
         </div>
       </Container>
-      <Container>
-        <div className="flex flex-col bg-pale-purple rounded-2xl py-12 px-40 items-center gap-12">
+      <Container className="flex flex-col items-center">
+        <div className="flex flex-col bg-pale-purple rounded-2xl py-12 px-40 items-center gap-12 w-containerMd">
           <div className="font-sans font-bold text-5xl text-dark-purple tracking-wider">
             Let the stats do the talking
           </div>

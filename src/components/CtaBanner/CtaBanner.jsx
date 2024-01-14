@@ -4,9 +4,9 @@ import { Container } from "../Container";
 
 export const CtaBanner = ({ className, image }) => {
   return (
-    <Container>
+    <Container className="flex flex-col items-center">
       <div
-        className={`flex flex-row rounded-ctaBanner h-testimonialContainer py-20 px-16 relative overflow-hidden ${className}`}
+        className={`flex flex-row rounded-ctaBanner w-containerMd h-testimonialContainer py-20 px-16 relative overflow-hidden ${className}`}
       >
         <div className="flex flex-col gap-5 w-shortTextContainer">
           <div className="font-sans text-3xl font-bold text-off-white tracking-wide">
