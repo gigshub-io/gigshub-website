@@ -68,6 +68,7 @@ module.exports = {
       },
       lineHeight: {
         textHero: "5.375rem",
+        textHero2: "3.375rem",
         headingCardsContainer: "3.6rem",
         aboutUsBanner: "3rem",
       },
