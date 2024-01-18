@@ -39,7 +39,7 @@ export const Card = ({ heading, children }) => {
   };
 
   return (
-    <div className="w-card flex flex-col gap-3 h-max p-7 bg-dark-blue rounded-2xl">
+    <div className="min-w-64 max-w-lg flex flex-col gap-3 h-max p-7 bg-dark-blue rounded-2xl">
       <div>
         <img src={checkIcon} alt="Check Icon" />
       </div>
