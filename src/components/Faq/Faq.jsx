@@ -1,48 +1,49 @@
 import React, { useState } from "react";
 import { Container } from "../Container";
 import { Accordion } from "./subComponents";
+
+const faqData = [
+  {
+    question: "Question text goes here",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    isOpen: false,
+  },
+  {
+    question: "Question text goes here",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    isOpen: false,
+  },
+  {
+    question: "Question text goes here",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    isOpen: false,
+  },
+  {
+    question: "Question text goes here",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    isOpen: false,
+  },
+  {
+    question: "Question text goes here",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    isOpen: false,
+  },
+  {
+    question: "Question text goes here",
+    answer:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
+    isOpen: false,
+  },
+];
 export const Faq = () => {
-  const [faQuestions, setFaQuestions] = useState([
-    {
-      question: "Question text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
-      isOpen: false,
-    },
-    {
-      question: "Question text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
-      isOpen: false,
-    },
-    {
-      question: "Question text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
-      isOpen: false,
-    },
-    {
-      question: "Question text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
-      isOpen: false,
-    },
-    {
-      question: "Question text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
-      isOpen: false,
-    },
-    {
-      question: "Question text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis.",
-      isOpen: false,
-    },
-  ]);
+  const [faQuestions, setFaQuestions] = useState(faqData);
 
   const handleChange = (questionIndex) => {
-    console.log(questionIndex);
     const updatedFaQuestions = faQuestions.map((faQuestion, index) => ({
       ...faQuestion,
       isOpen: questionIndex === index ? !faQuestion.isOpen : false,
