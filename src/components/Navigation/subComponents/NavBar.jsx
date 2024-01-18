@@ -3,13 +3,33 @@ import { NavLink } from "./NavLink";
 import { Menu } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { classNames } from "../../../utils/classNames.js";
-import arrowDownIcon from "../../../assets/arrow-down-icon.svg";
-
+import { ReactComponent as ArrowDownIcon } from "../../../assets/arrow-down-icon.svg";
 /**
  * @param { kind: "mobile" | "browser" }
  * @returns
  */
-
+const pageLinks = [
+  {
+    label: "About Us",
+    path: "/aboutUs",
+  },
+  {
+    label: "Community",
+    path: "/community",
+  },
+  {
+    label: "Blog",
+    path: "/blog/view-all",
+  },
+  {
+    label: "Pricing",
+    path: "/pricing",
+  },
+  {
+    label: "Contact Us",
+    path: "/contactUs",
+  },
+];
 const menuItems = [
   {
     label: "Freelancers",
@@ -18,7 +38,7 @@ const menuItems = [
   { label: "Job Seekers", to: "/jobSeekers" },
 ];
 
-const SubDropDownMenu = ({ closeDropDownMenu }) => {
+const SubDropDownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => setIsOpen((prev) => !prev);
@@ -39,20 +59,7 @@ const SubDropDownMenu = ({ closeDropDownMenu }) => {
             isOpen && "rotate-180"
           )}
         >
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M16.5303 20.8839C16.2374 21.1768 15.7626 21.1768 15.4697 20.8839L7.82318 13.2374C7.53029 12.9445 7.53029 12.4697 7.82318 12.1768L8.17674 11.8232C8.46963 11.5303 8.9445 11.5303 9.2374 11.8232L16 18.5858L22.7626 11.8232C23.0555 11.5303 23.5303 11.5303 23.8232 11.8232L24.1768 12.1768C24.4697 12.4697 24.4697 12.9445 24.1768 13.2374L16.5303 20.8839Z"
-              fill="#1E1E53"
-            />
-          </svg>
+          <ArrowDownIcon />
         </button>
       </div>
       <div
@@ -63,12 +70,7 @@ const SubDropDownMenu = ({ closeDropDownMenu }) => {
       >
         <div className="flex flex-col py-4 gap-4 font-sans font-normal text-dark-purple text-base text-justify">
           {menuItems.map((item, index) => (
-            <NavLink
-              key={index}
-              onClick={closeDropDownMenu}
-              to={item.to}
-              className="block"
-            >
+            <NavLink key={index} to={item.to} className="block">
               {item.label}
             </NavLink>
           ))}
@@ -129,29 +131,7 @@ const NavMenu = ({ children }) => {
   );
 };
 
-export const NavBar = ({ dropDownIsOpen, closeDropDownMenu, kind }) => {
-  const pageLinks = [
-    {
-      label: "About Us",
-      path: "/aboutUs",
-    },
-    {
-      label: "Community",
-      path: "/community",
-    },
-    {
-      label: "Blog",
-      path: "/blog/view-all",
-    },
-    {
-      label: "Pricing",
-      path: "/pricing",
-    },
-    {
-      label: "Contact Us",
-      path: "/contactUs",
-    },
-  ];
+export const NavBar = ({ dropDownIsOpen, closeDropDownMenu }) => {
   return (
     <ul
       className={`bg-off-white ${
@@ -160,19 +140,10 @@ export const NavBar = ({ dropDownIsOpen, closeDropDownMenu, kind }) => {
       } hidden lg:flex lg:flex-row lg:font-normal lg:gap-12 lg:text-base`}
     >
       <li>
-        {dropDownIsOpen ? (
-          <SubDropDownMenu closeDropDownMenu={closeDropDownMenu} />
-        ) : (
-          <NavMenu>Find a Job</NavMenu>
-        )}
+        {dropDownIsOpen ? <SubDropDownMenu /> : <NavMenu>Find a Job</NavMenu>}
       </li>
       {pageLinks.map((link, index) => (
-        <NavLink
-          closeDropDownMenu={closeDropDownMenu}
-          dropDownIsOpen={dropDownIsOpen}
-          to={link.path}
-          key={index}
-        >
+        <NavLink dropDownIsOpen={dropDownIsOpen} to={link.path} key={index}>
           {link.label}
         </NavLink>
       ))}

@@ -1,12 +1,21 @@
 // Navigation.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../Button";
 import { Container } from "../Container";
 import { Logo } from "../Logo";
 import { NavBar } from "./subComponents";
+import { ReactComponent as HamburguerIcon } from "../../assets/hamburguer-icon.svg";
+import { ReactComponent as CloseIcon } from "../../assets/close-icon.svg";
+import { useLocation } from "react-router-dom";
 
 export const Navigation = () => {
   const [dropDownIsOpen, setDropDownIsOpen] = useState(false);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setDropDownIsOpen(false);
+  }, [pathname]);
 
   const handleDropDownMenu = () => {
     setDropDownIsOpen((prev) => !prev);
@@ -24,65 +33,7 @@ export const Navigation = () => {
             className={"lg:hidden w-8 h-8 flex items-center justify-center"}
             onClick={handleDropDownMenu}
           >
-            {!dropDownIsOpen ? (
-              <svg
-                width="20"
-                height="15"
-                viewBox="0 0 20 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 1.47461H19"
-                  stroke="#1E1E53"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M1 7.47461H19"
-                  stroke="#1E1E53"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M1 13.4746H19"
-                  stroke="#1E1E53"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            ) : (
-              <svg
-                width="19"
-                height="16"
-                viewBox="0 0 19 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.0343 1.8916L15.7622 14.6195"
-                  stroke="#1E1E53"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.0343 14.6191L15.7622 1.89122"
-                  stroke="#1E1E53"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            )}
+            {!dropDownIsOpen ? <HamburguerIcon /> : <CloseIcon />}
           </button>
           <NavBar
             dropDownIsOpen={dropDownIsOpen}
