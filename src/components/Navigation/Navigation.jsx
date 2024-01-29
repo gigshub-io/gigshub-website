@@ -1,104 +1,54 @@
 // Navigation.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../Button";
-import { NavLink } from "./subComponents/NavLink.jsx";
 import { Container } from "../Container";
 import { Logo } from "../Logo";
-import { Menu } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { classNames } from "../../utils/classNames.js";
-
-const menuItems = [
-  {
-    label: "Freelancers",
-    to: "/freelancers",
-  },
-  { label: "Job Seekers", to: "/jobSeekers" },
-];
-
-const NavMenu = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClose = () => setIsOpen(false);
-  const handleOpen = () => setIsOpen(true);
-  const handleToggle = () => setIsOpen((prev) => !prev);
-
-  return (
-    <Menu
-      as="div"
-      className="relative inline-block text-left"
-      onMouseLeave={handleClose}
-    >
-      <Menu.Button
-        className="flex flex-row text-dark-purple cursor-pointer"
-        onMouseOver={handleOpen}
-        onClick={handleToggle}
-      >
-        {children}
-        <ChevronDownIcon
-          className="-mr-1 h-5 w-5 text-dark-purple"
-          aria-hidden="true"
-        />
-      </Menu.Button>
-
-      <Menu.Items
-        static
-        className={classNames(
-          "absolute right-0 z-10 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none h-auto",
-          isOpen ? "block" : "hidden"
-        )}
-      >
-        <div className="py-1">
-          {menuItems.map((item, index) => (
-            <Menu.Item key={index}>
-              <NavLink
-                onClick={handleClose}
-                to={item.to}
-                className="block px-4 py-2 text-sm"
-              >
-                {item.label}
-              </NavLink>
-            </Menu.Item>
-          ))}
-        </div>
-      </Menu.Items>
-    </Menu>
-  );
-};
+import { NavBar } from "./subComponents";
+import { ReactComponent as HamburguerIcon } from "../../assets/hamburguer-icon.svg";
+import { ReactComponent as CloseIcon } from "../../assets/close-icon.svg";
+import { useLocation } from "react-router-dom";
 
 export const Navigation = () => {
+  const [dropDownIsOpen, setDropDownIsOpen] = useState(false);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setDropDownIsOpen(false);
+  }, [pathname]);
+
+  const handleDropDownMenu = () => {
+    setDropDownIsOpen((prev) => !prev);
+  };
+  const closeDropDownMenu = () => setDropDownIsOpen(false);
+
   return (
     <Container>
-      <nav className="w-full h-20 flex items-center justify-between">
-        <Logo />
-        <div className="items-center justify-between">
-          <ul className="flex flex-row font-sans font-normal leading-6 rounded-lg gap-16 text-base bg-off-white">
-            <li>
-              <NavMenu>Find a Job</NavMenu>
-            </li>
-            <li>
-              <NavLink to="/aboutUs">About us</NavLink>
-            </li>
-            <li>
-              <NavLink to="/community">Community</NavLink>
-            </li>
-            <li>
-              <NavLink to="/blog/view-all">Blog</NavLink>
-            </li>
-            <li>
-              <NavLink to="/pricing">Pricing</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contactUs">Contact Us</NavLink>
-            </li>
-          </ul>
-        </div>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <Button size="small" padding="longText" kind="primary">
+      <div
+        className={dropDownIsOpen && "fixed z-10 w-full inset-0 bg-off-white"}
+      >
+        <nav className="flex flex-wrap lg:flex-row py-6 px-6 gap-12 bg-off-white lg:items-center justify-between">
+          <Logo onClickFunction={closeDropDownMenu} />
+          <button
+            className={"lg:hidden w-8 h-8 flex items-center justify-center"}
+            onClick={handleDropDownMenu}
+          >
+            {!dropDownIsOpen ? <HamburguerIcon /> : <CloseIcon />}
+          </button>
+          <NavBar
+            dropDownIsOpen={dropDownIsOpen}
+            closeDropDownMenu={closeDropDownMenu}
+          />
+          <Button
+            size="small"
+            padding="longText"
+            kind="primary"
+            className="hidden lg:flex"
+          >
             Get Started
           </Button>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </Container>
   );
 };

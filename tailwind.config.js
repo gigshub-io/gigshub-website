@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    screens: {
+      lg: "1200px",
+    },
     extend: {
       colors: {
         "off-white": "#F3F3FF",
@@ -25,14 +28,14 @@ module.exports = {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
       },
       width: {
-        containerLg: "1300px",
-        containerMd: "1200px",
         textContainer: "550px",
         textContainer2: "800px",
         textContainer3: "830px",
         shortTextContainer: "480px",
         headingContainer: "768px",
-        card: "346px",
+        card: "246px",
+        card1: "346px",
+        card2: "200px",
         stepContainer: "528px",
         testimonialContainer: "834px",
         ctaBannerImage: "660px",
@@ -54,6 +57,7 @@ module.exports = {
         paragraph: "620px",
       },
       height: {
+        logo: "34px",
         imageContainer: "252px",
         card: "241px",
         testimonialContainer: "400px",
@@ -66,6 +70,7 @@ module.exports = {
       },
       lineHeight: {
         textHero: "5.375rem",
+        textHero2: "3.375rem",
         headingCardsContainer: "3.6rem",
         aboutUsBanner: "3rem",
       },
