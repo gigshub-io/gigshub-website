@@ -1,10 +1,11 @@
 /**
- * @param { size: "medium" | "small" }
+ * @param { size: "xSmall" | "medium" | "small" }
  * @param { padding: "longText" | "shortText" }
  * @param { kind: "primary" | "dark" }
  * @returns
  */
 const sizeClasses = {
+  xSmall: "text-xs px-4 py-2",
   small: "text-xs px-8 py-2.5",
   medium: "text-base px-14 py-3",
 };

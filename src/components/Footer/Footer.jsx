@@ -15,11 +15,11 @@ export const Footer = () => {
 
   return (
     <div className="w-full bg-dark-purple">
-      <Container className="flex flex-col items-center gap-16 py-20">
-        <div className="flex flex-row w-full justify-between">
-          <div className="flex flex-col gap-8">
+      <Container className="flex flex-col items-center gap-16 lg:py-20 py-10">
+        <div className="flex flex-col gap-8 ml-10 lg:flex-row w-full lg:justify-between lg:ml-0">
+          <div className="flex flex-col lg:gap-8 gap-10">
             <Logo kind="inverted" />
-            <ul className="flex flex-row flex-start font-sans font-normal leading-6 rounded-lg gap-8 text-base">
+            <ul className="flex flex-col gap-2 lg:flex-row lg:gap-8 flex-start font-sans font-normal leading-6 rounded-lg text-base">
               <li>
                 <NavLink kind="inverted">Find a job</NavLink>
               </li>
@@ -57,10 +57,12 @@ export const Footer = () => {
                 type="text"
                 value={emailSubs}
                 onChange={handleInputChange}
-                className="rounded-full w-60 h-14 pl-6 pr-3 py-3 text-dark-grey text-base font-normal font-sans"
+                className="rounded-full lg:w-60 lg:h-14 h-8 w-52 pl-6 pr-3 py-3 text-dark-grey text-base font-normal font-sans"
                 placeholder="Enter your email"
               ></input>
-              <Button kind="transparent">Send</Button>
+              <Button kind="transparent" size="xSmall">
+                Send
+              </Button>
             </div>
             <p className="text-off-white text-xs font-normal font-sans">
               By subscribing you agree with our{" "}
