@@ -40,7 +40,7 @@ export const Navigation = () => {
             closeDropDownMenu={closeDropDownMenu}
           />
           <Button
-            size="small"
+            size="medium"
             padding="longText"
             kind="primary"
             className="hidden lg:flex"

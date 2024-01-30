@@ -57,10 +57,17 @@ export const Footer = () => {
                 type="text"
                 value={emailSubs}
                 onChange={handleInputChange}
-                className="rounded-full lg:w-60 lg:h-14 h-8 w-52 pl-6 pr-3 py-3 text-dark-grey text-base font-normal font-sans"
+                className="rounded-full w-60 max-h-8 px-5 lg:py-6 py-2 text-dark-grey text-base font-normal font-sans"
                 placeholder="Enter your email"
               ></input>
-              <Button kind="transparent" size="xSmall">
+              <Button
+                kind="transparent"
+                size="medium"
+                className="hidden lg:block"
+              >
+                Send
+              </Button>
+              <Button kind="transparent" size="small" className="lg:hidden">
                 Send
               </Button>
             </div>

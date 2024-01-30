@@ -1,13 +1,15 @@
 /**
- * @param { size: "xSmall" | "medium" | "small" }
+ * @param { size: "small" | "medium" | "large" }
  * @param { padding: "longText" | "shortText" }
  * @param { kind: "primary" | "dark" }
  * @returns
  */
+
+// py-3 px-9 / px-4 py-2
 const sizeClasses = {
-  xSmall: "text-xs px-4 py-2",
-  small: "text-xs px-8 py-2.5",
-  medium: "text-base px-14 py-3",
+  small: "text-xs px-6 border-[3px]",
+  medium: "text-xs px-7 py-2 border-[4px]",
+  large: "text-base px-9 py-3 border-[5px]",
 };
 const colorClasses = {
   primary: "bg-purple",
@@ -17,7 +19,7 @@ const colorClasses = {
 export const Button = ({
   children,
   onClick,
-  size = "medium",
+  size = "large",
   kind = "primary",
   type = "button",
   className,
@@ -28,7 +30,7 @@ export const Button = ({
       {...rest}
       type={type}
       onClick={onClick}
-      className={`rounded-full border-[5px] border-solid border-pale-purple shadow-button text-white py-3 px-9 ${sizeClasses[size]} ${colorClasses[kind]} ${className}`}
+      className={`items-center rounded-full border-solid border-pale-purple shadow-button text-white ${sizeClasses[size]} ${colorClasses[kind]} ${className}`}
     >
       {children}
     </button>
