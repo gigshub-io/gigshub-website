@@ -41,7 +41,7 @@ const menuItems = [
   { label: "Job Seekers", to: "/jobSeekers" },
 ];
 
-const SubDropDownMenu = ({ isMainNavbar }) => {
+const SubDropDownMenu = ({ isMainNavbar, dropDownIsOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => setIsOpen((prev) => !prev);
@@ -87,7 +87,12 @@ const SubDropDownMenu = ({ isMainNavbar }) => {
           }`}
         >
           {menuItems.map((item, index) => (
-            <NavLink key={index} to={item.to} className="block">
+            <NavLink
+              key={index}
+              isADropDown={isOpen}
+              to={item.to}
+              className="block"
+            >
               {item.label}
             </NavLink>
           ))}
