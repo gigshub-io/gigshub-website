@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Logo } from "../Logo/Logo";
 import { NavLink } from "../Navigation/subComponents/NavLink";
 import { useState } from "react";
 import { Button } from "../Button/Button";
 import { Container } from "../Container";
+import { NavBar } from "../Navigation/subComponents/NavBar";
 
 export const Footer = () => {
   const [emailSubs, setEmailSubs] = useState("");
@@ -15,40 +16,11 @@ export const Footer = () => {
 
   return (
     <div className="w-full bg-dark-purple">
-      <Container className="flex flex-col items-center gap-16 lg:py-20 py-10">
-        <div className="flex flex-col gap-8 ml-10 lg:flex-row w-full lg:justify-between lg:ml-0">
+      <Container className="flex flex-col items-center lg:gap-16 gap-10 lg:py-20 py-10">
+        <div className="flex flex-col gap-12 ml-10 lg:flex-row w-full lg:justify-between lg:ml-0">
           <div className="flex flex-col lg:gap-8 gap-10">
             <Logo kind="inverted" />
-            <ul className="flex flex-col gap-2 lg:flex-row lg:gap-8 flex-start font-sans font-normal leading-6 rounded-lg text-base">
-              <li>
-                <NavLink kind="inverted">Find a job</NavLink>
-              </li>
-              <li>
-                <NavLink to="/aboutUs" kind="inverted">
-                  About us
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/community" kind="inverted">
-                  Community
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/employers" kind="inverted">
-                  Employers
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/pricing" kind="inverted">
-                  Pricing
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/contactUs" kind="inverted">
-                  Contact Us
-                </NavLink>
-              </li>
-            </ul>
+            <NavBar isMainNavbar={false} dropDownIsOpen={true} />
           </div>
           <div className="flex flex-col gap-4 text-sm">
             <label className="text-off-white">Subscribe</label>
@@ -80,27 +52,27 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col w-full gap-8">
-          <hr />
-          <div className="flex flex-row justify-between">
+          <hr className="mx-6 lg:mx-0" />
+          <div className="flex lg:flex-row flex-col gap-2 items-center lg:justify-between">
             <div className="flex flex-row gap-6">
               <a
-                className="underline text-off-white text-sm font-normal font-sans"
+                className="underline text-off-white lg:text-sm text-xs font-normal font-sans"
                 href="/privacyPolicy"
               >
                 Privacy Policy
               </a>
               <a
-                className="underline text-off-white text-sm font-normal font-sans"
+                className="underline text-off-white lg:text-sm text-xs font-normal font-sans"
                 href="/termsOfService"
               >
                 Terms of Service
               </a>
-              <a className="underline text-off-white text-sm font-normal font-sans">
+              <a className="underline text-off-white lg:text-sm text-xs font-normal font-sans">
                 Cookies Settings
               </a>
             </div>
-            <p className="text-off-white text-sm font-normal font-sans">
-              © 2023 GigsHub. All rights reserved.
+            <p className="text-off-white lg:text-sm text-xs font-normal font-sans">
+              © 2024 GigsHub. All rights reserved.
             </p>
           </div>
         </div>

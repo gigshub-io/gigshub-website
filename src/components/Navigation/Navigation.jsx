@@ -35,10 +35,7 @@ export const Navigation = () => {
           >
             {!dropDownIsOpen ? <HamburguerIcon /> : <CloseIcon />}
           </button>
-          <NavBar
-            dropDownIsOpen={dropDownIsOpen}
-            closeDropDownMenu={closeDropDownMenu}
-          />
+          <NavBar dropDownIsOpen={dropDownIsOpen} isMainNavbar={true} />
           <Button
             size="medium"
             padding="longText"

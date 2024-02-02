@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import checkIcon from "../../../assets/check-icon.svg";
-import arrowDownIcon from "../../../assets/arrow-down-icon-white.svg";
+import arrowDownIcon from "../../../assets/arrow-down-white-icon.svg";
 import { classNames } from "../../../utils/classNames";
 
 export const Card = ({ heading, children }) => {
