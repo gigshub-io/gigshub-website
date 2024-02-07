@@ -33,6 +33,7 @@ module.exports = {
         textContainer3: "830px",
         shortTextContainer: "480px",
         headingContainer: "768px",
+        headingMobileContainer: "340px",
         card: "246px",
         card1: "346px",
         card2: "200px",
