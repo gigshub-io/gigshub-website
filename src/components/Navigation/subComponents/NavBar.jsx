@@ -41,7 +41,7 @@ const menuItems = [
   { label: "Job Seekers", to: "/jobSeekers" },
 ];
 
-const SubDropDownMenu = ({ isMainNavbar, dropDownIsOpen }) => {
+const SubDropDownMenu = ({ isMainNavbar }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => setIsOpen((prev) => !prev);

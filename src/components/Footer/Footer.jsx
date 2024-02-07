@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Logo } from "../Logo/Logo";
-import { NavLink } from "../Navigation/subComponents/NavLink";
 import { useState } from "react";
 import { Button } from "../Button/Button";
 import { Container } from "../Container";
