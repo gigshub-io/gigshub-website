@@ -10,7 +10,7 @@ export const NavLink = ({
   children,
   to,
   kind = "primary",
-  isADropDown,
+  isDropDown,
   className,
   ...rest
 }) => {
@@ -21,10 +21,12 @@ export const NavLink = ({
       className={classNames(
         kind === "primary"
           ? `lg:text-sm hover:text-purple font-sans lg:font-normal font-bold leading-7 ${
-              isADropDown ? "text-sm text-purple" : "text-xl text-dark-purple"
+              isDropDown
+                ? "text-sm text-light-purple"
+                : "text-xl text-dark-purple"
             }`
           : `hover:text-washed-purple font-sans font-normal leading-7 ${
-              isADropDown
+              isDropDown
                 ? "text-sm text-washed-purple"
                 : "text-sm text-off-white"
             }`,

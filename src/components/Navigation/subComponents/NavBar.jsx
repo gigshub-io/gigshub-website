@@ -89,7 +89,7 @@ const SubDropDownMenu = ({ isMainNavbar }) => {
           {menuItems.map((item, index) => (
             <NavLink
               key={index}
-              isADropDown={isOpen}
+              isDropDown={isOpen}
               to={item.to}
               className="block"
             >
