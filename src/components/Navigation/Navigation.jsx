@@ -35,12 +35,9 @@ export const Navigation = () => {
           >
             {!dropDownIsOpen ? <HamburguerIcon /> : <CloseIcon />}
           </button>
-          <NavBar
-            dropDownIsOpen={dropDownIsOpen}
-            closeDropDownMenu={closeDropDownMenu}
-          />
+          <NavBar dropDownIsOpen={dropDownIsOpen} isMainNavbar={true} />
           <Button
-            size="small"
+            size="medium"
             padding="longText"
             kind="primary"
             className="hidden lg:flex"

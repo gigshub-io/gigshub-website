@@ -13,7 +13,11 @@ export const Hero = () => {
             <span className="text-light-purple">GigsHub</span>
           </div>
           <div className="flex justify-center">
-            <img className="lg:hidden" src={homeHeroImg} />
+            <img
+              className="lg:hidden"
+              src={homeHeroImg}
+              alt="Women laughing in front of computers"
+            />
           </div>
           <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
             We automate applications, tailor CVs, and ensure ideal matches, so
@@ -24,7 +28,11 @@ export const Hero = () => {
           </div>
         </div>
         <div>
-          <img className="hidden lg:flex" src={homeHeroImg} />
+          <img
+            className="hidden lg:flex"
+            src={homeHeroImg}
+            alt="Women laughing in front of computers"
+          />
         </div>
       </div>
     </Container>

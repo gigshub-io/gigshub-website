@@ -3,11 +3,14 @@ import { NavLink } from "./NavLink";
 import { Menu } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { classNames } from "../../../utils/classNames.js";
-import { ReactComponent as ArrowDownIcon } from "../../../assets/arrow-down-icon.svg";
+import { ReactComponent as ArrowDownPurpleIcon } from "../../../assets/arrow-down-icon.svg";
+import { ReactComponent as ArrowDownWhiteIcon } from "../../../assets/arrow-down-white-icon.svg";
+
 /**
- * @param { kind: "mobile" | "browser" }
+ * @param { isMainNavbar: "true" | "false" }
  * @returns
  */
+
 const pageLinks = [
   {
     label: "About Us",
@@ -38,7 +41,7 @@ const menuItems = [
   { label: "Job Seekers", to: "/jobSeekers" },
 ];
 
-const SubDropDownMenu = () => {
+const SubDropDownMenu = ({ isMainNavbar }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => setIsOpen((prev) => !prev);
@@ -47,10 +50,14 @@ const SubDropDownMenu = () => {
     <div className="flex flex-col">
       <div
         onClick={() => handleToggle()}
-        className={`flex flex-row gap-2 items-center`}
+        className={`flex flex-row items-center`}
         role="button"
       >
-        <div className="font-sans font-bold leading-6 gap-6 text-xl text-dark-purple">
+        <div
+          className={`font-sans font-bold leading-6 gap-6 ${
+            isMainNavbar ? "text-xl text-dark-purple" : "text-sm text-off-white"
+          }`}
+        >
           Find a Job
         </div>
         <button
@@ -59,7 +66,11 @@ const SubDropDownMenu = () => {
             isOpen && "rotate-180"
           )}
         >
-          <ArrowDownIcon />
+          {isMainNavbar ? (
+            <ArrowDownPurpleIcon />
+          ) : (
+            <ArrowDownWhiteIcon className="w-6 h-6" />
+          )}
         </button>
       </div>
       <div
@@ -68,16 +79,26 @@ const SubDropDownMenu = () => {
           isOpen && "max-h-screen !visible duration-200 ease-in"
         )}
       >
-        <div className="flex flex-col py-4 gap-4 font-sans font-normal text-dark-purple text-base text-justify">
+        <div
+          className={`flex flex-col py-4 gap-4 font-sans font-normal text-justify ${
+            isMainNavbar
+              ? "text-dark-purple text-base"
+              : "text-off-white text-sm"
+          }`}
+        >
           {menuItems.map((item, index) => (
-            <NavLink key={index} to={item.to} className="block">
+            <NavLink
+              key={index}
+              isDropDown={isOpen}
+              to={item.to}
+              className="block"
+            >
               {item.label}
             </NavLink>
           ))}
         </div>
       </div>
     </div>
-    // </div>
   );
 };
 
@@ -131,19 +152,29 @@ const NavMenu = ({ children }) => {
   );
 };
 
-export const NavBar = ({ dropDownIsOpen, closeDropDownMenu }) => {
+export const NavBar = ({ dropDownIsOpen, isMainNavbar }) => {
   return (
     <ul
-      className={`bg-off-white ${
-        dropDownIsOpen &&
-        "w-full !flex flex-col font-sans font-bold leading-6 gap-6 text-xl text-dark-purple"
-      } hidden lg:flex lg:flex-row lg:font-normal lg:gap-12 lg:text-base`}
+      className={`${
+        isMainNavbar && "hidden bg-off-white"
+      } lg:flex lg:flex-row lg:font-normal lg:gap-12 lg:text-base flex flex-col gap-4 ${
+        dropDownIsOpen && "w-full !flex flex-col gap-6"
+      }`}
     >
       <li>
-        {dropDownIsOpen ? <SubDropDownMenu /> : <NavMenu>Find a Job</NavMenu>}
+        {dropDownIsOpen ? (
+          <SubDropDownMenu isMainNavbar={isMainNavbar} />
+        ) : (
+          <NavMenu>Find a Job</NavMenu>
+        )}
       </li>
       {pageLinks.map((link, index) => (
-        <NavLink dropDownIsOpen={dropDownIsOpen} to={link.path} key={index}>
+        <NavLink
+          dropDownIsOpen={dropDownIsOpen}
+          to={link.path}
+          key={index}
+          kind={isMainNavbar ? "primary" : "inverted"}
+        >
           {link.label}
         </NavLink>
       ))}
