@@ -2,10 +2,10 @@ import React from "react";
 import { Container } from "../components/Container";
 import { Button } from "../components/Button";
 import { useParams, useNavigate } from "react-router-dom";
-import { CategorySection } from "../components/BlogPosts/CategorySection";
+//import { CategorySection } from "../components/BlogPosts/CategorySection";
 import { classNames } from "../utils/classNames";
-import { LatestPostCard } from "../components/BlogPosts/LatestPostCard";
-import blogPosts from "../components/BlogPosts/blogPosts.json";
+//import { LatestPostCard } from "../components/BlogPosts/LatestPostCard";
+//import blogPosts from "../components/BlogPosts/blogPosts.json";
 
 const blogCategories = [
   { id: "view-all", label: "View all" },
@@ -17,9 +17,7 @@ const blogCategories = [
   { id: "user-guides", label: "User guides" },
 ];
 
-const latestPosts = blogPosts
-  .sort((a, b) => new Date(b.date) - new Date(a.date))
-  .slice(0, 2);
+//const latestPosts = blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 2);
 
 export default function Blog() {
   const navigate = useNavigate();
@@ -65,7 +63,7 @@ export default function Blog() {
           </ul>
         </div>
         <div>
-          <CategorySection id={category} />
+        { /*<CategorySection id={category} />*/}
         </div>
       </div>
       <div className="flex flex-col gap-20">
@@ -77,9 +75,9 @@ export default function Blog() {
         </div>
         <div>
           <div className="flex flex-row justify-between">
-            {latestPosts.map((post, index) => (
-              <LatestPostCard post={post} key={index} />
-            ))}
+          { /*  {latestPosts.map((post, index) => (
+          <LatestPostCard post={post} key={index} />
+            ))}*/}
           </div>
         </div>
       </div>
