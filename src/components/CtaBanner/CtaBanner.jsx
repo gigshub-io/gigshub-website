@@ -4,15 +4,15 @@ import { Container } from "../Container";
 
 export const CtaBanner = ({ className, image }) => {
   return (
-    <Container className="flex flex-col items-center">
+    <Container className="flex flex-col p-6">
       <div
-        className={`flex flex-row rounded-ctaBanner w-containerMd h-testimonialContainer py-20 px-16 relative overflow-hidden ${className}`}
+        className={`flex flex-col gap-10 lg:flex-row rounded-ctaBanner h-ctaBanner lg:h-testimonialContainer py-14 lg:py-20 px-2 lg:px-16 relative overflow-hidden ${className}`}
       >
-        <div className="flex flex-col gap-5 w-shortTextContainer">
-          <div className="font-sans text-3xl font-bold text-off-white tracking-wide">
+        <div className="flex flex-col gap-5 lg:w-shortTextContainer items-center lg:items-start text-center lg:text-left">
+          <div className="font-sans lg:text-3xl text-xl font-bold text-off-white tracking-wide">
             Call to action that invites the visitor to get started
           </div>
-          <p className="font-sans text-lg font-normal leading-7 text-off-white">
+          <p className="font-sans lg:text-lg text-sm font-normal leading-7 text-off-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique.
           </p>

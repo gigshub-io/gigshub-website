@@ -56,6 +56,7 @@ module.exports = {
         blogCategoriesMenu: "240px",
         arrowDownWhite: "32px",
         paragraph: "620px",
+        ctaBannerMobileWidth: "342px",
       },
       height: {
         logo: "34px",
@@ -68,6 +69,7 @@ module.exports = {
         blogPostCardVer: "300px",
         blogPostCardHorImg: "250px",
         arrowDownWhite: "32px",
+        ctaBanner: "510px",
       },
       lineHeight: {
         textHero: "5.375rem",
