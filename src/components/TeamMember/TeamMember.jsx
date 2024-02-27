@@ -12,7 +12,7 @@ export const TeamMember = ({
   image = teamPic,
 }) => {
   return (
-    <div className="flex flex-col items-center gap-6 w-teamImage">
+    <div className="flex flex-col items-center gap-6 w-teamImage px-6 lg:px-6">
       <img src={image} alt="Team" />
       <div className="flex flex-col gap-1 items-center">
         <div className="font-sans text-xl font-semibold text-dark-purple">

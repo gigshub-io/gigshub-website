@@ -114,12 +114,13 @@ export default function AboutUs() {
         </Container>
         <img src={aboutUsImg2} alt="Hero" className="lg:py-20 lg:pr-16" />
       </div>
-      <Container className="flex flex-col gap-20 items-start">
+      <Container className="flex flex-col gap-14 lg:gap-20 items-center lg:items-start">
         <Heading
           title="Meet the team"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          className="text-3xl lg:text-5xl text-center lg:text-start"
         />
-        <div className="flex flex-row w-full justify-between">
+        <div className="flex flex-col gap-10 lg:flex-row w-full lg:justify-between items-center">
           {team.map((teamMember, index) => (
             <TeamMember
               key={index}

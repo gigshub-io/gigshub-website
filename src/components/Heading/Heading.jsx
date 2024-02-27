@@ -4,21 +4,14 @@ import React from "react";
  * @param alignment "start" | "center" | "end"
  * @returns
  */
-export const Heading = ({
-  title,
-  description,
-  className,
-  alignment = "start",
-  textSize = "5xl",
-  gap = "6",
-}) => {
+export const Heading = ({ title, description, className, gap = "6" }) => {
   return (
-    <div className={`flex ${className} justify-${alignment}`}>
+    <div className={`flex ${className}`}>
       <div
-        className={`flex flex-col gap-${gap} w-headingMobileContainer lg:w-headingContainer text-${alignment}`}
+        className={`flex flex-col gap-${gap} w-headingMobileContainer lg:w-headingContainer`}
       >
         <p
-          className={`font-sans text-${textSize} font-bold leading-7 text-dark-purple leading-headingCardsContainer tracking-wide`}
+          className={`font-sans font-bold leading-7 text-dark-purple leading-headingCardsContainer tracking-wide`}
         >
           {title}
         </p>
