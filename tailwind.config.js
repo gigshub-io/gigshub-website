@@ -77,6 +77,8 @@ module.exports = {
         headingCardsContainer: "3.6rem",
         aboutUsBanner: "3.5rem",
         aboutUsBannerMobile: "1.5rem",
+        aboutUsBanner2: "1.7rem",
+        aboutUsBanner2Mobile: "1.5rem",
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"],

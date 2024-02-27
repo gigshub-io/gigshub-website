@@ -66,43 +66,43 @@ export default function AboutUs() {
           mauris duis. Lorem eu neque, tristique quis duis.”
         </div>
       </div>
-      <div className="flex w-full h-aboutUsBanner bg-pale-purple">
-        <Container className="flex flex-row gap-28 justify-between items-center">
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-6 w-textContainer">
-              <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider">
+      <div className="flex w-full flex-col lg:flex-row lg:justify-between lg:h-aboutUsBanner bg-pale-purple">
+        <Container className="flex flex-col gap-28 py-14 px-6 lg:py-0 lg:px-0 lg:items-center">
+          <div className="flex flex-col gap-14 lg:gap-8 lg:text-start text-center">
+            <div className="flex flex-col gap-6 lg:w-textContainer">
+              <div className="font-sans text-3xl lg:text-5xl font-bold text-dark-purple tracking-wider text-center lg:text-left">
                 How we're making a difference, daily.
               </div>
-              <p className="font-sans text-lg font-normal text-dark-purple text-justify">
+              <p className="font-sans text-sm lg:text-lg font-normal text-dark-purple text-center lg:text-justify leading-aboutUsBanner2Mobile lg:leading-aboutUsBanner2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                 commodo diam libero vitae erat.
               </p>
             </div>
-            <div className="flex flex-col gap-10">
-              <div className="flex flex-row gap-15">
-                <div className="flex flex-col gap-2 w-72">
+            <div className="flex flex-col gap-14 lg:gap-10">
+              <div className="flex flex-col lg:flex-row lg:gap-15 gap-14">
+                <div className="flex flex-col gap-5 lg:gap-2">
                   <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider">
                     $30m
                   </div>
                   <div>Customer savings</div>
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-5 lg:gap-2">
                   <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider">
                     10m+
                   </div>
                   <div>Hours saved</div>
                 </div>
               </div>
-              <div className="flex flex-row gap-15">
-                <div className="flex flex-col gap-2 w-72">
+              <div className="flex flex-col lg:flex-row lg:gap-15 gap-14">
+                <div className="flex flex-col gap-5 lg:gap-2">
                   <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider">
                     200%
                   </div>
                   <div>Year on year growth</div>
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-5 lg:gap-2">
                   <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider">
                     5k+
                   </div>
@@ -111,8 +111,8 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
-          <img src={aboutUsImg2} alt="Hero" />
         </Container>
+        <img src={aboutUsImg2} alt="Hero" className="lg:py-20 lg:pr-16" />
       </div>
       <Container className="flex flex-col gap-20 items-start">
         <Heading
