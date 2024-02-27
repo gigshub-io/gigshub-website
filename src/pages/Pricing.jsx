@@ -52,14 +52,13 @@ export default function Pricing() {
   return (
     <div className="flex flex-col w-full gap-40 mb-12 bg-off-white items-center">
       <Container>
-        <div className="flex flex-col items-center py-28 gap-6">
+        <div className="flex flex-col items-center py-20 lg:py-28 gap-6">
           <Heading
             title="Pricing plans"
             description="Simple, transparent pricing that grows with you."
-            textSize="7xl"
             alignment="center"
             gap="10"
-            className=""
+            className="lg:text7xl text-3xl"
           />
           <div className="flex items-center justify-between">
             <div className="isolate inline-flex -space-x-px rounded-md shadow-sm items-center">
@@ -87,7 +86,7 @@ export default function Pricing() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row gap-8">
+        <div className="flex flex-col px-6 lg:px-0 lg:flex-row gap-8">
           {plans.map((plan, index) => (
             <PricingCard
               key={index}
