@@ -37,13 +37,13 @@ export default function AboutUs() {
   ];
   return (
     <div className="flex flex-col w-full py-16 gap-20 mb-12 bg-off-white items-center">
-      <Container className="flex flex-col gap-20 items-center">
-        <div className="flex flex-row gap-20 items-center">
-          <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
+      <Container className="flex flex-col gap-20 px-6 lg:px-14">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-between">
+          <div className="font-sans text-3xl lg:text-7xl font-bold text-dark-purple lg:leading-textHero tracking-wider">
             A little bit <span className="text-light-purple">about</span> us at
             GigsHub
           </div>
-          <div className="flex flex-col w-textContainer2">
+          <div className="flex flex-col lg:w-textContainer2">
             <div className="font-sans text-lg font-bold text-dark-blue text-justify">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               varius faucibus massa sollicitudin amet augue. Nibh metus a semper
