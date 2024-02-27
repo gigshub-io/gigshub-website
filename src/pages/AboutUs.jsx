@@ -38,7 +38,7 @@ export default function AboutUs() {
   return (
     <div className="flex flex-col w-full py-16 gap-20 mb-12 bg-off-white items-center">
       <Container className="flex flex-col gap-20 px-6 lg:px-14">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-between">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-between">
           <div className="font-sans text-3xl lg:text-7xl font-bold text-dark-purple lg:leading-textHero tracking-wider">
             A little bit <span className="text-light-purple">about</span> us at
             GigsHub
@@ -58,14 +58,14 @@ export default function AboutUs() {
           </div>
         </div>
         <img src={aboutUsImg} alt="About Us" />
-        <div className="flex px-28">
-          <div className="font-sans text-3xl font-medium text-dark-blue text-center tracking-wider leading-aboutUsBanner py-20">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            varius faucibus massa sollicitudin amet augue. Nibh metus a semper
-            purus mauris duis. Lorem eu neque, tristique quis duis.”
-          </div>
-        </div>
       </Container>
+      <div className="flex lg:px-28">
+        <div className="font-sans text-lg lg:text-3xl font-semibold text-dark-blue text-center tracking-wider leading-aboutUsBannerMobile lg:leading-aboutUsBanner lg:py-20 px-14">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius
+          faucibus massa sollicitudin amet augue. Nibh metus a semper purus
+          mauris duis. Lorem eu neque, tristique quis duis.”
+        </div>
+      </div>
       <div className="flex w-full h-aboutUsBanner bg-pale-purple">
         <Container className="flex flex-row gap-28 justify-between items-center">
           <div className="flex flex-col gap-8">
