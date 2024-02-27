@@ -59,8 +59,8 @@ export const Faq = () => {
 
   return (
     <Container>
-      <div className="flex flex-row justify-between gap-20">
-        <div className="flex flex-col gap-6 w-heroImage">
+      <div className="flex flex-col px-6 lg:px-0 lg:flex-row justify-between gap-20">
+        <div className="flex flex-col gap-6 lg:w-heroImage">
           <div className="font-sans font-semibold text-dark-purple text-5xl tracking-wide leading-headingCardsContainer">
             Frequently asked questions
           </div>

@@ -11,7 +11,7 @@ export const Accordion = ({
   questionIndex,
 }) => {
   return (
-    <div className="flex flex-col w-accordion border-b border-purple">
+    <div className="flex flex-col lg:w-accordion border-b border-purple">
       <div
         onClick={(event) => handleChange(questionIndex)}
         onKeyDown={handleKeyDown}
