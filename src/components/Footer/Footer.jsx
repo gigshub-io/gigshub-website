@@ -16,7 +16,7 @@ export const Footer = () => {
   return (
     <div className="w-full bg-dark-purple">
       <Container className="flex flex-col items-center lg:gap-16 gap-10 lg:py-20 py-10">
-        <div className="flex flex-col gap-12 pl-8 lg:flex-row w-full lg:justify-between lg:pl-0">
+        <div className="flex flex-col gap-12 pl-7 lg:flex-row w-full lg:justify-between lg:pl-0">
           <div className="flex flex-col lg:gap-8 gap-10">
             <Logo kind="inverted" />
             <NavBar isMainNavbar={false} dropDownIsOpen={true} />
