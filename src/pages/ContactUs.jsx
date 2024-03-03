@@ -22,44 +22,11 @@ export default function ContactUs() {
     }));
   };
 
-  let message = {
-    from: "GigsHub <isadora.caputo@gmail.com>",
-    to: `${newUser.firstName} <${newUser.lastName}>`,
-    subject: "Fromageria Tesilli: Recebemos o seu pedido!",
-    html: `<h2><b>Olá ${newUser.firstName}!</b></h2>
-    <p>We have received your e-mail.</p>`,
-  };
-
-  const handleSubmit = (event) => {
-    console.log(event);
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // if (!newUser.firstName) {
-    //   alert("Please, fill in the required fields.");
-    //   return;
-    // }
-    // if (!newUser.lastName) {
-    //   alert("Please, fill in the required fields.");
-    //   return;
-    // }
-    // if (!emailRegex.test(newUser.email)) {
-    //   alert("Invalid e-mail");
-    //   return;
-    // }
-    // if (!newUser.termsChecked) {
-    //   alert("Please, accept Terms of Service.");
-    //   return;
-    // }
-    // handleSubmit
-  };
-
   return (
     <div className="flex flex-row gap-20">
-      <img src={contactUsImg} alt="Contact us" />
-      <form
-        className="flex flex-col px-14 py-20 gap-6 w-contactUsForm items-start"
-        onSubmit={handleSubmit}
-      >
-        <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
+      <img src={contactUsImg} alt="Contact us" className="hidden lg:flex" />
+      <form className="flex flex-col px-14 py-20 gap-6 w-contactUsFormMobile lg:w-contactUsFormDesktop items-center lg:items-start">
+        <div className="font-sans text-3xl lg:text-7xl font-bold text-dark-purple text-center lg:text-start leading-10 lg:leading-textHero tracking-wider">
           Dont't be shy, say <span className="text-light-purple">hello!</span>
         </div>
         <div className="flex flex-row gap-1.5 py-2.5 px-6 bg-washed-purple p-2 rounded-full font-sans text-base font-semibold leading-7 tracking-wide text-dark-purple text-center">
@@ -96,7 +63,7 @@ export default function ContactUs() {
           Send us a message
         </div>
         <div className="flex flex-col gap-6">
-          <div className="flex flex-row gap-6">
+          <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex flex-col gap-2">
               <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 First name *
@@ -124,7 +91,7 @@ export default function ContactUs() {
               </label>
             </div>
           </div>
-          <div className="flex flex-row gap-6">
+          <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex flex-col gap-2">
               <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 Email *
@@ -152,7 +119,7 @@ export default function ContactUs() {
               </label>
             </div>
           </div>
-          <div className="flex flex-row gap-6 content-start">
+          <div className="flex flex-col lg:flex-row gap-6 content-start">
             <div className="flex flex-col gap-2">
               <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 Message
@@ -161,14 +128,14 @@ export default function ContactUs() {
                   name="message"
                   value={newUser.message}
                   onChange={handleChange}
-                  className="border-2 border-light-purple rounded-lg p-3 w-contactUsForm h-contactUsMessage bg-transparent"
+                  className="border-2 border-light-purple rounded-lg p-3 w-contactUsFormMobile lg:w-contactUsFormDesktop h-contactUsMessage bg-transparent"
                   placeholder="Type your message here..."
                 ></textarea>
               </label>
             </div>
           </div>
         </div>
-        <label className="flex flex-row font-sans text-sm font-normal text-dark-purple">
+        <label className="flex flex-col lg:flex-row font-sans text-sm font-normal text-dark-purple">
           <input
             required
             className="mr-2 accent-light-purple"
