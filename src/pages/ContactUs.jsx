@@ -25,11 +25,11 @@ export default function ContactUs() {
   return (
     <div className="flex flex-row gap-20">
       <img src={contactUsImg} alt="Contact us" className="hidden lg:flex" />
-      <form className="flex flex-col px-14 py-20 gap-6 w-contactUsFormMobile lg:w-contactUsFormDesktop items-center lg:items-start">
+      <form className="flex flex-col lg:px-14 py-20 gap-6 lg:w-contactUsFormDesktop items-center lg:items-start">
         <div className="font-sans text-3xl lg:text-7xl font-bold text-dark-purple text-center lg:text-start leading-10 lg:leading-textHero tracking-wider">
           Dont't be shy, say <span className="text-light-purple">hello!</span>
         </div>
-        <div className="flex flex-row gap-1.5 py-2.5 px-6 bg-washed-purple p-2 rounded-full font-sans text-base font-semibold leading-7 tracking-wide text-dark-purple text-center">
+        <div className="flex flex-row gap-1.5 py-2.5 px-6 bg-washed-purple p-2 rounded-full font-sans text-sm lg:text-base font-semibold leading-7 tracking-wide text-dark-purple text-center">
           <img src={whiteCircle} alt="White circle" />
           Book a call with us through{" "}
           <a
@@ -46,7 +46,7 @@ export default function ContactUs() {
             <div className="flex items-center justify-center bg-light-purple w-9 h-9 rounded-full w-p-1.5">
               <img src={emailIcon} alt="Email Icon" />
             </div>
-            <div className="font-sans font-normal text-lg text-dark-purple">
+            <div className="font-sans font-normal text-base lg:text-lg text-dark-purple">
               hello@gigshub.io
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function ContactUs() {
             <div className="flex items-center justify-center bg-light-purple w-9 h-9 rounded-full w-p-1.5">
               <img src={emailIcon} alt="Email Icon" />
             </div>
-            <div className="font-sans font-normal text-lg text-dark-purple">
+            <div className="font-sans font-normal text-base lg:text-lg text-dark-purple">
               hello@gigshub.io
             </div>
           </div>
