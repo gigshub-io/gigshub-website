@@ -55,10 +55,10 @@ export default function Pricing() {
         <div className="flex flex-col items-center py-20 lg:py-28 gap-6">
           <Heading
             title="Pricing plans"
+            titleSize="lg:text-7xl text-4xl"
             description="Simple, transparent pricing that grows with you."
+            descriptionSize="lg:text-lg text-sm"
             alignment="center"
-            gap="10"
-            className="lg:text7xl text-3xl"
           />
           <div className="flex items-center justify-between">
             <div className="isolate inline-flex -space-x-px rounded-md shadow-sm items-center">
