@@ -58,9 +58,11 @@ export const TestimonialCarousel = () => {
         <div className="flex flex-col items-center gap-32">
           <Heading
             title={titleText}
+            titleSize="text-3xl lg:text-5xl"
             description={descriptionText}
-            className="mb-10"
+            descriptionSize="text-sm text-lg"
             alignment="center"
+            className="mb-10"
           />
         </div>
       </Container>

@@ -13,7 +13,9 @@ export const Steps = () => {
       <div className="flex flex-col items-center gap-16 lg:gap-32">
         <Heading
           title={titleText}
+          titleSize="text-4xl lg:text-5xl"
           description={descriptionText}
+          descriptionSize="text-base lg:text-lg"
           alignment="center"
           className="flex"
         />

@@ -10,7 +10,7 @@ import ctaImage from "../assets/cta-banner.png";
 
 const Home = () => {
   return (
-    <div className="flex flex-col w-full py-16 gap-32 mb-12 bg-off-white">
+    <div className="flex flex-col w-full py-16 gap-24 lg:gap-32 mb-12 bg-off-white">
       <Hero />
       <SocialProof />
       <CardGallery />

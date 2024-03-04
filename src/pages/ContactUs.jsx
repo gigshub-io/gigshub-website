@@ -30,7 +30,7 @@ export default function ContactUs() {
         <div className="font-sans text-3xl lg:text-7xl font-bold text-dark-purple text-center lg:text-start leading-10 lg:leading-textHero tracking-wider">
           Dont't be shy, say <span className="text-light-purple">hello!</span>
         </div>
-        <div className="flex flex-row gap-1.5 lg:py-2.5 lg:px-6 px-9 py-2 bg-washed-purple rounded-full font-sans text-sm lg:text-base font-semibold leading-7 tracking-wide text-dark-purple text-center">
+        <div className="flex flex-row gap-1.5 lg:py-2.5 lg:px-6 px-8 py-2 bg-washed-purple rounded-full font-sans text-sm lg:text-base font-semibold leading-7 tracking-wide text-dark-purple text-center">
           <img src={whiteCircle} alt="White circle" />
           Book a call with us through{" "}
           <a
