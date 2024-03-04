@@ -9,9 +9,9 @@ import { TestimonialCarousel } from "../components/TestimonialCarousel/Testimoni
 
 export default function JobSeekers() {
   return (
-    <div className="flex flex-col w-full py-16 gap-32 mb-12 bg-off-white items-center">
+    <div className="flex flex-col w-full py-16 gap-32 mb-12 bg-off-white lg:items-center">
       <Container>
-        <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-col lg:flex-row lg:justify-between items-center">
           <div className="flex flex-col gap-6 w-textContainer">
             <div className="bg-pale-purple p-2 rounded-full font-sans text-base font-semibold leading-7 text-dark-purple max-w-56 text-center">
               GigsHub for Job Seekers
@@ -20,6 +20,11 @@ export default function JobSeekers() {
               <span className="text-light-purple">Job Seeking</span> just got
               easier with us
             </div>
+            <img
+              src={freelancersHeroImg}
+              alt="Hero"
+              className="flex lg:hidden"
+            />
             <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique.
@@ -29,16 +34,20 @@ export default function JobSeekers() {
             </div>
           </div>
           <div>
-            <img src={freelancersHeroImg} alt="Hero" />
+            <img
+              src={freelancersHeroImg}
+              alt="Hero"
+              className="hidden lg:flex"
+            />
           </div>
         </div>
       </Container>
       <Container>
-        <div className="flex flex-col bg-pale-purple rounded-2xl py-12 px-40 items-center gap-12">
-          <div className="font-sans font-bold text-5xl text-dark-purple tracking-wider">
+        <div className="flex flex-col bg-pale-purple lg:rounded-2xl py-12 lg:px-40 p-20 items-center gap-12">
+          <div className="font-sans font-bold lg:text-5xl text-3xl text-dark-purple tracking-wider lg:text-start text-center">
             Let the stats do the talking
           </div>
-          <div className="flex flex-row justify-between gap-32">
+          <div className="flex flex-col lg:flex-row justify-between text-center lg:text-start gap-14 lg:gap-32">
             <div className="flex flex-col gap-4">
               <div className="font-sans font-semibold text-4xl text-purple tracking-wider">
                 150 +
@@ -66,8 +75,12 @@ export default function JobSeekers() {
           </div>
         </div>
       </Container>
-      <div className="flex flex-row gap-24 items-center">
-        <img src={freelancersSubHeroImg} alt="SubHero" />
+      <div className="flex flex-col lg:flex-row gap-24 items-center">
+        <img
+          src={freelancersSubHeroImg}
+          alt="SubHero"
+          className="hidden lg:flex"
+        />
         <div className="flex flex-col gap-6 w-textContainer">
           <div className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide">
             Helping <span className="text-light-purple">job seekers</span>
@@ -115,6 +128,11 @@ export default function JobSeekers() {
             </div>
           </div>
         </div>
+        <img
+          src={freelancersSubHeroImg}
+          alt="SubHero"
+          className="flex lg:hidden"
+        />
       </div>
       <CardGallery />
       <TestimonialCarousel />
