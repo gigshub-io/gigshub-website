@@ -16,7 +16,7 @@ const pageLinks = [
     label: "About Us",
     path: "/aboutUs",
   },
-  {
+/*  {
     label: "Community",
     path: "/community",
   },
@@ -24,6 +24,7 @@ const pageLinks = [
     label: "Blog",
     path: "/blog/view-all",
   },
+  */ 
   {
     label: "Pricing",
     path: "/pricing",

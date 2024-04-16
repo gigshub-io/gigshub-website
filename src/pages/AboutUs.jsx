@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "../components/Container";
+import teamPic from "../assets/thaipic.jpg";
 import aboutUsImg from "../assets/aboutus-image.png";
 import aboutUsImg2 from "../assets/aboutus-image2.png";
 import { Heading } from "../components/Heading/Heading";
@@ -8,32 +9,26 @@ import { TeamMember } from "../components/TeamMember";
 export default function AboutUs() {
   const team = [
     {
-      fullName: "Full Name",
-      jobTitle: "Job Title",
+      fullName: "Thai Braz",
+      jobTitle: "CTO",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      linkedInProfile: "https://www.linkedin.com/",
+      linkedInProfile: "https://www.linkedin.com/in/thain%C3%A1-braz/",
       twitterProfile: "https://twitter.com/",
       webPage: "https://www.google.com/",
+      image: teamPic
     },
     {
-      fullName: "Full Name",
+      fullName: "Ali",
       jobTitle: "Job Title",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
       linkedInProfile: "https://www.linkedin.com/",
       twitterProfile: "https://twitter.com/",
       webPage: "https://www.google.com/",
-    },
-    {
-      fullName: "Full Name",
-      jobTitle: "Job Title",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      linkedInProfile: "https://www.linkedin.com/",
-      twitterProfile: "https://twitter.com/",
-      webPage: "https://www.google.com/",
-    },
+      image: teamPic,
+    }
+    
   ];
   return (
     <div className="flex flex-col w-full py-16 gap-20 mb-12 bg-off-white items-center">
@@ -115,11 +110,12 @@ export default function AboutUs() {
         </Container>
       </div>
       <Container className="flex flex-col gap-20 items-start">
-        <Heading
+        <Heading 
+          className="flex w-full justify-center"
           title="Meet the team"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
-        <div className="flex flex-row w-full justify-between">
+        <div className="flex flex-row w-full justify-center">
           {team.map((teamMember, index) => (
             <TeamMember
               key={index}

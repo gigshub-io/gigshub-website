@@ -9,7 +9,7 @@ export const TeamMember = ({
   linkedInProfile,
   twitterProfile,
   webPage,
-  image = teamPic,
+  image
 }) => {
   return (
     <div className="flex flex-col items-center gap-6 w-teamImage">

@@ -20,10 +20,10 @@ function App() {
         <Route path="/freelancers" element={<Freelancers />} />
         <Route path="/jobSeekers" element={<JobSeekers />} />
         <Route path="/aboutUs" element={<AboutUs />} />
-        <Route path="/community" element={<Community />} />
+        { /* <Route path="/community" element={<Community />} />
         <Route path="/blog/*" element={<Blog />}>
           <Route path=":category" element={<Blog />} />
-        </Route>
+        </Route> */}
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
