@@ -53,13 +53,13 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="flex flex-row gap-20">
-      <img src={contactUsImg} alt="Contact us" />
+    <div className="flex flex-row max-xl:flex-col">
+      <img className="w-1/2 max-xl:w-full max-xl:h-[500px] max-xl:object-cover" src={contactUsImg} alt="Contact us" />
       <form
-        className="flex flex-col px-14 py-20 gap-6 w-contactUsForm items-start"
+        className="flex flex-col w-1/2 max-lg:w-full p-10 gap-6 w-contactUsForm items-center max-sm:p-5"
         onSubmit={handleSubmit}
       >
-        <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
+        <div className="font-sans text-7xl text-center font-bold text-dark-purple leading-textHero tracking-wider max-sm:text-3xl">
           Dont't be shy, say <span className="text-light-purple">hello!</span>
         </div>
         <div className="flex flex-row gap-1.5 py-2.5 px-6 bg-washed-purple p-2 rounded-full font-sans text-base font-semibold leading-7 tracking-wide text-dark-purple text-center">
@@ -74,7 +74,7 @@ export default function ContactUs() {
             calendly
           </a>
         </div>
-        <div className="flex flex-row gap-8 mb-8">
+        <div className="flex flex-row gap-8 mb-8 max-sm:flex-col">
           <div className="flex flex-row gap-3.5 items-center">
             <div className="flex items-center justify-center bg-light-purple w-9 h-9 rounded-full w-p-1.5">
               <img src={emailIcon} alt="Email Icon" />
@@ -96,7 +96,7 @@ export default function ContactUs() {
           Send us a message
         </div>
         <div className="flex flex-col gap-6">
-          <div className="flex flex-row gap-6">
+          <div className="flex flex-row gap-6 max-sm:flex-col">
             <div className="flex flex-col gap-2">
               <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 First name *
@@ -124,7 +124,7 @@ export default function ContactUs() {
               </label>
             </div>
           </div>
-          <div className="flex flex-row gap-6">
+          <div className="flex flex-row gap-6 max-sm:flex-col">
             <div className="flex flex-col gap-2">
               <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 Email *
@@ -152,8 +152,8 @@ export default function ContactUs() {
               </label>
             </div>
           </div>
-          <div className="flex flex-row gap-6 content-start">
-            <div className="flex flex-col gap-2">
+          <div className="flex flex-row gap-6 content-start w-full">
+            <div className="flex flex-col gap-2 w-full">
               <label className="flex flex-col gap-2 font-sans font-normal text-base text-dark-purple tracking-wide">
                 Message
                 <textarea
