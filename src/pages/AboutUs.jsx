@@ -33,12 +33,12 @@ export default function AboutUs() {
   return (
     <div className="flex flex-col w-full py-16 gap-20 mb-12 bg-off-white items-center">
       <Container className="flex flex-col gap-20 items-center">
-        <div className="flex flex-row gap-20 items-center">
-          <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
+        <div className="flex flex-row gap-20 items-center max-xl:flex-wrap max-xl:justify-center">
+          <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider text-balance text-center max-sm:text-3xl">
             A little bit <span className="text-light-purple">about</span> us at
             GigsHub
           </div>
-          <div className="flex flex-col w-textContainer2">
+          <div className="flex flex-col w-full justify-center text-balance text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
             <div className="font-sans text-lg font-bold text-dark-blue text-justify">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               varius faucibus massa sollicitudin amet augue. Nibh metus a semper
@@ -62,43 +62,43 @@ export default function AboutUs() {
         </div>
       </Container>
       <div className="flex w-full h-aboutUsBanner bg-pale-purple">
-        <Container className="flex flex-row gap-28 justify-between items-center">
+        <Container className="flex flex-row gap-28 justify-center items-center">
           <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-6 w-textContainer">
-              <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider">
+            <div className="flex flex-col gap-6 w-full">
+              <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
                 How we're making a difference, daily.
               </div>
-              <p className="font-sans text-lg font-normal text-dark-purple text-justify">
+              <p className="font-sans text-lg font-normal text-dark-purple text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                 commodo diam libero vitae erat.
               </p>
             </div>
-            <div className="flex flex-col gap-10">
-              <div className="flex flex-row gap-15">
-                <div className="flex flex-col gap-2 w-72">
-                  <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider">
+            <div className="flex flex-col gap-10 items-center">
+              <div className="flex flex-row gap-15 justify-center max-sm:gap-7">
+                <div className="flex flex-col gap-2 w-72 max-sm:w-auto">
+                  <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider max-sm:text-3xl">
                     $30m
                   </div>
                   <div>Customer savings</div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider">
+                  <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider max-sm:text-3xl">
                     10m+
                   </div>
                   <div>Hours saved</div>
                 </div>
               </div>
-              <div className="flex flex-row gap-15">
-                <div className="flex flex-col gap-2 w-72">
-                  <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider">
+              <div className="flex flex-row gap-15 justify-center max-sm:gap-7">
+                <div className="flex flex-col gap-2 w-72 max-sm:w-auto">
+                  <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider max-sm:text-3xl">
                     200%
                   </div>
                   <div>Year on year growth</div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider">
+                  <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider max-sm:text-3xl">
                     5k+
                   </div>
                   <div>Downloads</div>
@@ -106,16 +106,16 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
-          <img src={aboutUsImg2} alt="Hero" />
+          <img className="max-xl:hidden" src={aboutUsImg2} alt="Hero" />
         </Container>
       </div>
-      <Container className="flex flex-col gap-20 items-start">
+      <Container className="flex flex-col gap-20 items-start max-sm:items-center">
         <Heading 
           className="flex w-full justify-center"
           title="Meet the team"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         />
-        <div className="flex flex-row w-full justify-center">
+        <div className="flex flex-row w-full justify-center max-sm:flex-wrap gap-y-12">
           {team.map((teamMember, index) => (
             <TeamMember
               key={index}
