@@ -87,7 +87,7 @@ export default function Pricing() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row gap-8">
+        <div className="flex flex-row gap-3 justify-center flex-wrap">
           {plans.map((plan, index) => (
             <PricingCard
               key={index}
