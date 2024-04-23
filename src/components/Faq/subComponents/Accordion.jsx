@@ -11,11 +11,11 @@ export const Accordion = ({
   questionIndex,
 }) => {
   return (
-    <div className="flex flex-col w-accordion border-b border-purple">
+    <div className="flex flex-col w-accordion border-b border-purple w-full">
       <div
         onClick={(event) => handleChange(questionIndex)}
         onKeyDown={handleKeyDown}
-        className={`flex flex-row py-5 justify-between`}
+        className={`flex flex-row py-5 justify-between w-full`}
         role="button"
       >
         <div className="font-sans font-semibold text-lg text-dark-purple tracking-wide">
@@ -32,8 +32,8 @@ export const Accordion = ({
       </div>
       <div
         className={classNames(
-          "max-h-0 overflow-hidden duration-200 invisible ease-out",
-          isOpen && "max-h-screen !visible duration-200 ease-in"
+          "w-full max-h-0 overflow-hidden duration-200 invisible ease-out",
+          isOpen && "w-full max-h-screen !visible duration-200 ease-in"
         )}
       >
         <div className="flex py-6 font-sans font-normal text-dark-purple text-base text-justify">

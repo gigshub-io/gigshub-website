@@ -3,7 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
-      lg: "1200px",
+      mc: "300px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
     extend: {
       colors: {
@@ -46,7 +50,7 @@ module.exports = {
         pricingButtons: "160px",
         pricingCard: "416px",
         accordion: "730px",
-        contactUsForm: "620px",
+        contactUsForm: "100%",
         input: "300px",
         featuredBlogPost: "970px",
         blogPostCardVer: "470px",

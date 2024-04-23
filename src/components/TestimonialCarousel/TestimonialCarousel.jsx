@@ -53,7 +53,7 @@ export const TestimonialCarousel = () => {
   const descriptionText =
     "Don't just take our word for it. Hear what our customers have to say about their experience with Gigs Hub.";
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-x-scroll w-screen">
       <Container>
         <div className="flex flex-col items-center gap-32">
           <Heading
@@ -79,10 +79,10 @@ export const TestimonialCarousel = () => {
         className="my-0 -mx-24"
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index} className="!w-testimonialContainer">
-            <div className="bg-pale-purple rounded-2xl  py-20 px-36">
+          <SwiperSlide key={index} className="!w-testimonialContainer !max-md:w-screen">
+            <div className="bg-pale-purple rounded-2xl  py-20 px-36 max-md:px-14 max-md:px-10">
               <div className="flex flex-col gap-11 items-center">
-                <p className="text-center font-sans font-bold text-dark-purple text-lg leading-7 tracking-wide px-5">
+                <p className="text-center font-sans font-bold text-dark-purple text-lg leading-7 tracking-wide px-5 max-md:w-4/5 max-sm:w-1/2">
                   {slide.testimonial}
                 </p>
                 <div className="flex flex-row gap-4">

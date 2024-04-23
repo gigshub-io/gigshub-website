@@ -11,16 +11,16 @@ export default function Freelancers() {
   return (
     <div className="flex flex-col w-full py-16 gap-32 mb-12 bg-off-white items-center">
       <Container>
-        <div className="flex flex-row justify-between items-center">
-          <div className="flex flex-col gap-6 w-textContainer">
+        <div className="flex flex-row justify-between items-center w-full max-xl:flex-col max-xl:items-center px-32 max-sm:px-3">
+          <div className="flex flex-col w-1/2 max-xl:w-full gap-6 w-textContainer max-xl:w-full max-xl:flex max-xl:items-center">
             <div className="bg-pale-purple p-2 rounded-full font-sans text-base font-semibold leading-7 text-dark-purple max-w-56 text-center">
               GigsHub for Freelancers
             </div>
-            <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider">
+            <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider max-xl:text-center max-sm:text-3xl">
               <span className="text-light-purple">Freelancing</span> just got
               easier with us
             </div>
-            <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
+            <p className="font-sans text-lg font-normal leading-7 text-dark-purple max-xl:text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique.
             </p>
@@ -28,17 +28,17 @@ export default function Freelancers() {
               <Button>Get Hired</Button>
             </div>
           </div>
-          <div>
+          <div className="w-1/2 max-xl:w-full">
             <img src={freelancersHeroImg} alt="Hero" />
           </div>
         </div>
       </Container>
-      <Container className="flex flex-col items-center">
-        <div className="flex flex-col bg-pale-purple rounded-2xl py-12 px-40 items-center gap-12 w-containerMd">
-          <div className="font-sans font-bold text-5xl text-dark-purple tracking-wider">
+      <Container className="flex flex-col items-center w-screen">
+        <div className="flex flex-col bg-pale-purple rounded-2xl py-12 px-40 items-center gap-12 w-full max-sm:px-6">
+          <div className="font-sans font-bold text-5xl text-dark-purple tracking-wider max-sm:text-center">
             Let the stats do the talking
           </div>
-          <div className="flex flex-row justify-between gap-32">
+          <div className="flex flex-row justify-around gap-6 flex-wrap">
             <div className="flex flex-col gap-4">
               <div className="font-sans font-semibold text-4xl text-purple tracking-wider">
                 150 +
@@ -67,16 +67,16 @@ export default function Freelancers() {
         </div>
       </Container>
       <div className="flex flex-row gap-24 items-center">
-        <img src={freelancersSubHeroImg} alt="SubHero" />
-        <div className="flex flex-col gap-6 w-textContainer">
-          <div className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide">
+        <img src={freelancersSubHeroImg} alt="SubHero"  className="w-1/2 block max-lg:hidden"/>
+        <div className="flex flex-col gap-6 w-1/2 max-lg:w-full">
+          <div className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide max-lg:text-center">
             Helping <span className="text-light-purple">freelancers</span>
           </div>
-          <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
+          <p className="font-sans text-lg font-normal leading-7 text-dark-purple max-lg:w-full max-lg:text-balance max-lg:text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique.
           </p>
-          <div className="flex flex-col gap-10 pt-7">
+          <div className="flex flex-col gap-10 pt-7 max-lg:px-32 max-sm:px-14">
             <div className="flex flex-row gap-3">
               <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
               <div className="flex flex-col gap-2">

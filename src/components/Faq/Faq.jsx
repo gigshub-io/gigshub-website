@@ -59,18 +59,18 @@ export const Faq = () => {
 
   return (
     <Container>
-      <div className="flex flex-row justify-between gap-20">
-        <div className="flex flex-col gap-6 w-heroImage">
-          <div className="font-sans font-semibold text-dark-purple text-5xl tracking-wide leading-headingCardsContainer">
+      <div className="flex flex-row justify-between gap-20 w-full max-xl:flex-col max-xl:items-center">
+        <div className="flex flex-col gap-6 w-1/2 max-xl:w-full max-xl:justify-center">
+          <div className="font-sans font-semibold text-dark-purple text-5xl tracking-wide leading-headingCardsContainer max-xl:text-center">
             Frequently asked questions
           </div>
-          <div className="font-sans font-normal text-dark-purple text-lg tracking-wide leading-7">
+          <div className="font-sans font-normal text-dark-purple text-lg tracking-wide leading-7 max-xl:text-center">
             Frequently asked questions ordered by popularity. Remember that if
             the visitor has not committed to the call to action, they may still
             have questions (doubts) that can be answered.
           </div>
         </div>
-        <div>
+        <div className="w-1/2 max-xl:w-full">
           {faQuestions.map((faquestion, index) => (
             <Accordion
               isOpen={faquestion.isOpen}
