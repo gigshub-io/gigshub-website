@@ -10,7 +10,7 @@ export const SocialProof = () => {
         <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
           Trusted by the world's best companies
         </p>
-        <div className="flex flex-row gap-12">
+        <div className="flex flex-wrap gap-12 pl-8 md:flex-row"> {/* Added media query */}
           <img src={webflowLogo} alt="People laughing with pcs" />
           <img src={relumeLogo} alt="People laughing with pcs" />
           <img src={webflowLogo} alt="People laughing with pcs" />

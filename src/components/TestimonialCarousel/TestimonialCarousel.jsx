@@ -80,9 +80,9 @@ export const TestimonialCarousel = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="!w-testimonialContainer">
-            <div className="bg-pale-purple rounded-2xl py-20 px-36">
+            <div className="bg-pale-purple rounded-2xl  py-20 px-36">
               <div className="flex flex-col gap-11 items-center">
-                <p className="text-center font-sans font-bold text-dark-purple text-lg leading-7 tracking-wide">
+                <p className="text-center font-sans font-bold text-dark-purple text-lg leading-7 tracking-wide px-5">
                   {slide.testimonial}
                 </p>
                 <div className="flex flex-row gap-4">
