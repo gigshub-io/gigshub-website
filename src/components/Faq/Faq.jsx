@@ -64,13 +64,13 @@ export const Faq = () => {
           <div className="font-sans font-semibold text-dark-purple text-5xl tracking-wide leading-headingCardsContainer max-xl:text-center">
             Frequently asked questions
           </div>
-          <div className="font-sans font-normal text-dark-purple text-lg tracking-wide leading-7 max-xl:text-center">
+          <div className="font-sans font-normal text-dark-purple text-lg tracking-wide leading-7 max-xl:text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
             Frequently asked questions ordered by popularity. Remember that if
             the visitor has not committed to the call to action, they may still
             have questions (doubts) that can be answered.
           </div>
         </div>
-        <div className="w-1/2 max-xl:w-full">
+        <div className="w-1/2 max-xl:w-full max-xl:px-32 max-md:px-14 max-sm:px-7">
           {faQuestions.map((faquestion, index) => (
             <Accordion
               isOpen={faquestion.isOpen}
