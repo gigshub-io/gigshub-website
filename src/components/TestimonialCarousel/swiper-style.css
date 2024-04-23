@@ -32,3 +32,62 @@
     display: none;
   }
 }
+
+
+/* // in under 850px */
+@media (max-width: 850px) {
+  .swiper {
+    .swiper-button-prev {
+      left: calc(50% - 300px);
+      /* background-color: red; */
+    }
+    .swiper-button-next {
+      right: calc(50% - 300px);
+    }
+  }
+}
+@media (max-width: 650px) {
+  .swiper {
+    .swiper-button-prev {
+      left: calc(50% - 250px);
+      /* background-color: red; */
+    }
+    .swiper-button-next {
+      right: calc(50% - 250px);
+    }
+  }
+}
+@media (max-width: 500px) {
+  .swiper {
+    .swiper-button-prev {
+      left: calc(50% - 200px);
+      /* background-color: red; */
+    }
+    .swiper-button-next {
+      right: calc(50% - 200px);
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .swiper {
+    .swiper-button-prev {
+      left: calc(50% - 180px);
+      /* background-color: red; */
+    }
+    .swiper-button-next {
+      right: calc(50% - 180px);
+    }
+  }
+}
+@media (max-width: 330px) {
+  .swiper {
+    .swiper-button-prev {
+      left: calc(50% - 160px);
+      /* background-color: red; */
+    }
+    .swiper-button-next {
+      right: calc(50% - 160px);
+    }
+  }
+}
