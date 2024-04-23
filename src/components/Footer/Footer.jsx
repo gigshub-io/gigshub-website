@@ -23,7 +23,7 @@ export const Footer = () => {
           </div>
           <div className="flex flex-col gap-4 text-sm">
             <label className="text-off-white">Subscribe</label>
-            <div className="flex flex-row gap-4">
+            <div className="flex flex-row gap-4 max-sm:flex-wrap">
               <input
                 type="text"
                 value={emailSubs}
