@@ -22,7 +22,7 @@ export const TeamMember = ({
           {jobTitle}
         </div>
       </div>
-      <div className="font-sans text-base font-normal text-dark-purple text-center">
+      <div className="font-sans text-base font-normal text-dark-purple text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
         {description}
       </div>
       <div className="flex flex-row gap-3.5">
