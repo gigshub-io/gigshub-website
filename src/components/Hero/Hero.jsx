@@ -20,8 +20,8 @@ export const Hero = () => {
             />
           </div>
           <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
-           Discover the future of job search with Gigshub – 
-           automate your applications and focus on what truly matters - nailing interviews!
+          Discover the future of job search with Gigshub – 
+          automate your applications and focus on what truly matters - nailing interviews!
 
           </p>
           <div className="flex pt-4">
