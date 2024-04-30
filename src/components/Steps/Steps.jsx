@@ -3,10 +3,9 @@ import step from "../../assets/step.png";
 import { Heading } from "../Heading";
 import { Container } from "../Container";
 
-const titleText = "A better way to job search";
+const titleText = "We do the hard work for you";
 const descriptionText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.";
-
+  "Why waste time scrolling through endless job boards? Our tailored approach guarantees that each candidate is delivered job opportunities that fit like a glove. "
 export const Steps = () => {
   return (
     <Container>

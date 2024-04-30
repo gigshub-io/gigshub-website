@@ -11,18 +11,17 @@ export default function JobSeekers() {
   return (
     <div className="flex flex-col w-full py-16 gap-32 mb-12 bg-off-white items-center">
       <Container>
-        <div className="flex flex-row justify-between items-center">
-          <div className="flex flex-col gap-6 w-full max-md:items-center">
-            <div className="bg-pale-purple p-2 rounded-full font-sans text-base font-semibold leading-7 text-dark-purple max-w-56 text-center max-md:flex max-md:justify-center">
+      <div className="flex flex-row justify-between items-center w-full max-xl:flex-col max-xl:items-center px-32 max-sm:px-3">
+          <div className="flex flex-col w-1/2 max-xl:w-full gap-6 w-textContainer max-xl:w-full max-xl:flex max-xl:items-center">
+            <div className="bg-pale-purple p-2 rounded-full font-sans text-base font-semibold leading-7 text-dark-purple max-w-56 text-center">
               GigsHub for Job Seekers
             </div>
             <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider max-md:text-center">
-              <span className="text-light-purple">Job Seeking</span> just got
-              easier with us
+              <span className="text-light-purple">Job Seeking</span> Fast Track Your Career with Gigshub
+
             </div>
-            <p className="font-sans text-lg font-normal leading-7 text-dark-purple max-md:text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
+            <p className="font-sans text-lg font-normal leading-7 px-1 text-dark-purple max-md:text-center">
+            Take your Job search to a new level. Effortless applications, personalised job matches, company insights.
             </p>
             <div className="flex pt-4 max-md:justify-center">
               <Button>Get Hired</Button>
@@ -73,18 +72,19 @@ export default function JobSeekers() {
             Helping <span className="text-light-purple">job seekers</span>
           </div>
           <p className="font-sans text-lg font-normal leading-7 text-dark-purple max-md:text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
+          We hate job applications as much as you do. 
+
+
           </p>
           <div className="flex flex-col gap-10 pt-7 max-xl:px-32 max-md:px-14 max-sm:px-7">
             <div className="flex flex-row gap-3">
               <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
               <div className="flex flex-col gap-2">
                 <div className="font-sans text-lg font-bold text-dark-purple">
-                  Job Auto Apply
+                Join the Job hunting revolution 
                 </div>
                 <div className="font-sans text-base font-normal text-dark-purple">
-                  Let automation do the boring bits.
+                Apply 15x faster using our automation toolkit. It's like a personal assistant, minus the coffee runs.
                 </div>
               </div>
             </div>
@@ -92,10 +92,13 @@ export default function JobSeekers() {
               <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
               <div className="flex flex-col gap-2">
                 <div className="font-sans text-lg font-bold text-dark-purple">
-                  Job Auto Apply
+ 
+                One platform: Many features 
+
+
                 </div>
                 <div className="font-sans text-base font-normal text-dark-purple">
-                  Let automation do the boring bits.
+                Our Auto Fill automates the application process, giving you more time to focus on what truly matters
                 </div>
               </div>
             </div>
@@ -103,10 +106,10 @@ export default function JobSeekers() {
               <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
               <div className="flex flex-col gap-2">
                 <div className="font-sans text-lg font-bold text-dark-purple">
-                  Dashboard
+                Apply in one click 
                 </div>
                 <div className="font-sans text-base font-normal text-dark-purple">
-                  Your job app stats at a glance.
+                We hate job applications as much as the next person, that's why we built Gigshub, to spare users hours in filling applications. 
                 </div>
               </div>
             </div>

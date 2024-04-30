@@ -24,12 +24,17 @@ export const Button = ({
   type = "button",
   className,
   ...rest
-}) => {
+}) => 
+  {
+    const handleButtonClick = () => {
+      // Redirect to the Chrome Web Store page
+      window.open("https://chromewebstore.google.com/", "_blank");
+    };
   return (
     <button
       {...rest}
       type={type}
-      onClick={onClick}
+      onClick={onClick || handleButtonClick}
       className={`items-center rounded-full border-solid border-pale-purple shadow-button text-white ${sizeClasses[size]} ${colorClasses[kind]} ${className}`}
     >
       {children}
