@@ -20,8 +20,9 @@ export const Hero = () => {
             />
           </div>
           <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
-            We automate applications, tailor CVs, and ensure ideal matches, so
-            you can focus on what truly matters - nailing interviews.
+          Discover the future of job search with Gigshub – 
+          automate your applications and focus on what truly matters - nailing interviews!
+
           </p>
           <div className="flex pt-4">
             <Button>Get Hired</Button>

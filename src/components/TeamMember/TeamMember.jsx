@@ -1,4 +1,3 @@
-import teamPic from "../../assets/team-pic.png";
 import linkedinIcon from "../../assets/social-media-icon-1.svg";
 import twitterIcon from "../../assets/social-media-icon-2.svg";
 import webIcon from "../../assets/social-media-icon-3.svg";
@@ -9,11 +8,11 @@ export const TeamMember = ({
   linkedInProfile,
   twitterProfile,
   webPage,
-  image
+  imageMember
 }) => {
   return (
     <div className="flex flex-col items-center gap-6 w-teamImage">
-      <img src={image} alt="Team" />
+      <img src={imageMember} alt="Team" />
       <div className="flex flex-col gap-1 items-center">
         <div className="font-sans text-xl font-semibold text-dark-purple">
           {fullName}

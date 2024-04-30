@@ -51,7 +51,7 @@ const slides = [
 export const TestimonialCarousel = () => {
   const titleText = "Join thousands of satisfied customers";
   const descriptionText =
-    "Don't just take our word for it. Hear what our customers have to say about their experience with Gigs Hub.";
+    "Don't just take our word for it. Hear what our customers have to say about their experience with GigsHub.";
   return (
     <section className="overflow-x-scroll w-screen">
       <Container>
