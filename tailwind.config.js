@@ -62,6 +62,7 @@ module.exports = {
         paragraph: "620px",
       },
       height: {
+        heroContainer: "1289px",
         logo: "34px",
         imageContainer: "252px",
         card: "241px",
