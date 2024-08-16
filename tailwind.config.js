@@ -30,6 +30,8 @@ module.exports = {
       },
       boxShadow: {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
+        "card-1": "0px 0px 100px 0px #ADADFFE5",
+        "card-2": "0px 4px 10px 0px #8A8AFF4D",
       },
       width: {
         textContainer: "550px",
@@ -60,6 +62,7 @@ module.exports = {
         blogCategoriesMenu: "240px",
         arrowDownWhite: "32px",
         paragraph: "620px",
+        engineIcon: "28.24px",
       },
       height: {
         heroContainer: "1289px",
@@ -73,6 +76,8 @@ module.exports = {
         blogPostCardVer: "300px",
         blogPostCardHorImg: "250px",
         arrowDownWhite: "32px",
+        cardHeader: "56.45px",
+        engineIcon: "28.24px",
       },
       lineHeight: {
         textHero: "5.375rem",

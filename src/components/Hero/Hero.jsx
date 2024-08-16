@@ -3,6 +3,7 @@ import homeHeroImg from "../../assets/home-hero-image.png";
 import chrome from "../../assets/chrome.png";
 import { Button } from "../Button";
 import { Container } from "../Container";
+import { CompanyInfoCard } from "./Cards-Hero/CompanyInfoCard";
 
 export const Hero = () => {
   return (
@@ -32,6 +33,7 @@ export const Hero = () => {
               We automate applications, tailor CVs, and ensure ideal matches, so
               you can focus on what truly matters <br /> - nailing interviews.
             </p>
+
             <div className="flex pt-12">
               <Button>
                 <div className="flex items-center gap-2">
@@ -41,6 +43,7 @@ export const Hero = () => {
               </Button>
             </div>
           </div>
+          <CompanyInfoCard />
         </div>
       </Container>
     </div>
