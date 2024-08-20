@@ -10,6 +10,9 @@ module.exports = {
       xl: "1280px",
     },
     extend: {
+      fontSize: {
+        xxs: ["10px", "14px"], // 10px font size with 14px line height
+      },
       colors: {
         "off-white": "#F3F3FF",
         purple: "#3C3C8E",
@@ -19,6 +22,8 @@ module.exports = {
         "dark-grey": "#505050",
         "washed-purple": "#ADADFF",
         "light-purple": "#7575E5",
+        "light-liliac": "#9797ED",
+        "soft-liliac": "#E5E5FF",
         "dark-blue": "#2C2C70",
         "lime-green": "#D7F77C",
         "semi-dark-purple": "#4D4DAB",
@@ -32,6 +37,8 @@ module.exports = {
         button: "0 0 5px rgba(0, 0, 0, 0.5)",
         "card-1": "0px 0px 100px 0px #ADADFFE5",
         "card-2": "0px 4px 10px 0px #8A8AFF4D",
+        "custom-inner": "0px 10px 30px 0px rgba(0, 0, 0, 0.08) inset",
+        "custom-drop": "0px 4px 20px 0px rgba(0, 0, 0, 0.08)",
       },
       width: {
         textContainer: "550px",
@@ -63,6 +70,9 @@ module.exports = {
         arrowDownWhite: "32px",
         paragraph: "620px",
         engineIcon: "28.24px",
+        vectorArrow: "8.47px",
+        orbitechLogo: "63.55px",
+        textBox: "303.82px",
       },
       height: {
         heroContainer: "1289px",
@@ -78,6 +88,10 @@ module.exports = {
         arrowDownWhite: "32px",
         cardHeader: "56.45px",
         engineIcon: "28.24px",
+        cardHero: "718px",
+        vectorArrow: "21.17px",
+        orbitechLogo: "63.51px",
+        textBox: "169.36px",
       },
       lineHeight: {
         textHero: "5.375rem",

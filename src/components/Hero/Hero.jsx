@@ -3,7 +3,9 @@ import homeHeroImg from "../../assets/home-hero-image.png";
 import chrome from "../../assets/chrome.png";
 import { Button } from "../Button";
 import { Container } from "../Container";
-import { CompanyInfoCard } from "./Cards-Hero/CompanyInfoCard";
+import { CompanyInfoCard } from "./subComponents/CompanyInfoCard";
+import { JobSummaryCard } from "./subComponents/JobSummaryCard";
+import { MessageHR } from "./subComponents/MessageHR";
 
 export const Hero = () => {
   return (
@@ -43,7 +45,17 @@ export const Hero = () => {
               </Button>
             </div>
           </div>
-          <CompanyInfoCard />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-10">
+            <div className="col-span-1">
+              <CompanyInfoCard />
+            </div>
+            <div className="col-span-2">
+              <JobSummaryCard />
+            </div>
+            <div className="col-span-1">
+              <MessageHR />
+            </div>
+          </div>
         </div>
       </Container>
     </div>
