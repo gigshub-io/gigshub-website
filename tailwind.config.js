@@ -11,7 +11,7 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        xxs: ["10px", "14px"], // 10px font size with 14px line height
+        xxs: ["10px", "14px"],
       },
       colors: {
         "off-white": "#F3F3FF",
@@ -39,6 +39,7 @@ module.exports = {
         "card-2": "0px 4px 10px 0px #8A8AFF4D",
         "custom-inner": "0px 10px 30px 0px rgba(0, 0, 0, 0.08) inset",
         "custom-drop": "0px 4px 20px 0px rgba(0, 0, 0, 0.08)",
+        "homepage-icon": "0px 5px 10px 0px #7575E5",
       },
       width: {
         textContainer: "550px",
