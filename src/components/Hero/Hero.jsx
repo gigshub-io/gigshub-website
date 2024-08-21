@@ -36,7 +36,7 @@ export const Hero = () => {
               you can focus on what truly matters <br /> - nailing interviews.
             </p>
 
-            <div className="flex pt-12">
+            <div className="flex pt-12 lg:pt-16">
               <Button>
                 <div className="flex items-center gap-2">
                   <img src={chrome} alt="Chrome logo" className="w-5 h-5" />
@@ -45,14 +45,14 @@ export const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-10">
-            <div className="col-span-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-6 lg:mt-20">
+            <div className="self-start">
               <CompanyInfoCard />
             </div>
-            <div className="col-span-2">
+            <div className="self-start">
               <JobSummaryCard />
             </div>
-            <div className="col-span-1">
+            <div className="self-start">
               <MessageHR />
             </div>
           </div>
