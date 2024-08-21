@@ -10,7 +10,9 @@ import appVector from "../../../assets/appVector.png";
 import adminIcon from "../../../assets/adminIcon.png";
 import saveIconFilled from "../../../assets/saveIconFilled.png";
 import homepageIcon from "../../../assets/homepageIcon.png";
-import { Button } from "../../Button";
+import starsUnfilled from "../../../assets/starsUnfilled.png";
+import starsFilled from "../../../assets/starsFilled.png";
+import envelopIcon from "../../../assets/envelopIcon.png";
 
 export const JobSummaryCard = () => {
   return (
@@ -102,10 +104,26 @@ export const JobSummaryCard = () => {
           </div>
 
           {/* Apply Button Section */}
-          <button className="flex items-center justify-center w-applyButton h-applyButton max-w-xs ml-4 mt-6 py-2 px-4 bg-dark-blue rounded-2xl border-4 border-light-liliac">
-            <span className="mr-2">✨</span>
-            <span className="text-white text-sx font-light">Apply</span>
-          </button>
+          <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center w-applyButton h-applyButton mt-4 py-6 px-1 rounded-full border-2 border-soft-liliac">
+              <button className="flex items-center justify-center w-applyButton h-applyButton bg-dark-blue rounded-3xl">
+                <span className="mr-2 h-4 w-4">
+                  <img src={starsUnfilled} alt="Stars Icon" />
+                </span>
+                <span className="text-xs text-white font-light">Apply</span>
+              </button>
+            </div>
+
+            {/* Icons next to the Apply button */}
+            <div className="flex items-center ml-3 mr-3 mt-4 relative">
+              <img src={envelopIcon} alt="Envelop Icon" className="h-8 w-8" />
+              <img
+                src={starsFilled}
+                alt="Stars Icon"
+                className="h-4 w-4 absolute -right-3"
+              />
+            </div>
+          </div>
 
           {/* Bottom Icons on the App Vector */}
           {/* App Vector at Bottom */}

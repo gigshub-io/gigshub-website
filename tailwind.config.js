@@ -99,6 +99,8 @@ module.exports = {
         cardJobSummary: "683px",
         textBoxJobSummary: "303.63px",
         applyButton: "38.88px",
+        cardHRMessage: "530px",
+        textBoxHRMessage: "280px",
       },
       lineHeight: {
         textHero: "5.375rem",
