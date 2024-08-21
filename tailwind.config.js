@@ -74,6 +74,8 @@ module.exports = {
         vectorArrow: "8.47px",
         orbitechLogo: "63.55px",
         textBox: "303.82px",
+        logoIcon: "30.36px",
+        applyButton: "251.56px",
       },
       height: {
         heroContainer: "1289px",
@@ -93,6 +95,10 @@ module.exports = {
         vectorArrow: "21.17px",
         orbitechLogo: "63.51px",
         textBox: "169.36px",
+        logoIcon: "28.27px",
+        cardJobSummary: "683px",
+        textBoxJobSummary: "303.63px",
+        applyButton: "38.88px",
       },
       lineHeight: {
         textHero: "5.375rem",

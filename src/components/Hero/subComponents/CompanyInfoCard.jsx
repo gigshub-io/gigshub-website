@@ -72,7 +72,7 @@ export const CompanyInfoCard = () => {
 
           {/* Description Section */}
           <div className="w-textBox h-textBox rounded-2xl mt-5 mx-auto px-2 shadow-custom-inner shadow-custom-drop">
-            <p className="p-4 text-xs dark-purple text-left">
+            <p className="p-4 text-xs dark-purple text-left font-light">
               Orbitech is a satellite operations application built on top of the
               Leanspace platform. Navigating through the complexities of
               crafting satellite management strategies and building ground
@@ -166,7 +166,7 @@ export const CompanyInfoCard = () => {
           <div className="absolute bottom-0 w-full h-appVector flex justify-center items-center gap-20 pb-5">
             <img
               src={homepageIcon}
-              className="h-10 w-10 mr-1 -mt-4 shadow-homepage-icon"
+              className="h-10 w-10 mr-1 -mt-4"
               alt="Homepage Icon"
             />
             <img
