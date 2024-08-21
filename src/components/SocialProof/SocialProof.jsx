@@ -19,7 +19,8 @@ export const SocialProof = () => {
   return (
     <Container>
       <div className="flex flex-col items-center gap-5">
-        <p className="font-sans leading-7 text-dark-purple w-full max-xl:text-center font-bold text-3xl">
+        <p className="font-sans leading-7 text-dark-purple w-full text-center font-bold text-5xl ">
+          {/* <p className="font-sans leading-7 text-dark-purple w-full text-center font-bold text-3xl"> */}
           Join thousands of job seekers
         </p>
         {/* <div className="flex flex-wrap gap-12 px-4 justify-center">
@@ -56,18 +57,22 @@ export const SocialProof = () => {
             <Avatar alt="Rosy Dean" src={RosyDean} />
           </AvatarGroup>
         </div>
-        <Button className="mt-8">
-          <div className="flex items-center gap-2">
-            <img src={chrome} alt="Chrome logo" className="w-5 h-5" />
-            <span>Add to Chrome</span>
-          </div>
-        </Button>
-        <Button className="mt-8">
-          <div className="flex items-center gap-2">
-            <img src={adminIcon} alt="Admin Icon" className="w-5 h-5" />
-            <span>Start a free trial</span>
-          </div>
-        </Button>
+        <div className="flex gap-24 mt-8">
+          {" "}
+          {/* Flex container with gap between buttons */}
+          <Button>
+            <div className="flex items-center gap-2">
+              <img src={chrome} alt="Chrome logo" className="w-5 h-5" />
+              <span>Add to Chrome</span>
+            </div>
+          </Button>
+          <Button>
+            <div className="flex items-center gap-2">
+              <img src={adminIcon} alt="Admin Icon" className="w-5 h-5" />
+              <span>Start a free trial</span>
+            </div>
+          </Button>
+        </div>
       </div>
     </Container>
   );
