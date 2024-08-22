@@ -44,33 +44,7 @@ export default function JobSeekers() {
         <div className="flex flex-col bg-pale-purple rounded-2xl py-12 px-40 items-center gap-12 w-full max-sm:px-6">
           <div className="font-sans font-bold text-5xl text-dark-purple tracking-wider max-sm:text-center">
             Let the stats do the talking
-          </div>{" "}
-          {/* <div className="flex flex-row justify-around gap-6 flex-wrap">
-            <div className="flex flex-col gap-4">
-              <div className="font-sans font-semibold text-4xl text-purple tracking-wider max-md:text-center">
-                150 +
-              </div>
-              <div className="font-sans font-normal text-base text-dark-purple tracking-wide">
-                Suspendisse varius enim in eros lorem ipsum
-              </div>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="font-sans font-semibold text-4xl text-purple tracking-wider max-md:text-center">
-                70K
-              </div>
-              <div className="font-sans font-normal text-base text-dark-purple tracking-wide">
-                Suspendisse varius enim in eros lorem ipsum
-              </div>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="font-sans font-semibold text-4xl text-purple tracking-wider max-md:text-center">
-                1.4B
-              </div>
-              <div className="font-sans font-normal text-base text-dark-purple tracking-wide">
-                Suspendisse varius enim in eros lorem ipsum
-              </div>
-            </div>
-          </div> */}
+          </div>
           <div className="flex flex-row justify-around gap-24 flex-wrap">
             <div className="flex flex-col gap-4">
               <div className="flex items-center font-sans font-semibold text-4xl text-purple tracking-wider max-md:text-center">
