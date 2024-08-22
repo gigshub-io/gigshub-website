@@ -27,6 +27,7 @@ module.exports = {
         "dark-blue": "#2C2C70",
         "lime-green": "#D7F77C",
         "semi-dark-purple": "#4D4DAB",
+        violet: "#8A8AFF",
       },
       padding: {
         button: "30px 10px",
