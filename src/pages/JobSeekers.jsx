@@ -56,7 +56,7 @@ export default function JobSeekers() {
                 />
               </div>
               <div className="font-sans font-normal text-base text-dark-purple tracking-wide">
-                Numbers of Active Users
+                Number of Active Users
               </div>
             </div>
             <div className="flex flex-col gap-4">
