@@ -62,9 +62,7 @@ export default function Blog() {
             ))}
           </ul>
         </div>
-        <div>
-        { /*<CategorySection id={category} />*/}
-        </div>
+        <div>{/*<CategorySection id={category} />*/}</div>
       </div>
       <div className="flex flex-col gap-20">
         <div className="flex flex-row justify-between">
@@ -75,7 +73,7 @@ export default function Blog() {
         </div>
         <div>
           <div className="flex flex-row justify-between">
-          { /*  {latestPosts.map((post, index) => (
+            {/*  {latestPosts.map((post, index) => (
           <LatestPostCard post={post} key={index} />
             ))}*/}
           </div>
