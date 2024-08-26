@@ -13,6 +13,7 @@ import homepageIcon from "../../../assets/homepageIcon.png";
 import starsUnfilled from "../../../assets/starsUnfilled.png";
 import starsFilled from "../../../assets/starsFilled.png";
 import envelopIcon from "../../../assets/envelopIcon.png";
+import airbnb from "../../../assets/airbnb.svg";
 
 export const JobSummaryCard = () => {
   return (
@@ -33,17 +34,15 @@ export const JobSummaryCard = () => {
           </div>
           <div className="flex justify-between items-start mt-5 px-6">
             <div className="flex items-center">
-              <div
-                className="w-orbitechLogo h-orbitechLogo rounded-lg flex items-center justify-center"
-                style={{
-                  background:
-                    "linear-gradient(321.34deg, #031A2D -28.32%, #0A5593 95.06%)",
-                }}
-              >
-                <PlanetIcon className="w-10 h-10" />
+              <div>
+                <img
+                  src={airbnb}
+                  className="w-orbitechLogo h-orbitechLogo rounded-lg flex items-center justify-center"
+                  alt="Airbnb Icon"
+                />
               </div>
               <div className="ml-4 flex flex-col text-left">
-                <span className="text-sm text-purple">ORBITECH</span>
+                <span className="text-sm text-purple">AIRBNB</span>
                 <span className="text-lg font-semibold text-dark-blue">
                   Front-end developer
                 </span>
@@ -58,15 +57,15 @@ export const JobSummaryCard = () => {
             </div>
           </div>
 
-          <div className="flex items-center mt-5 px-6 text-light-liliac">
+          <div className="flex items-center mt-5 px-5 text-light-liliac">
             <img src={locationIcon} className="h-5 w-5" alt="Location Icon" />
-            <span className="ml-2 text-xs">Bremen, Germany</span>
+            <span className="ml-2 text-xs">Barcelona, Spain</span>
             <img src={linkIcon} className="h-5 w-5 ml-6" alt="Link Icon" />
             <a
-              href="https://orbitech.com"
+              href="https://www.airbnb.com"
               className="ml-2 text-xs underline text-light-liliac"
             >
-              https://orbitech.com
+              https://www.airbnb.com
             </a>
           </div>
 
@@ -78,7 +77,7 @@ export const JobSummaryCard = () => {
           {/* Description Section */}
           <div className="w-textBox h-textBoxJobSummary rounded-2xl mt-5 mx-auto px-2 shadow-custom-inner shadow-custom-drop">
             <p className="pt-4 px-4 text-xs dark-purple text-left font-light">
-              Orbitech is a leading satellite software company.
+              Airbnb is a global leader in hospitality services.
             </p>
 
             <p className="px-4 mt-2 text-xs dark-purple text-left font-semibold font-light">
