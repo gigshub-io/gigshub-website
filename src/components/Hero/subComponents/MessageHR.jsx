@@ -10,6 +10,7 @@ import homepageIcon from "../../../assets/homepageIcon.png";
 import closeIcon from "../../../assets/closeIcon.png";
 import copyIcon from "../../../assets/copyIcon.png";
 import magicWandIcon from "../../../assets/magicWandIcon.png";
+import airbnb from "../../../assets/airbnb.svg";
 
 export const MessageHR = () => {
   return (
@@ -30,19 +31,17 @@ export const MessageHR = () => {
           </div>
           <div className="flex justify-between items-start mt-5 px-6">
             <div className="flex items-center">
-              <div
-                className="w-orbitechLogo h-orbitechLogo rounded-lg flex items-center justify-center"
-                style={{
-                  background:
-                    "linear-gradient(321.34deg, #031A2D -28.32%, #0A5593 95.06%)",
-                }}
-              >
-                <PlanetIcon className="w-10 h-10" />
+              <div>
+                <img
+                  src={airbnb}
+                  className="w-orbitechLogo h-orbitechLogo rounded-lg flex items-center justify-center"
+                  alt="Airbnb Icon"
+                />
               </div>
               <div className="ml-4 flex flex-col text-left">
-                <span className="text-sm text-purple">ORBITECH CEO</span>
+                <span className="text-sm text-purple">AIRBNB CEO</span>
                 <span className="text-lg font-semibold text-dark-blue">
-                  John Doe
+                  Brian Chesky
                 </span>
               </div>
             </div>

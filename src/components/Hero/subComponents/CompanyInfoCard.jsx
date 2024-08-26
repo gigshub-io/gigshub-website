@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "../../Container";
 import engineIcon from "../../../assets/engine-icon.png";
 import vector from "../../../assets/Vector.png";
-import { ReactComponent as PlanetIcon } from "../../../assets/planetIcon.svg";
 import saveIcon from "../../../assets/saveIcon.png";
 import locationIcon from "../../../assets/locationIcon.png";
 import linkIcon from "../../../assets/linkIcon.png";
@@ -11,6 +10,7 @@ import appVector from "../../../assets/appVector.png";
 import adminIcon from "../../../assets/adminIcon.png";
 import saveIconFilled from "../../../assets/saveIconFilled.png";
 import homepageIcon from "../../../assets/homepageIcon.png";
+import airbnb from "../../../assets/airbnb.svg";
 
 export const CompanyInfoCard = () => {
   return (
@@ -31,17 +31,15 @@ export const CompanyInfoCard = () => {
           </div>
           <div className="flex justify-between items-start mt-5 px-6">
             <div className="flex items-center">
-              <div
-                className="w-orbitechLogo h-orbitechLogo rounded-lg flex items-center justify-center"
-                style={{
-                  background:
-                    "linear-gradient(321.34deg, #031A2D -28.32%, #0A5593 95.06%)",
-                }}
-              >
-                <PlanetIcon className="w-10 h-10" />
+              <div>
+                <img
+                  src={airbnb}
+                  className="w-orbitechLogo h-orbitechLogo rounded-lg flex items-center justify-center"
+                  alt="Airbnb Icon"
+                />
               </div>
               <span className="ml-4 text-lg font-semibold text-dark-blue">
-                ORBITECH
+                AIRBNB
               </span>
             </div>
             <div className="flex-grow flex justify-end">
@@ -53,15 +51,15 @@ export const CompanyInfoCard = () => {
             </div>
           </div>
 
-          <div className="flex items-center mt-5 px-6 text-light-liliac">
+          <div className="flex items-center mt-5 px-5 text-light-liliac">
             <img src={locationIcon} className="h-5 w-5" alt="Location Icon" />
-            <span className="ml-2 text-xs">Bremen, Germany</span>
+            <span className="ml-2 text-xs">Barcelona, Spain</span>
             <img src={linkIcon} className="h-5 w-5 ml-6" alt="Link Icon" />
             <a
-              href="https://orbitech.com"
+              href="https://www.airbnb.com"
               className="ml-2 text-xs underline text-light-liliac"
             >
-              https://orbitech.com
+              https://www.airbnb.com
             </a>
           </div>
 
@@ -73,12 +71,12 @@ export const CompanyInfoCard = () => {
           {/* Description Section */}
           <div className="w-textBox h-textBox rounded-2xl mt-5 mx-auto px-2 shadow-custom-inner shadow-custom-drop">
             <p className="p-4 text-xs dark-purple text-left font-light">
-              Orbitech is a satellite operations application built on top of the
-              Leanspace platform. Navigating through the complexities of
-              crafting satellite management strategies and building ground
-              segment software from scratch, the goal of Orbitech is to allow
-              the management of a constellation of 20 satellites, and capture
-              images of specific locations on Earth.
+              Airbnb is a global marketplace built on connecting people through
+              hospitality and trust. Navigating the complexities of managing
+              travel accommodations and crafting unique experiences, Airbnb's
+              goal is to offer travelers diverse lodging options, from private
+              homes to boutique hotels, and facilitate meaningful connections
+              between hosts and guests worldwide.
             </p>
           </div>
 
@@ -90,7 +88,7 @@ export const CompanyInfoCard = () => {
             </div>
             <div className="flex items-center justify-center bg-soft-liliac rounded-lg py-2 px-2">
               <img src={labelIcon} alt="Label Icon" className="h-4 w-4 mr-1" />
-              <span className="text-xs text-dark-purple">Space</span>
+              <span className="text-xs text-dark-purple">Hospitality</span>
             </div>
             <div className="flex items-center justify-center bg-soft-liliac rounded-lg py-2 px-2">
               <img src={labelIcon} alt="Label Icon" className="h-4 w-4 mr-1" />
@@ -108,7 +106,7 @@ export const CompanyInfoCard = () => {
                   <p className="text-xxs text-light-liliac tracking-wide">
                     YEAR OF FOUNDING
                   </p>
-                  <p className="text-xs font-semibold text-dark-purple">2023</p>
+                  <p className="text-xs font-semibold text-dark-purple">2008</p>
                 </div>
               </div>
               <div className="flex justify-center items-center">
@@ -117,7 +115,7 @@ export const CompanyInfoCard = () => {
                     EMPLOYEES
                   </p>
                   <p className="text-xs font-semibold text-dark-purple">
-                    &lt;10
+                    &lt;5000
                   </p>
                 </div>
               </div>
@@ -132,10 +130,10 @@ export const CompanyInfoCard = () => {
                 </p>
                 <div className="flex justify-center gap-4">
                   <p className="text-xs font-semibold text-dark-purple">
-                    <span className="text-light-liliac">♀</span> 40%
+                    <span className="text-light-liliac">♀</span> 51%
                   </p>
                   <p className="text-xs font-semibold text-dark-purple">
-                    <span className="text-light-liliac">♂</span> 60%
+                    <span className="text-light-liliac">♂</span> 49%
                   </p>
                 </div>
               </div>
@@ -148,7 +146,7 @@ export const CompanyInfoCard = () => {
                   REVENUE
                 </p>
                 <p className="text-xs font-semibold text-dark-purple">
-                  $50 million
+                  $10.5 billion
                 </p>
               </div>
             </div>
