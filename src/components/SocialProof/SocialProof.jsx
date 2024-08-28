@@ -20,19 +20,8 @@ export const SocialProof = () => {
     <Container>
       <div className="flex flex-col items-center gap-5">
         <p className="font-sans leading-7 text-dark-purple w-full text-center font-bold text-5xl ">
-          {/* <p className="font-sans leading-7 text-dark-purple w-full text-center font-bold text-3xl"> */}
           Join thousands of job seekers
         </p>
-        {/* <div className="flex flex-wrap gap-12 px-4 justify-center">
-          {" "}
-          <img src={webflowLogo} alt="People laughing with pcs" />
-          <img src={relumeLogo} alt="People laughing with pcs" />
-          <img src={webflowLogo} alt="People laughing with pcs" />
-          <img src={relumeLogo} alt="People laughing with pcs" />
-          <img src={webflowLogo} alt="People laughing with pcs" />
-          <img src={relumeLogo} alt="People laughing with pcs" />
-        </div> */}
-
         <div className="flex flex-wrap gap-12 px-4 justify-center mt-16">
           <AvatarGroup
             max={8}

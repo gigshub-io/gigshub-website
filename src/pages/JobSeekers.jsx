@@ -24,8 +24,9 @@ export default function JobSeekers() {
               Your Career with Gigshub
             </div>
             <p className="font-sans text-lg font-normal leading-7 px-1 text-dark-purple max-md:text-center">
-              Take your Job search to a new level. Effortless applications,
-              personalised job matches, company insights.
+              Take your Job search to a new level. <br />
+              Effortless applications, personalised job matches, company
+              insights.
             </p>
             <div className="flex pt-4 max-md:justify-center">
               <Button>Get Hired</Button>
@@ -95,9 +96,14 @@ export default function JobSeekers() {
           className="w-stepContainer h-auto max-md:hidden"
         />
         <div className="flex flex-col gap-6 w-full">
-          <div className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide max-md:text-center">
+          {/* <div className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide max-md:text-center">
             Helping <span className="text-light-purple">job seekers</span>
+          </div> */}
+          <div className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide max-md:text-center">
+            Maximum Reach{""}
+            <span className="text-light-purple"> Minimum Effort</span>
           </div>
+
           <div className="flex flex-col gap-10 pt-7 max-xl:px-32 max-md:px-14 max-sm:px-7">
             <div className="flex flex-row gap-3">
               <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
