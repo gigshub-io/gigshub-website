@@ -18,9 +18,14 @@ export const Hero = () => {
     >
       <Container>
         <div className="flex flex-col gap-6 w-full text-center h-heroContainer mx-auto px-6">
-          <div className="font-sans text-5xl lg:text-7xl font-bold text-dark-purple leading-textHero2 lg:leading-textHero tracking-wider">
+          {/* <div className="font-sans text-5xl lg:text-7xl font-bold text-dark-purple leading-textHero2 lg:leading-textHero tracking-wider">
             Turbocharge your job <br />
             search with <span className="text-light-purple">GigsHub</span>
+          </div> */}
+          <div className="font-sans text-5xl lg:text-7xl font-bold text-dark-purple leading-textHero2 lg:leading-textHero tracking-wider">
+            More interviews,
+            <br />
+            <span className="text-light-purple">No applications</span>
           </div>
 
           <div className="flex justify-center">
@@ -32,8 +37,8 @@ export const Hero = () => {
           </div>
           <div className="flex flex-col items-center">
             <p className="font-sans text-lg font-normal leading-7 text-dark-purple">
-              We automate applications, tailor CVs, and ensure ideal matches, so
-              you can focus on what truly matters <br /> - nailing interviews.
+              We Automate Applications, Tailor CVs, and Ensure Ideal Matches, So
+              You Can Focus on What Truly Matters <br /> - acing Interviews.
             </p>
 
             <div className="flex pt-12 lg:pt-16">

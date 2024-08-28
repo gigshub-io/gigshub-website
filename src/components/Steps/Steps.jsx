@@ -5,7 +5,7 @@ import { Container } from "../Container";
 
 const titleText = "We do the hard work for you";
 const descriptionText =
-  "Why waste time scrolling through endless job boards? Our tailored approach guarantees that each candidate is delivered job opportunities that fit like a glove. "
+  "In the world of job hunting, the struggle has been all too real. Hours upon hours spent each day on painstaking job applications, leaving individuals exhausted and unmotivated. So, we reimagined it all. Our solution?";
 export const Steps = () => {
   return (
     <Container>
@@ -23,36 +23,35 @@ export const Steps = () => {
             </div>
             <div className="flex flex-col lg:py-10 lg:py-40 gap-6 w-80 lg:w-stepContainer items-start">
               <h1 className="font-sans font-bold text-3xl tracking-wide text-dark-purple">
-                Step 1
+                Smart Job Matching
               </h1>
               <div className="lg:hidden flex">
                 <img src={step} alt="Step 1" />
               </div>
               <p className="font-sans font-bold text-sm lg:text-lg tracking-wide leading-7 text-dark-purple">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim in eros elementum tristique.
+                We do the hard work for you.
               </p>
               <p className="lg:pt-4 font-sans font-normal text-sm lg:text-lg tracking-wide leading-7 text-dark-purple">
-                Duis cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                ut commodo diam libero vitae erat.
+                Why waste time scrolling through endless job boards? Our
+                tailored approach guarantees that each candidate is delivered
+                job opportunities that fit like a glove.
               </p>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row items-center lg:justify-start gap-3 lg:gap-24">
             <div className="flex flex-col lg:py-40 gap-6 w-80 lg:w-stepContainer items-start">
               <h1 className="font-sans font-bold text-3xl tracking-wide text-dark-purple">
-                Step 2
+                Job Autoapply
               </h1>
               <div className="lg:hidden flex">
                 <img src={step} alt="Step 2" />
               </div>
               <p className="font-sans font-bold text-sm lg:text-lg tracking-wide leading-7 text-dark-purple">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim in eros elementum tristique.
+                Job Hunting on Easy Mode.
               </p>
               <p className="lg:pt-4 font-sans font-normal text-sm lg:text-lg tracking-wide leading-7 text-dark-purple">
-                Duis cursus, mi quis viverra ornare, eros dolor interdum nulla,
-                ut commodo diam libero vitae erat.
+                Take the work out of job hunting so you can focus on what truly
+                matters.
               </p>
             </div>
             <div className="hidden lg:flex">
@@ -66,18 +65,20 @@ export const Steps = () => {
               </div>
               <div className="flex flex-col lg:py-40 gap-6 w-80 lg:w-stepContainer items-start">
                 <h1 className="font-sans font-bold text-3xl tracking-wide text-dark-purple">
-                  Step 3
+                  Dashboard
                 </h1>
                 <div className="lg:hidden flex">
                   <img src={step} alt="Step 3" />
                 </div>
                 <p className="font-sans font-bold text-sm lg:text-lg tracking-wide leading-7 text-dark-purple">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique.
+                  Experience control like never before.
                 </p>
                 <p className="lg:pt-4 font-sans font-normal text-sm lg:text-lg tracking-wide leading-7 text-dark-purple">
-                  Duis cursus, mi quis viverra ornare, eros dolor interdum
-                  nulla, ut commodo diam libero vitae erat.
+                  Introducing our all-in-one dashboard, your personal powerhouse
+                  for job hunting. This tool tracks your job applications,
+                  provides real-time hiring news, and lets you follow preferred
+                  companies. Say goodbye to scattered spreadsheets and endless
+                  browser tabs.
                 </p>
               </div>
             </div>
