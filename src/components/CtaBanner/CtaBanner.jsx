@@ -9,25 +9,30 @@ export const CtaBanner = ({ className, image }) => {
         className={`flex flex-col gap-10 lg:flex-row rounded-ctaBanner h-ctaBanner lg:h-testimonialContainer py-14 lg:py-20 px-2 lg:px-16 relative overflow-hidden ${className}`}
       >
         <div className="flex flex-col gap-5 lg:w-shortTextContainer items-center lg:items-start text-center lg:text-left">
-          <div className="font-sans lg:text-3xl text-xl font-bold text-off-white tracking-wide">
+          <div className="font-sans lg:text-3xl text-xl font-bold text-off-white tracking-wide z-10">
+            {/* <div className={`font-sans lg:text-3xl text-xl font-bold tracking-wide z-10 ${className}`}> */}
             Call to action that invites the visitor to get started
           </div>
           {window.innerWidth > 768 && (
-          <p className="font-sans lg:text-lg text-sm font-normal leading-7 text-off-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
-          </p>)}
+            <p className="font-sans lg:text-lg text-sm font-normal text-off-white leading-7 z-10">
+              {/*          <p
+              className={`font-sans lg:text-lg text-sm font-normal leading-7 z-10 ${className}`}
+            > */}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.
+            </p>
+          )}
           <div className="flex pt-4">
             <Button>Sign Up</Button>
           </div>
         </div>
         {window.innerWidth > 768 && (
-        <img
-          src={image}
-          alt="Cta Banner"
-          className="absolute right-0 bottom-0"
-        />
-      )}
+          <img
+            src={image}
+            alt="Cta Banner"
+            className="absolute right-0 bottom-0 z-0"
+          />
+        )}
       </div>
     </Container>
   );

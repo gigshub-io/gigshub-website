@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "../../Container";
 import logoIcon from "../../../assets/logoIcon.png";
 import engineIcon from "../../../assets/engine-icon.png";
-import { ReactComponent as PlanetIcon } from "../../../assets/planetIcon.svg";
 import appVector from "../../../assets/appVector.png";
 import adminIcon from "../../../assets/adminIcon.png";
 import saveIconFilled from "../../../assets/saveIconFilled.png";
