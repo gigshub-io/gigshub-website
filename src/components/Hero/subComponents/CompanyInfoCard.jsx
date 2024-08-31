@@ -16,7 +16,8 @@ export const CompanyInfoCard = () => {
   return (
     <Container>
       <div className="flex flex-col items-center gap-10 relative">
-        <div className="w-card1 h-cardHero flex flex-col rounded-2xl rounded-b-3xl shadow-lg shadow-card-1 shadow-card-2 text-black bg-white relative ">
+        <div className="w-card1 h-cardHero flex flex-col rounded-2xl rounded-b-3xl text-black bg-white relative">
+          {/* <div className="w-card1 h-cardHero flex flex-col rounded-2xl rounded-b-3xl shadow-lg shadow-card-1 shadow-card-2 text-black bg-white relative"> */}
           <div className="w-full h-cardHeader bg-dark-blue rounded-t-2xl flex items-center justify-between">
             <img
               src={vector}
@@ -29,7 +30,7 @@ export const CompanyInfoCard = () => {
               alt="Engine Icon"
             />
           </div>
-          <div className="flex justify-between items-start mt-5 px-6">
+          <div className="flex justify-between items-start mt-5 px- xs:px-4">
             <div className="flex items-center">
               <div>
                 <img
@@ -38,7 +39,7 @@ export const CompanyInfoCard = () => {
                   alt="Airbnb Icon"
                 />
               </div>
-              <span className="ml-4 text-lg font-semibold text-dark-blue">
+              <span className="ml-4 text-lg font-semibold text-dark-blue xs:text-base xs:ml-2">
                 AIRBNB
               </span>
             </div>
@@ -51,10 +52,18 @@ export const CompanyInfoCard = () => {
             </div>
           </div>
 
-          <div className="flex items-center mt-5 px-5 text-light-liliac">
+          {/* <div className="flex items-center mt-5 px-5 text-light-liliac">
             <img src={locationIcon} className="h-5 w-5" alt="Location Icon" />
             <span className="ml-2 text-xs">Barcelona, Spain</span>
-            <img src={linkIcon} className="h-5 w-5 ml-6" alt="Link Icon" />
+            <img src={linkIcon} className="h-5 w-5 ml-6" alt="Link Icon" /> */}
+          <div className="flex items-center mt-5 px-5 xs:px-3 text-light-liliac">
+            <img src={locationIcon} className="h-5 w-5" alt="Location Icon" />
+            <span className="ml-2 text-xs">Barcelona, Spain</span>
+            <img
+              src={linkIcon}
+              className="h-5 w-5 ml-6 xs:ml-3"
+              alt="Link Icon"
+            />
             <a
               href="https://www.airbnb.com"
               className="ml-2 text-xs underline text-light-liliac"
@@ -69,7 +78,7 @@ export const CompanyInfoCard = () => {
           </div>
 
           {/* Description Section */}
-          <div className="w-textBox h-textBox rounded-2xl mt-5 mx-auto px-2 shadow-custom-inner shadow-custom-drop">
+          <div className="w-textBox h-textBox rounded-2xl mt-5 mx-auto px-2 shadow-custom-inner shadow-custom-drop xs:px-1">
             <p className="p-4 text-xs dark-purple text-left font-light">
               Airbnb is a global marketplace built on connecting people through
               hospitality and trust. Navigating the complexities of managing
@@ -81,7 +90,7 @@ export const CompanyInfoCard = () => {
           </div>
 
           {/* Labels Section */}
-          <div className="flex justify-center gap-2 mt-5 px-8">
+          {/* <div className="flex justify-center gap-2 mt-5 px-8">
             <div className="flex items-center justify-center bg-soft-liliac rounded-lg py-2 px-2">
               <img src={labelIcon} alt="Label Icon" className="h-4 w-4 mr-1" />
               <span className="text-xs text-dark-purple">Engineering</span>
@@ -91,6 +100,21 @@ export const CompanyInfoCard = () => {
               <span className="text-xs text-dark-purple">Hospitality</span>
             </div>
             <div className="flex items-center justify-center bg-soft-liliac rounded-lg py-2 px-2">
+              <img src={labelIcon} alt="Label Icon" className="h-4 w-4 mr-1" />
+              <span className="text-xs text-dark-purple">Software</span>
+            </div>
+          </div> */}
+
+          <div className="flex justify-center gap-2 mt-5 px-8 xs:px-4">
+            <div className="flex items-center justify-center bg-soft-liliac rounded-lg py-2 px-2 xs:px-1">
+              <img src={labelIcon} alt="Label Icon" className="h-4 w-4 mr-1" />
+              <span className="text-xs text-dark-purple">Engineering</span>
+            </div>
+            <div className="flex items-center justify-center bg-soft-liliac rounded-lg py-2 px-2 xs:px-1">
+              <img src={labelIcon} alt="Label Icon" className="h-4 w-4 mr-1" />
+              <span className="text-xs text-dark-purple">Hospitality</span>
+            </div>
+            <div className="flex items-center justify-center bg-soft-liliac rounded-lg py-2 px-2 xs:px-1">
               <img src={labelIcon} alt="Label Icon" className="h-4 w-4 mr-1" />
               <span className="text-xs text-dark-purple">Software</span>
             </div>

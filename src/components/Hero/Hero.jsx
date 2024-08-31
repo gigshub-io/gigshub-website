@@ -5,55 +5,71 @@ import { Container } from "../Container";
 import { CompanyInfoCard } from "./subComponents/CompanyInfoCard";
 import { JobSummaryCard } from "./subComponents/JobSummaryCard";
 import { MessageHR } from "./subComponents/MessageHR";
+import airbnbimg1 from "../../assets/airbnbimg1.png";
+import airbnbimg2 from "../../assets/airbnbimg2.png";
+import airbnbimg3 from "../../assets/airbnbimg3.png";
 
 export const Hero = () => {
   return (
     <div
-      className="w-full"
+      className="h-full bg-pink-700"
       style={{
         background:
-          "linear-gradient(180deg, #F3F3FF 33.44%, rgba(173, 173, 255, 0.3) 63.65%, rgba(138, 138, 255, 0.3) 69.67%, #F3F3FF 94.92%)",
+          "linear-gradient(180deg, #F3F3FF 33.44%, rgba(173, 173, 255, 0.3) 63.65%, rgba(138, 138, 255, 0.3) 80.67%, #F3F3FF 94.92%)",
       }}
     >
-      <Container className="flex-wrap">
-        <div className="flex flex-col gap-6 w-full text-center h-heroContainer mx-auto px-6">
-          {/* <div className="font-sans text-5xl lg:text-7xl font-bold text-dark-purple leading-textHero2 lg:leading-textHero tracking-wider">
-            Turbocharge your job <br />
-            search with <span className="text-light-purple">GigsHub</span>
-          </div> */}
-          <div className="font-sans text-5xl sm:text-5xl lg:text-7xl font-bold text-dark-purple leading-textHero2 sm:leading-textHero2 lg:leading-textHero tracking-wider">
+      <Container>
+        <div className="flex flex-col gap-6 w-full text-center mx-auto px-8">
+          <div className="font-sans text-5xl xs:text-5xl lg:text-7xl font-bold text-dark-purple leading-textHero2 xs:leading-textHero2 lg:leading-textHero tracking-wider">
             More interviews,
-            <br className="sm:hidden" />
-            <span className="text-light-purple sm:block">No applications</span>
+            <br className="xs:hidden" />
+            <span className="text-light-purple xs:block">No applications</span>
           </div>
           <div className="flex flex-col items-center">
-            <p className="font-sans text-lg font-normal leading-7 sm:leading-7 text-dark-purple sm:items-start sm:text-left">
+            <p
+              className="font-sans text-lg font-normal leading-7 text-dark-purple xs:leading-7 xs:items-start xs:text-left
+            md:text-center lg:text-center"
+            >
               We Automate Applications, Tailor CVs, and Ensure Ideal Matches, So
               You Can Focus on What Truly Matters <br /> - acing Interviews.
             </p>
 
-            <div className="flex pt-12 sm:pt-12 lg:pt-16 sm:text-lg">
+            <div className="flex pt-12 xs:pt-12 lg:pt-16 xs:text-lg">
               <Button>
-                <div className="flex items-center gap-2 sm:text-base">
+                <div className="flex items-center gap-2 xs:text-base">
                   <img
                     src={chrome}
                     alt="Chrome logo"
-                    className="w-5 h-5 sm:w-6 sm:h-6"
+                    className="w-5 h-5 xs:w-8 xs:h-8"
                   />
                   <span>Add to Chrome</span>
                 </div>
               </Button>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[14rem] mt-6 lg:mt-20">
-            <div className="self-start">
-              <CompanyInfoCard className="w-full sm:w-auto" />
+          {/* Ensure grid items shrink but never stack */}
+          <div className="grid grid-cols-3 gap-2 xs:gap-2 md:gap-12 lg:gap-28 mt-6 lg:mt-12">
+            {/* Set min-width to prevent shrinking below a certain size */}
+            <div className="self-start" style={{ minWidth: "100px" }}>
+              <img
+                src={airbnbimg1}
+                alt="Company Info Card"
+                className="w-card1 h-auto"
+              />
             </div>
-            <div className="self-start">
-              <JobSummaryCard className="w-full sm:w-auto" />
+            <div className="self-start" style={{ minWidth: "100px" }}>
+              <img
+                src={airbnbimg2}
+                alt="Job Summary Card"
+                className="w-card1 h-auto"
+              />
             </div>
-            <div className="self-start">
-              <MessageHR className="w-full sm:w-auto" />
+            <div className="self-start" style={{ minWidth: "100px" }}>
+              <img
+                src={airbnbimg3}
+                alt="HR Message"
+                className="w-card1 h-auto"
+              />
             </div>
           </div>
         </div>

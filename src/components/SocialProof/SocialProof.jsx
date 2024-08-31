@@ -1,6 +1,4 @@
-import React from "react";
-import webflowLogo from "../../assets/webflow-logo.png";
-import relumeLogo from "../../assets/relume-logo.png";
+import React, { useState, useEffect } from "react";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
 import { Container } from "../Container";
@@ -11,20 +9,39 @@ import TrevorHenderson from "../../assets/TrevorHenderson.jpg";
 import CindyBaker from "../../assets/CindyBaker.jpg";
 import HannaNelson from "../../assets/HannaNelson.jpg";
 import RosyDean from "../../assets/RosyDean.jpg";
-import chrome from "../../assets/chrome.png";
 import { Button } from "../Button";
 import adminIcon from "../../assets/adminIcon.png";
 
 export const SocialProof = () => {
+  const [maxAvatars, setMaxAvatars] = useState(8);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        // Adjusted max value to 4 for screens smaller than 640px (Tailwind xs breakpoint)
+        setMaxAvatars(4);
+      } else {
+        setMaxAvatars(8);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call it initially to set the correct max value
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Container>
       <div className="flex flex-col items-center gap-5">
-        <p className="font-sans leading-7 text-dark-purple w-full text-center font-bold text-5xl ">
+        <p className="font-sans leading-7 text-dark-purple w-full text-center font-bold text-5xl px-6 xs:leading-10">
           Join thousands of job seekers
         </p>
         <div className="flex flex-wrap gap-12 px-4 justify-center mt-16">
           <AvatarGroup
-            max={8}
+            max={maxAvatars} // Dynamically setting max based on screen size
             sx={{
               "& .MuiAvatar-root": { width: 80, height: 80, fontSize: 24 },
             }} // Adjust avatar size here

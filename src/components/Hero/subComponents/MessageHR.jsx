@@ -15,7 +15,7 @@ export const MessageHR = () => {
   return (
     <Container>
       <div className="flex flex-col items-center gap-10 relative">
-        <div className="w-card1 h-cardHRMessage flex flex-col rounded-2xl rounded-b-3xl shadow-lg shadow-card-1 shadow-card-2 text-black bg-white relative ">
+        <div className="w-card1 h-cardHRMessage flex flex-col rounded-2xl rounded-b-3xl text-black bg-white relative">
           <div className="w-full h-cardHeader bg-dark-blue rounded-t-2xl flex items-center justify-between">
             <img
               src={logoIcon}
@@ -38,9 +38,9 @@ export const MessageHR = () => {
                 />
               </div>
               <div className="ml-4 flex flex-col text-left">
-                <span className="text-sm text-purple">AIRBNB CEO</span>
+                <span className="text-sm text-purple">AIRBNB HR MANAGER</span>
                 <span className="text-lg font-semibold text-dark-blue">
-                  Brian Chesky
+                  Heather Fuller
                 </span>
               </div>
             </div>

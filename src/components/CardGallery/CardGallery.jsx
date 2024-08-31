@@ -39,9 +39,11 @@ export const CardGallery = () => {
   return (
     <Container>
       <div className="flex flex-col items-center gap-10 p-6">
-        <p className="flex flex-col lg:flex-row lg:gap-4 justify-center font-sans text-5xl font-bold leading-7 text-dark-purple leading-headingCardsContainer text-center tracking-wider max-md:text-3xl">
-          What makes us <span className="text-light-purple">unique</span>at
-          GigsHub
+        <p className="font-sans text-5xl font-bold text-dark-purple text-center tracking-wider max-md:text-3xl">
+          <span>
+            What makes us <span className="text-light-purple">unique</span>
+          </span>
+          <span className="block">at GigsHub</span>
         </p>
 
         <div className="grid grid-row lg:grid-cols-3 gap-2 lg:gap-10">

@@ -4,10 +4,11 @@ module.exports = {
   theme: {
     screens: {
       mc: "300px",
+      xs: "393px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1280px",
+      xl: "1480px",
     },
     extend: {
       fontSize: {
