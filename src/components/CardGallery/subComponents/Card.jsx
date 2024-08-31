@@ -14,7 +14,7 @@ export const Card = ({ heading, children }) => {
     };
     return (
       <div className="flex flex-col gap-4">
-        <p className="text">{isReadMore ? `${text.slice(0, 100)}...` : text}</p>
+        <p className="text">{isReadMore ? `${text.slice(0, 97)}...` : text}</p>
         <div
           className="flex flex-row gap-4 items-center"
           onClick={toggleReadMore}

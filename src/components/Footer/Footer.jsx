@@ -21,7 +21,7 @@ export const Footer = () => {
             <Logo kind="inverted" />
             <NavBar isMainNavbar={false} dropDownIsOpen={true} />
           </div>
-          <div className="flex flex-col gap-4 text-sm">
+          {/* <div className="flex flex-col gap-4 text-sm">
             <label className="text-off-white">Subscribe</label>
             <div className="flex flex-row gap-4 max-sm:flex-wrap">
               <input
@@ -48,7 +48,7 @@ export const Footer = () => {
                 Privacy Policy
               </a>
             </p>
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-col w-full gap-8">
           <hr className="mx-6 lg:mx-0" />
