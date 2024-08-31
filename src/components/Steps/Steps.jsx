@@ -16,7 +16,7 @@ export const Steps = () => {
           alignment="center"
           className="flex"
         />
-        <div className="flex flex-col gap-14 lg:gap-10 w-full bg-pink-900">
+        <div className="flex flex-col gap-14 lg:gap-10">
           <div className="flex flex-col lg:flex-row items-center lg:justify-start gap-3 lg:gap-24">
             <div className="hidden lg:flex">
               <img src={step} alt="Step 1" />
