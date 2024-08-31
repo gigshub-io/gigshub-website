@@ -36,7 +36,7 @@ export const SocialProof = () => {
   return (
     <Container>
       <div className="flex flex-col items-center gap-5">
-        <p className="font-sans leading-7 text-dark-purple w-full text-center font-bold text-5xl px-6 xs:leading-10">
+        <p className="font-sans text-5xl font-bold leading-7 text-dark-purple leading-headingCardsContainer tracking-wide w-full text-center px-6 xs:leading-headingCardsContainer">
           Join thousands of job seekers
         </p>
         <div className="flex flex-wrap gap-12 px-4 justify-center mt-16">
