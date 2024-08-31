@@ -20,12 +20,12 @@ export default function Freelancers() {
               GigsHub for Freelancers
             </div>
             <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider max-md:text-center">
-              <span className="text-light-purple">Freelancers</span> Find Your
-              Next Project Faster with Gigshub
+              <span className="text-light-purple">Freelancers</span> just got
+              easier with us
             </div>
             <p className="font-sans text-lg font-normal leading-7 text-dark-purple max-md:text-center">
-              Streamline Your Job Search, Automate Applications, and Land More
-              Gigs Effortlessly with Gigshub.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.
             </p>
             <div className="flex pt-4 max-md:justify-center">
               <Button>Get Hired</Button>

@@ -8,6 +8,7 @@ import { CardGallery } from "../components/CardGallery";
 import { CtaBanner } from "../components/CtaBanner";
 import { Faq } from "../components/Faq";
 import ctaImage from "../assets/pricing-cta-banner.png";
+import aboutUsImg from "../assets/aboutus-image.png";
 
 export default function Pricing() {
   const [isBillingAnnual, setIsBillingAnnual] = useState(false);
@@ -49,6 +50,7 @@ export default function Pricing() {
   const handleBillingSelection = () => {
     setIsBillingAnnual((prev) => !prev);
   };
+
   return (
     <div className="flex flex-col w-full gap-40 mb-12 bg-off-white items-center">
       <Container>
@@ -60,6 +62,11 @@ export default function Pricing() {
             alignment="center"
             gap="10"
             className=""
+          />
+          <img
+            src={aboutUsImg}
+            alt="About Us"
+            className="block md:hidden lg:hidden xl:hidden w-[342px] h-[182px] rounded-tl-lg"
           />
           <div className="flex items-center justify-between">
             <div className="isolate inline-flex -space-x-px rounded-md shadow-sm items-center">
@@ -87,7 +94,10 @@ export default function Pricing() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row gap-3 justify-center flex-wrap">
+        {/* Apply flex-row for large screens and flex-col for smaller screens */}
+        <div className="flex flex-col gap-3 justify-center items-center md:flex-row px-4 md:px-10 xs:px-20">
+          {" "}
+          {/* Added px-4 for small screens, md:px-10 for medium and larger screens */}
           {plans.map((plan, index) => (
             <PricingCard
               key={index}
@@ -95,6 +105,7 @@ export default function Pricing() {
               planPrice={isBillingAnnual ? plan.annualPrice : plan.monthlyPrice}
               billingType={isBillingAnnual ? "annual" : "monthly"}
               planFeatures={plan.features}
+              className="w-full md:w-1/3" // Full width on small screens, one-third width on md and above
             />
           ))}
         </div>
