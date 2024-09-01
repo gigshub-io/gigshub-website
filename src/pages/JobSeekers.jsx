@@ -109,23 +109,23 @@ export default function JobSeekers() {
               <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
               <div className="flex flex-col gap-2">
                 <div className="font-sans text-3xl font-bold text-dark-purple">
-                  Join the Job hunting revolution
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row gap-3">
-              <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
-              <div className="flex flex-col gap-2">
-                <div className="font-sans text-3xl font-bold text-dark-purple">
-                  One platform: Many features
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row gap-3">
-              <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
-              <div className="flex flex-col gap-2">
-                <div className="font-sans text-3xl font-bold text-dark-purple">
                   Apply in one click
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row gap-3">
+              <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
+              <div className="flex flex-col gap-2">
+                <div className="font-sans text-3xl font-bold text-dark-purple">
+                  Connect with job poster
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row gap-3">
+              <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
+              <div className="flex flex-col gap-2">
+                <div className="font-sans text-3xl font-bold text-dark-purple">
+                  Track your progress
                 </div>
               </div>
             </div>

@@ -95,8 +95,7 @@ export default function Pricing() {
           </div>
         </div>
         {/* Apply flex-row for large screens and flex-col for smaller screens */}
-        <div className="flex flex-col gap-3 justify-center items-center md:flex-row px-4 md:px-10 xs:px-20">
-          {" "}
+        <div className="flex flex-col gap-3 justify-center items-center md:flex-row px-4 md:px-10">
           {/* Added px-4 for small screens, md:px-10 for medium and larger screens */}
           {plans.map((plan, index) => (
             <PricingCard
