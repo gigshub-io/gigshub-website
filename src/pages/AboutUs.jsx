@@ -137,7 +137,7 @@ export default function AboutUs() {
           />
         </Container>
       </div>
-      <Container className="flex flex-col gap-20 items-start max-sm:items-center">
+      <Container className="flex flex-col gap-20 items-start max-sm:items-center max-md:px-4">
         <Heading className="flex w-full justify-center" title="Meet the team" />
         <div className="flex flex-row w-full justify-center max-sm:flex-wrap gap-y-12 gap-x-12">
           {team.map((teamMember, index) => (
