@@ -14,40 +14,46 @@ export default function Freelancers() {
   return (
     <div className="flex flex-col w-full py-16 gap-32 mb-12 bg-off-white items-center">
       <Container>
-        <div className="flex flex-row justify-between items-center w-full max-xl:flex-col max-xl:items-center px-32 max-sm:px-3">
-          <div className="flex flex-col w-1/2 max-xl:w-full gap-6 w-textContainer max-xl:w-full max-xl:flex max-xl:items-center">
+        <div className="flex flex-row justify-between items-center w-full max-xl:flex-col max-xl:items-center px-8 max-sm:px-3">
+          <div className="flex flex-col w-1/2 max-xl:w-full gap-6 w-textContainer max-xl:w-full max-xl:flex max-xl:items-center max-sm:text-left max-sm:items-start max-sm:justify-start max-lg:text-left max-lg:items-start max-lg:justify-start">
             <div className="bg-pale-purple p-2 rounded-full font-sans text-base font-semibold leading-7 text-dark-purple max-w-56 text-center">
               GigsHub for Freelancers
             </div>
-            <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider max-md:text-center">
+            <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider max-md:text-left max-sm:text-left max-sm:text-4xl">
               <span className="text-light-purple">Freelancers</span> just got
               easier with us
             </div>
-            <p className="font-sans text-lg font-normal leading-7 text-dark-purple max-md:text-center">
+            <div>
+              <img
+                src={freelancersHeroImg}
+                alt="Female individual smiling and working on their laptop small"
+                className="max-lg:block lg:hidden"
+              />
+            </div>
+            <p className="font-sans text-lg font-normal leading-7 text-dark-purple max-md:text-left max-sm:text-left">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique.
             </p>
-            <div className="flex pt-4 max-md:justify-center">
+            <div className="flex pt-4 max-md:justify-start max-sm:justify-start">
               <Button>Get Hired</Button>
             </div>
           </div>
-          <div>
+          <div className="max-lg:hidden">
             <img
               src={freelancersHeroImg}
-              alt="Hero"
-              className="max-md:hidden"
+              alt="Female individual smiling and working on their laptop"
             />
           </div>
         </div>
       </Container>
-      <Container className="flex flex-col items-center w-screen max-xl:px-32 max-md:px-14 max-sm:px-7">
-        <div className="flex flex-col bg-pale-purple rounded-2xl py-12 px-40 items-center gap-12 w-full max-sm:px-6">
-          <div className="font-sans font-bold text-5xl text-dark-purple tracking-wider max-sm:text-center">
+      <Container className="flex flex-col items-center w-screen max-xl:px-32 max-lg:px-7 max-sm:px-7">
+        <div className="flex flex-col bg-pale-purple rounded-2xl py-12 px-20 items-center gap-12 w-full max-sm:px-6">
+          <div className="font-sans font-bold text-5xl text-dark-purple tracking-wider max-sm:text-center max-lg:text-center">
             Let the stats do the talking
           </div>
           <div className="flex flex-row justify-around gap-24 flex-wrap">
             <div className="flex flex-col gap-4">
-              <div className="flex items-center font-sans font-semibold text-4xl text-purple tracking-wider max-md:text-center">
+              <div className="flex items-center font-sans font-semibold text-4xl text-purple tracking-wider max-lg:text-center">
                 <span>150K</span>
                 <img
                   src={adminIcon}
@@ -60,7 +66,7 @@ export default function Freelancers() {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="flex items-center font-sans font-semibold text-4xl text-purple tracking-wider max-md:text-center">
+              <div className="flex items-center font-sans font-semibold text-4xl text-purple tracking-wider max-lg:text-center">
                 <span>250K</span>
                 <img
                   src={successIcon}
@@ -73,7 +79,7 @@ export default function Freelancers() {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="flex items-center font-sans font-semibold text-4xl text-purple tracking-wider max-md:text-center">
+              <div className="flex items-center font-sans font-semibold text-4xl text-purple tracking-wider max-lg:text-center">
                 <span>10 Days</span>
                 <img
                   src={calendar}
@@ -92,14 +98,18 @@ export default function Freelancers() {
         <img
           src={freelancersSubHeroImg}
           alt="SubHero"
-          className="w-stepContainer h-auto max-md:hidden"
+          className="w-stepContainer h-auto max-lg:hidden"
         />
-        <div className="flex flex-col gap-6 w-1/2 max-lg:w-full">
-          <div className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide max-lg:text-center">
+        <div className="flex flex-col gap-6 w-full">
+          <div
+            className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide
+          max-lg:text-center max-lg:items-start max-lg:justify-start max-lg:px-7
+          max-sm:text-left max-sm:items-start max-sm:justify-start max-sm:px-7"
+          >
             Helping <span className="text-light-purple">freelancers</span>
           </div>
 
-          <div className="flex flex-col gap-10 pt-7 max-lg:px-32 max-sm:px-14">
+          <div className="flex flex-col gap-10 pt-7 max-xl:px-32 max-sm:px-7">
             <div className="flex flex-row gap-3">
               <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
               <div className="flex flex-col gap-2">
@@ -127,6 +137,11 @@ export default function Freelancers() {
             <div className="flex">
               <Button>Get Hired</Button>
             </div>
+            <img
+              src={freelancersSubHeroImg}
+              alt="SubHero"
+              className="w-stepContainer h-auto max-xl:block xl:hidden"
+            />
           </div>
         </div>
       </div>
