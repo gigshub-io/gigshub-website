@@ -84,7 +84,7 @@ export default function AboutUs() {
         <Container className="flex flex-row gap-28 justify-center items-center">
           <div className="flex flex-col  gap-28 max-sm:gap-14">
             <div className="flex flex-col gap-6 w-full">
-              <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
+              <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider text-center max-xl:px-32 max-md:px-14 max-sm:px-7 leading-20">
                 How we’re making{" "}
                 <span className="hidden lg:block">a difference</span>
                 <span className="lg:hidden">a difference.</span>

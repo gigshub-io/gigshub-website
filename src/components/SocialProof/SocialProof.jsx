@@ -67,7 +67,7 @@ export const SocialProof = () => {
           <Button>
             <div className="flex items-center gap-2">
               <img src={adminIcon} alt="Admin Icon" className="w-5 h-5" />
-              <span>Start a free trial</span>
+              <span>Get started for free</span>
             </div>
           </Button>
         </div>
