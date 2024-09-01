@@ -35,7 +35,8 @@ export default function AboutUs() {
           <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider text-balance text-center max-sm:text-3xl">
             <span className="text-light-purple">About us</span> at GigsHub
           </div>
-          <div className="flex flex-col w-full justify-center text-balance text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
+          <div className="flex flex-col w-full justify-center text-balance text-center max-xl:px-32 max-md:px-14 max-sm:px-7 max-sm:text-left">
+            {/* Added 'max-sm:text-left' to align text to the left on smaller screens */}
             <div className="font-sans text-lg font-normal text-dark-blue text-justify">
               Gigshub emerged from a shared{" "}
               <span className="font-semibold">frustration </span> among us and
@@ -55,13 +56,12 @@ export default function AboutUs() {
               job search process for the modern world.
               <br />
               <br />
-              At Gigshub, our mission is to{" "}
+              Our goal is to build the world's first{" "}
               <span className="font-semibold">
-                redefine the job search process for the modern world.
+                candidate-first recruiting platform
               </span>{" "}
-              We are committed to transforming how job seekers connect with
-              opportunities by creating a streamlined, intelligent platform that
-              centralises and optimises every step from{" "}
+              by creating a streamlined, intelligent platform that centralises
+              and optimises every step from{" "}
               <span className="font-semibold">
                 first application to final interview.
               </span>
@@ -69,9 +69,10 @@ export default function AboutUs() {
             <div className="font-sans text-lg font-normal text-dark-blue text-justify mt-6"></div>
           </div>
         </div>
+
         <img src={aboutUsImg} alt="About Us" />
-        <div className="flex px-28">
-          <div className="font-sans text-3xl font-medium text-dark-blue text-center tracking-wider leading-aboutUsBanner py-20">
+        <div className="flex px-10">
+          <div className="font-sans text-3xl font-medium text-dark-blue text-center tracking-wider leading-aboutUsBanner py-10">
             “In the world of job hunting, the struggle has been all too real.
             Hours upon hours spent each day on painstaking job applications,
             leaving individuals exhausted and unmotivated. So, we reimagined it
@@ -81,41 +82,46 @@ export default function AboutUs() {
       </Container>
       <div className="flex w-full h-aboutUsBanner bg-pale-purple">
         <Container className="flex flex-row gap-28 justify-center items-center">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col  gap-28 max-sm:gap-14">
             <div className="flex flex-col gap-6 w-full">
               <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
-                How we’re making a difference
+                How we’re making{" "}
+                <span className="hidden lg:block">a difference</span>
+                <span className="lg:hidden">a difference.</span>
               </div>
-              <p className="font-sans text-lg font-normal text-dark-purple text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
+              {/* <p className="font-sans text-lg font-normal text-dark-purple text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
                 In the world of job hunting, the struggle has been all too real.
                 Hours upon hours spent each day on painstaking job applications,
                 leaving individuals exhausted and unmotivated. So, we reimagined
                 it all. Our solution?
-              </p>
+              </p> */}
             </div>
-            <div className="flex flex-col gap-10 items-center">
-              <div className="flex flex-row gap-15 justify-center max-sm:gap-7">
-                <div className="flex flex-col gap-2 w-72 max-sm:w-auto">
+            <div className="flex flex-col gap-10 items-center max-sm:gap-5 max-sm:-5">
+              <div className="flex flex-row gap-15 justify-center max-sm:flex-col max-sm:gap-7">
+                <div className="flex flex-col gap-2 w-72 max-sm:w-auto max-sm:text-center">
                   <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider max-sm:text-3xl">
                     $30m
                   </div>
-                  <div>Customer savings</div>
+                  <div className="max-sm:text-center">Customer savings</div>
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="hidden max-sm:block max-sm:w-full max-sm:h-[1px] max-sm:bg-black max-sm:opacity-20"></div>
+                <div className="flex flex-col gap-2 max-sm:text-center">
                   <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider max-sm:text-3xl">
                     10m+
                   </div>
                   <div>Hours saved</div>
                 </div>
+                <div className="hidden max-sm:block max-sm:w-full max-sm:h-[1px] max-sm:bg-black max-sm:opacity-20"></div>
               </div>
-              <div className="flex flex-row gap-15 justify-center max-sm:gap-7">
-                <div className="flex flex-col gap-2 w-72 max-sm:w-auto">
+              <div className="flex flex-row gap-15 justify-center max-sm:flex-col max-sm:gap-7">
+                <div className="flex flex-col gap-2 w-72 max-sm:w-auto max-sm:text-center">
                   <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider max-sm:text-3xl">
                     200%
                   </div>
                   <div>Year on year growth</div>
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="hidden max-sm:block max-sm:w-full max-sm:h-[1px] max-sm:bg-black max-sm:opacity-20"></div>
+                <div className="flex flex-col gap-2 max-sm:text-center">
                   <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider max-sm:text-3xl">
                     5k+
                   </div>
@@ -124,15 +130,15 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
-          <img className="max-xl:hidden" src={aboutUsImg2} alt="Hero" />
+          <img
+            className="max-xl:hidden"
+            src={aboutUsImg2}
+            alt="Female-looking individual working on a laptop"
+          />
         </Container>
       </div>
       <Container className="flex flex-col gap-20 items-start max-sm:items-center">
-        <Heading
-          className="flex w-full justify-center"
-          title="Meet the team"
-          description=""
-        />
+        <Heading className="flex w-full justify-center" title="Meet the team" />
         <div className="flex flex-row w-full justify-center max-sm:flex-wrap gap-y-12 gap-x-12">
           {team.map((teamMember, index) => (
             <TeamMember

@@ -11,40 +11,40 @@ import { Container } from "../Container";
 
 const slides = [
   {
-    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
+    testimonial: `"Gigshub transformed my job search! As a busy professional looking to switch careers, I was overwhelmed by the sheer number of applications. The smart job matching and one-click apply features saved me hours every week."`,
     avatar: avatarImage,
-    name: "Name 1",
-    description: "Position, Company",
+    name: "Emily Johnson",
+    description: "Marketing Manager, TechCorp",
   },
   {
-    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
+    testimonial: `"Finding the right job was always a struggle until I started using Gigshub. The personalised job matches were spot on."`,
     avatar: avatarImage,
-    name: "Name 2",
-    description: "Position, Company",
+    name: "Michael Smith",
+    description: "Software Engineer, Innovatech",
   },
   {
-    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
+    testimonial: `"Gigshub made my job search so much easier! As a recent grad, I was overwhelmed with where to start. With its tailored job matches and automation, I finally felt in control and saved myself from a lot of headache and burnout."`,
     avatar: avatarImage,
-    name: "Name 3",
-    description: "Position, Company",
+    name: "Sophia Brown",
+    description: "Junior Data Analyst, DataSolutions",
   },
   {
-    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
+    testimonial: `"Gigshub’s automated application process changed the game for me. No more repetitive, tedious tasks—just one click, and my applications were sent. It felt like magic."`,
     avatar: avatarImage,
-    name: "Name 4",
-    description: "Position, Company",
+    name: "James Wilson",
+    description: "Operations Specialist, LogiTech",
   },
   {
-    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
+    testimonial: `"Thanks to Gigshub, I found my dream job in a fraction of the time it usually takes. The platform’s user-friendly interface and personalized job recommendations were exactly what I needed. I can’t imagine job hunting any other way."`,
     avatar: avatarImage,
-    name: "Name 5",
-    description: "Position, Company",
+    name: "Olivia Martinez",
+    description: "Product Designer, CreativeWorks",
   },
   {
-    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero."`,
+    testimonial: `"Gigshub was a game changer for me. The smart job-matching algorithm not only saved me time but also helped me find roles that were a perfect fit for my skills and experience. The process was so seamless and stress-free."`,
     avatar: avatarImage,
-    name: "Name 6",
-    description: "Position, Company",
+    name: "Liam Davis",
+    description: "Financial Analyst, FinTech Solutions",
   },
 ];
 

@@ -9,7 +9,14 @@ export const PricingCard = ({
   planFeatures,
 }) => {
   return (
-    <div className="flex flex-col w-pricingCard bg-pale-purple bg-opacity-50 p-8 rounded-lg">
+    // <div className="flex flex-col w-pricingCard bg-pale-purple bg-opacity-50 p-8 rounded-lg">
+    <div
+      className="flex flex-col w-pricingCard bg-pale-purple bg-opacity-50 p-8 rounded-lg
+  md:w-full  // For screens above md, make the card full width
+  w-[90%]  // For smaller screens, make the card 90% of the screen width
+  mx-auto  // Center the card horizontally 
+"
+    >
       <div className="flex flex-col gap-4 items-start">
         <div className="bg-lime-green py-1 px-3 rounded-full font-sans text-xl font-normal leading-7 text-dark-purple">
           {planName}

@@ -11,11 +11,12 @@ export const CtaBanner = ({ className, image }) => {
         {/* This section is only visible on large screens (lg and above) */}
         <div className="flex flex-col gap-5 lg:w-shortTextContainer items-center lg:items-start text-center lg:text-left">
           <div className="font-sans lg:text-3xl text-xl font-bold text-off-white tracking-wide z-10">
-            Call to action that invites the visitor to get started
+            Take control of your job search!
           </div>
           <p className="font-sans lg:text-lg text-sm font-normal text-off-white leading-7 z-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
+            <span className="block">Get started with a free trial!</span>
+            <span className="block">Centralise, automate, and land</span>
+            <span className="block">your dream job faster.</span>
           </p>
           <div className="flex pt-4">
             <Button>Sign Up</Button>
