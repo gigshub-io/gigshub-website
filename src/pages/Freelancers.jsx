@@ -20,29 +20,26 @@ export default function Freelancers() {
               GigsHub for Freelancers
             </div>
             <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider max-md:text-left max-sm:text-left max-sm:text-4xl">
-              <span className="text-light-purple">Freelancers</span> just got
-              easier with us
+              <span className="text-light-purple">Find Your Next </span> Project
+              Faster with Gigshub
             </div>
             <div>
               <img
                 src={freelancersHeroImg}
-                alt="Female individual smiling and working on their laptop small"
+                alt="Hero"
                 className="max-lg:block lg:hidden"
               />
             </div>
             <p className="font-sans text-lg font-normal leading-7 text-dark-purple max-md:text-left max-sm:text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique.
+              Streamline Your Job Search, Automate Applications, and Land More
+              Gigs Effortlessly with Gigshub.
             </p>
             <div className="flex pt-4 max-md:justify-start max-sm:justify-start">
               <Button>Get Hired</Button>
             </div>
           </div>
           <div className="max-lg:hidden">
-            <img
-              src={freelancersHeroImg}
-              alt="Female individual smiling and working on their laptop"
-            />
+            <img src={freelancersHeroImg} alt="Hero" />
           </div>
         </div>
       </Container>
@@ -97,14 +94,14 @@ export default function Freelancers() {
       <div className="flex flex-row gap-24 items-center">
         <img
           src={freelancersSubHeroImg}
-          alt="SubHero"
-          className="w-stepContainer h-auto max-lg:hidden"
+          alt="SubHero Main"
+          className="w-stepContainer h-auto hidden lg:block"
         />
         <div className="flex flex-col gap-6 w-full">
           <div
             className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide
           max-lg:text-center max-lg:items-start max-lg:justify-start max-lg:px-7
-          max-sm:text-left max-sm:items-start max-sm:justify-start max-sm:px-7"
+          max-sm:text-center max-sm:items-start max-sm:justify-start max-sm:px-7"
           >
             Helping <span className="text-light-purple">freelancers</span>
           </div>
@@ -114,7 +111,7 @@ export default function Freelancers() {
               <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
               <div className="flex flex-col gap-2">
                 <div className="font-sans text-3xl font-bold text-dark-purple">
-                  Job Auto Apply
+                  Tailored project matches
                 </div>
               </div>
             </div>
@@ -122,7 +119,7 @@ export default function Freelancers() {
               <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
               <div className="flex flex-col gap-2">
                 <div className="font-sans text-3xl font-bold text-dark-purple">
-                  Job Auto Apply
+                  Automated proposals
                 </div>
               </div>
             </div>
@@ -130,7 +127,7 @@ export default function Freelancers() {
               <img src={checkIcon} alt="Check Icon" className="w-11 h-11" />
               <div className="flex flex-col gap-2">
                 <div className="font-sans text-3xl font-bold text-dark-purple">
-                  Dashboard
+                  Direct Outreach
                 </div>
               </div>
             </div>
@@ -139,8 +136,8 @@ export default function Freelancers() {
             </div>
             <img
               src={freelancersSubHeroImg}
-              alt="SubHero"
-              className="w-stepContainer h-auto max-xl:block xl:hidden"
+              alt="SubHero Sm"
+              className="w-stepContainer h-auto block lg:hidden"
             />
           </div>
         </div>

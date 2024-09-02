@@ -2,6 +2,11 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import avatarImage from "../../assets/avatar-image.png";
+import t1 from "../../assets/t1.png";
+import t2 from "../../assets/t2.png";
+import t3 from "../../assets/t3.png";
+import t4 from "../../assets/t4.png";
+import t5 from "../../assets/t5.png";
 import { Heading } from "../Heading";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,7 +17,7 @@ import { Container } from "../Container";
 const slides = [
   {
     testimonial: `"Gigshub transformed my job search! As a busy professional looking to switch careers, I was overwhelmed by the sheer number of applications. The smart job matching and one-click apply features saved me hours every week."`,
-    avatar: avatarImage,
+    avatar: t4,
     name: "Emily Johnson",
     description: "Marketing Manager, TechCorp",
   },
@@ -24,25 +29,25 @@ const slides = [
   },
   {
     testimonial: `"Gigshub made my job search so much easier! As a recent grad, I was overwhelmed with where to start. With its tailored job matches and automation, I finally felt in control and saved myself from a lot of headache and burnout."`,
-    avatar: avatarImage,
-    name: "Sophia Brown",
+    avatar: t5,
+    name: "Sophia Khan",
     description: "Junior Data Analyst, DataSolutions",
   },
   {
     testimonial: `"Gigshub’s automated application process changed the game for me. No more repetitive, tedious tasks—just one click, and my applications were sent. It felt like magic."`,
-    avatar: avatarImage,
+    avatar: t1,
     name: "James Wilson",
     description: "Operations Specialist, LogiTech",
   },
   {
     testimonial: `"Thanks to Gigshub, I found my dream job in a fraction of the time it usually takes. The platform’s user-friendly interface and personalized job recommendations were exactly what I needed. I can’t imagine job hunting any other way."`,
-    avatar: avatarImage,
-    name: "Olivia Martinez",
+    avatar: t3,
+    name: "Oliver Martinez",
     description: "Product Designer, CreativeWorks",
   },
   {
     testimonial: `"Gigshub was a game changer for me. The smart job-matching algorithm not only saved me time but also helped me find roles that were a perfect fit for my skills and experience. The process was so seamless and stress-free."`,
-    avatar: avatarImage,
+    avatar: t2,
     name: "Liam Davis",
     description: "Financial Analyst, FinTech Solutions",
   },

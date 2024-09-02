@@ -99,7 +99,7 @@ export default function JobSeekers() {
         <img
           src={freelancersSubHeroImg}
           alt="SubHero DOVE SONO"
-          className="w-stepContainer h-auto max-lg:hidden "
+          className="w-stepContainer h-auto hidden lg:block"
         />
         <div className="flex flex-col gap-6 w-full">
           {/* <div className="font-sans text-5xl font-semibold text-dark-purple leading-textHero tracking-wide max-md:text-center">
@@ -144,8 +144,8 @@ export default function JobSeekers() {
             </div>
             <img
               src={freelancersSubHeroImg}
-              alt="SubHero MIAOOO"
-              className="w-stepContainer h-auto max-xl:block xl:hidden"
+              alt="SubHero"
+              className="w-stepContainer h-auto block lg:hidden"
             />
           </div>
         </div>
