@@ -30,7 +30,7 @@ const slides = [
   {
     testimonial: `"Gigshub made my job search so much easier! As a recent grad, I was overwhelmed with where to start. With its tailored job matches and automation, I finally felt in control and saved myself from a lot of headache and burnout."`,
     avatar: t5,
-    name: "Sophia Khan",
+    name: "Sophia Brown",
     description: "Junior Data Analyst, DataSolutions",
   },
   {
@@ -68,43 +68,44 @@ export const TestimonialCarousel = () => {
             alignment="center"
           />
         </div>
-      </Container>
-      <Swiper
-        spaceBetween={44}
-        slidesPerView={"auto"}
-        loop
-        centeredSlides
-        navigation
-        normalizeSlideIndex
-        observer
-        threshold={3}
-        modules={[Navigation, Pagination]}
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        className="my-0 -mx-24"
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide
-            key={index}
-            className="!w-testimonialContainer !max-md:w-screen"
-          >
-            <div className="bg-pale-purple rounded-2xl  py-20 px-36 max-md:px-14 max-md:px-10">
-              <div className="flex flex-col gap-11 items-center">
-                <p className="text-center font-sans font-bold text-dark-purple text-lg leading-7 tracking-wide px-5 max-md:w-4/5 max-sm:w-1/2">
-                  {slide.testimonial}
-                </p>
-                <div className="flex flex-row gap-4">
-                  <img src={slide.avatar} alt={slide.name} />
-                  <div className="flex flex-col items-center">
-                    <p className="font-sans font-bold mt-4">{slide.name}</p>
-                    <p>{slide.description}</p>
+
+        <Swiper
+          spaceBetween={44}
+          slidesPerView={"auto"}
+          loop
+          centeredSlides
+          navigation
+          normalizeSlideIndex
+          observer
+          threshold={3}
+          modules={[Navigation, Pagination]}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          className="my-0 -mx-24"
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide
+              key={index}
+              className="!w-testimonialContainer !max-md:w-screen"
+            >
+              <div className="bg-pale-purple rounded-2xl  py-20 px-36 max-md:px-14 max-md:px-10">
+                <div className="flex flex-col gap-11 items-center">
+                  <p className="text-center font-sans font-bold text-dark-purple text-lg leading-7 tracking-wide px-5 max-md:w-4/5 max-sm:w-1/2">
+                    {slide.testimonial}
+                  </p>
+                  <div className="flex flex-row gap-4">
+                    <img src={slide.avatar} alt={slide.name} />
+                    <div className="flex flex-col items-center">
+                      <p className="font-sans font-bold mt-4">{slide.name}</p>
+                      <p>{slide.description}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Container>
     </section>
   );
 };
