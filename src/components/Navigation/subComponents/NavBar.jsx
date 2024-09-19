@@ -24,11 +24,11 @@ const pageLinks = [
     label: "Blog",
     path: "/blog/view-all",
   },
-  */ 
+  
   {
     label: "Pricing",
     path: "/pricing",
-  },
+  },*/ 
   {
     label: "Contact Us",
     path: "/contactUs",

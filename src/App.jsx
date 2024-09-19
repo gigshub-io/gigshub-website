@@ -24,7 +24,7 @@ function App() {
         <Route path="/blog/*" element={<Blog />}>
           <Route path=":category" element={<Blog />} />
         </Route> */}
-        <Route path="/pricing" element={<Pricing />} />
+         { /* <Route path="/pricing" element={<Pricing />} /> */}
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/termsOfService" element={<TermsOfService />} />
