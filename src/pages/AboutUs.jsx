@@ -10,10 +10,10 @@ import { TeamMember } from "../components/TeamMember";
 export default function AboutUs() {
   const team = [
     {
-      fullName: "Thai Braz",
+      fullName: "Thiago Braz",
       jobTitle: "CTO",
       description:
-        "Develop and execute a compelling product strategy aligned with our company's overall vision and goals. ",
+        "Thiago, a 28-year-old Brazilian-born driven by a passion for automating processes with innovative tech solutions, AI, and entrepreneurship, he loves solving complex challenges with simple solutions. When he's not behind a screen, you'll find him exploring new cultures and traveling the world",
       linkedInProfile: "https://www.linkedin.com/in/thain%C3%A1-braz/",
 
       imageMember: thai,
@@ -22,7 +22,7 @@ export default function AboutUs() {
       fullName: "Ali",
       jobTitle: "CMO",
       description:
-        "Develop and execute strategic marketing plans aligned with our company's overall goals.",
+        "Ali, a 24-year-old Somali-born, London-raised marketer, is driven by a passion for solving problems and a love for all things digital. When he's not tackling marketing challenges, he's enduring the ups and downs of being a Chelsea fan or playing his favourite video games.",
       linkedInProfile: "https://www.linkedin.com/",
 
       imageMember: ali,
@@ -69,8 +69,6 @@ export default function AboutUs() {
             <div className="font-sans text-lg font-normal text-dark-blue text-justify mt-6"></div>
           </div>
         </div>
-
-        <img src={aboutUsImg} alt="About Us" />
         <div className="flex px-10">
           <div className="font-sans text-3xl font-medium text-dark-blue text-center tracking-wider leading-aboutUsBanner py-10">
             “In the world of job hunting, the struggle has been all too real.
