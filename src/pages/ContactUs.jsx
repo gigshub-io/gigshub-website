@@ -3,6 +3,7 @@ import contactUsImg from "../assets/contactus-image.png";
 import whiteCircle from "../assets/white-circle.svg";
 import emailIcon from "../assets/email-icon.svg";
 import { Button } from "../components/Button";
+import { Container } from "../components/Container/Container";
 
 export default function ContactUs() {
   const [newUser, setNewUser] = useState({
@@ -34,6 +35,11 @@ export default function ContactUs() {
         src={contactUsImg}
         alt="Contact us"
       />
+      {/* <img
+        className="w-1/2 max-xl:w-full max-xl:h-[500px] max-xl:object-cover mx-auto px-5 sm:px-20 hidden sm:block"
+        src={contactUsImg}
+        alt="Contact us"
+      /> */}
       <form
         className="flex flex-col w-1/2 max-lg:w-full p-10 gap-6 w-contactUsForm items-center max-sm:p-5"
         onSubmit={handleSubmit}

@@ -82,19 +82,13 @@ export default function AboutUs() {
       </Container>
       <div className="flex w-full h-aboutUsBanner bg-pale-purple">
         <Container className="flex flex-row gap-28 justify-center items-center">
-          <div className="flex flex-col  gap-28 max-sm:gap-14">
+          <div className="flex flex-col gap-28 max-sm:gap-14">
             <div className="flex flex-col gap-6 w-full">
               <div className="font-sans text-5xl font-bold text-dark-purple tracking-wider text-center max-xl:px-32 max-md:px-14 max-sm:px-7 leading-20">
                 How we’re making{" "}
                 <span className="hidden lg:block">a difference</span>
                 <span className="lg:hidden">a difference.</span>
               </div>
-              {/* <p className="font-sans text-lg font-normal text-dark-purple text-center max-xl:px-32 max-md:px-14 max-sm:px-7">
-                In the world of job hunting, the struggle has been all too real.
-                Hours upon hours spent each day on painstaking job applications,
-                leaving individuals exhausted and unmotivated. So, we reimagined
-                it all. Our solution?
-              </p> */}
             </div>
             <div className="flex flex-col gap-10 items-center max-sm:gap-5 max-sm:-5">
               <div className="flex flex-row gap-15 justify-center max-sm:flex-col max-sm:gap-7">
