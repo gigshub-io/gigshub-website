@@ -1,98 +1,112 @@
-import React, { useCallback } from "react";
-import { useLocation } from "react-router";
-import { classNames } from "../utils/classNames";
-import { TextDisplay } from "../components/TextDisplay/TextDisplay";
-import { Container } from "../components/Container";
+import React from "react";
 
-export default function TermsOfService() {
-  let location = useLocation();
-  const isLinkSelected = useCallback(
-    (id) => location.hash && `#${id}` === location.hash,
-    [location]
-  );
+const TermsOfService = () => {
   return (
-    <Container className="flex py-20 flex-col gap-60">
-      <div className="flex flex-row justify-between ">
-        <div className="font-sans text-7xl font-bold text-dark-purple">
-          Terms of Service
-        </div>
-        <div className="flex flex-col font-sans text-lg font-normal text-dark-purple w-paragraph">
-          <span className="font-bold mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            varius faucibus massa sollicitudin amet augue.
-          </span>
-          Sit turpis pretium eget maecenas. Vestibulum dolor mattis consectetur
-          eget commodo vitae. Amet pellentesque sit pulvinar lorem mi.
+    <div className="ml-2 mr-10">
+      <div className="flex flex-col items-center bg-white rounded-xl w-full max-w-7xl h-[calc(100vh-28px)] overflow-y-auto">
+        <div className="w-full px-9 mt-10">
+          <h1 className="text-dark-blue text-3xl font-extrabold text-center">
+            Terms of Service for gigshub
+          </h1>
+
+          <p className="text-dark-blue text-md mt-4">Last updated: April 29, 2024</p>
+
+          <p className="text-dark-blue text-md mt-6">
+            Welcome to gigshub. By accessing or using our service, you agree to
+            comply with and be bound by the following terms and conditions. Please
+            review them carefully.
+          </p>
+
+          <h2 className="text-dark-blue text-2xl font-bold mt-8">Acceptance of Terms</h2>
+          <p className="text-dark-blue text-md mt-6">
+            By using gigshub, you agree to be bound by these Terms of Service,
+            all applicable laws, and regulations. If you do not agree with any of
+            these terms, you are prohibited from using our Service.
+          </p>
+
+          <h2 className="text-dark-blue text-2xl font-bold mt-8">Service Description</h2>
+          <p className="text-dark-blue text-md mt-6">
+            gigshub is a job application management tool designed to autofill job
+            applications based on your resume, update your resume based on job
+            requirements, and contact HR representatives on your behalf via
+            LinkedIn and Gmail. The Service requires users to grant OAuth access
+            to their Gmail and LinkedIn accounts to perform these actions.
+          </p>
+
+          <h2 className="text-dark-blue text-2xl font-bold mt-8">User Responsibilities</h2>
+          <p className="text-dark-blue text-md mt-6">
+            As a user of gigshub, you agree to:
+          </p>
+          <ul className="list-disc ml-5 mt-2">
+            <li>
+              Provide accurate, current, and complete information when registering
+              or using the Service.
+            </li>
+            <li>
+              Keep your login credentials secure and notify us immediately of any
+              unauthorized access to your account.
+            </li>
+            <li>
+              Refrain from using the Service for illegal purposes or in violation
+              of any applicable laws or regulations.
+            </li>
+          </ul>
+
+          <h2 className="text-dark-blue text-2xl font-bold mt-8">OAuth Authorization</h2>
+          <p className="text-dark-blue text-md mt-6">
+            By using gigshub, you authorize the app to access your Gmail and
+            LinkedIn accounts via OAuth. This access is used solely for the
+            purpose of sending emails to HR representatives or interacting with
+            job applications. We do not store your OAuth tokens after the session
+            has ended.
+          </p>
+
+          <h2 className="text-dark-blue text-2xl font-bold mt-8">Intellectual Property</h2>
+          <p className="text-dark-blue text-md mt-6">
+            All content, including text, graphics, logos, and software, is the
+            property of gigshub or its licensors. You may not use, modify,
+            reproduce, or distribute any content from gigshub without our
+            permission.
+          </p>
+
+          <h2 className="text-dark-blue text-2xl font-bold mt-8">Termination of Service</h2>
+          <p className="text-dark-blue text-md mt-6">
+            We reserve the right to suspend or terminate your account and access
+            to the Service if you violate these Terms of Service or engage in
+            unauthorized use of the Service.
+          </p>
+
+          <h2 className="text-dark-blue text-2xl font-bold mt-8">Limitation of Liability</h2>
+          <p className="text-dark-blue text-md mt-6">
+            To the fullest extent permitted by law, gigshub shall not be liable for
+            any indirect, incidental, or consequential damages arising from the
+            use of, or inability to use, our Service. This includes but is not
+            limited to data loss, business interruption, or personal injury.
+          </p>
+
+          <h2 className="text-dark-blue text-2xl font-bold mt-8">Dispute Resolution</h2>
+          <p className="text-dark-blue text-md mt-6">
+            Any disputes arising from the use of gigshub will be resolved through
+            binding arbitration in accordance with the laws of Portugal.
+          </p>
+
+          <h2 className="text-dark-blue text-2xl font-bold mt-8">Changes to Terms</h2>
+          <p className="text-dark-blue text-md mt-6">
+            We may update these Terms of Service from time to time. Changes to the
+            terms will be effective when posted on this page. By continuing to use
+            the Service after changes are posted, you agree to be bound by the new
+            terms.
+          </p>
+
+          <h2 className="text-dark-blue text-2xl font-bold mt-8">Contact Us</h2>
+          <p className="text-dark-blue text-md mt-6">
+            If you have any questions about these Terms of Service, You can
+            contact us by email at info.gigshub@gmail.com.
+          </p>
         </div>
       </div>
-      <div className="flex flex-row justify-between">
-        <div>
-          <div className="flex flex-col gap-6 w-blogCategoriesMenu sticky top-10">
-            <div className="font-sans text-2xl font-bold text-dark-purple">
-              Table of contents
-            </div>
-            <ul className="flex flex-col">
-              <li
-                className={classNames(
-                  "flex p-3 font-sans text-lg font-normal rounded-md text-dark-purple",
-                  isLinkSelected("heading1") &&
-                    "bg-semi-dark-purple text-off-white"
-                )}
-                role="button"
-              >
-                <a href="#heading1">Heading 1</a>
-              </li>
-              <li
-                className={classNames(
-                  "flex p-3 font-sans text-lg font-normal rounded-md text-dark-purple ml-6",
-                  isLinkSelected("heading2") &&
-                    "bg-semi-dark-purple text-off-white"
-                )}
-                role="button"
-              >
-                <a href="#heading2">Heading 2</a>
-              </li>
-              <li
-                className={classNames(
-                  "flex p-3 font-sans text-lg font-normal rounded-md text-dark-purple ml-12",
-                  isLinkSelected("heading3") &&
-                    "bg-semi-dark-purple text-off-white"
-                )}
-                role="button"
-              >
-                <a href="#heading3">Heading 3</a>
-              </li>
-              <li
-                className={classNames(
-                  "flex p-3 font-sans text-lg font-normal rounded-md text-dark-purple ml-24",
-                  isLinkSelected("heading4") &&
-                    "bg-semi-dark-purple text-off-white"
-                )}
-                role="button"
-              >
-                <a href="#heading4">Heading 4</a>
-              </li>
-              <li
-                className={classNames(
-                  "flex p-3 font-sans text-lg font-normal rounded-md text-dark-purple ml-32",
-                  isLinkSelected("heading5") &&
-                    "bg-semi-dark-purple text-off-white"
-                )}
-                role="button"
-              >
-                <a href="#heading5">Heading 5</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="flex flex-col gap-8 w-headingContainer">
-          <TextDisplay headingType={1} id="heading1" />
-          <TextDisplay headingType={2} id="heading2" />
-          <TextDisplay headingType={3} id="heading3" />
-          <TextDisplay headingType={4} id="heading4" />
-          <TextDisplay headingType={5} id="heading5" />
-        </div>
-      </div>
-    </Container>
+    </div>
   );
-}
+};
+
+export default TermsOfService;
