@@ -67,20 +67,19 @@ export const Steps = () => {
               </div>
               <div className="flex flex-col lg:py-40 gap-6 w-80 lg:w-stepContainer items-start">
                 <h1 className="font-sans font-bold text-3xl tracking-wide text-dark-purple">
-                  Dashboard
+                Personalized Outreach
                 </h1>
                 <div className="lg:hidden flex">
                   <img src={step3} alt="Step 3" />
                 </div>
                 <p className="font-sans font-bold text-sm lg:text-lg tracking-wide leading-7 text-dark-purple">
-                  Experience control like never before.
+                It's the smart way to stand out.
                 </p>
                 <p className="lg:pt-4 font-sans font-normal text-sm lg:text-lg tracking-wide leading-7 text-dark-purple">
-                  Introducing our all-in-one dashboard, your personal powerhouse
-                  for job hunting. This tool tracks your job applications,
-                  provides real-time hiring news, and lets you follow preferred
-                  companies. Say goodbye to scattered spreadsheets and endless
-                  browser tabs.
+                But it's not just about applying—it's about getting noticed. 
+                That's why we offer personalized outreach. 
+                From within Gigshub, users can send tailored follow-ups, 
+                message recruiters, and build important connections, all without leaving the platform. 
                 </p>
               </div>
             </div>
