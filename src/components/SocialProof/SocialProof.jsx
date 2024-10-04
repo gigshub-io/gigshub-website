@@ -64,7 +64,7 @@ export const SocialProof = () => {
           </AvatarGroup>
         </div>
         <div className="flex gap-24 mt-16">
-          <Button>
+          <Button onClick={() => window.open("https://chromewebstore.google.com/detail/autofill-extension/koohbndpkdkgpfokglpjlbfnaodkgkbj?authuser=0&hl=en", "_blank")}>
             <div className="flex items-center gap-2">
               <img src={adminIcon} alt="Admin Icon" className="w-5 h-5" />
               <span>Get started for free</span>

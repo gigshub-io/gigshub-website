@@ -20,6 +20,9 @@ export const Navigation = () => {
   const handleDropDownMenu = () => {
     setDropDownIsOpen((prev) => !prev);
   };
+  const redirect = () => {
+    window.open("https://chromewebstore.google.com/detail/autofill-extension/koohbndpkdkgpfokglpjlbfnaodkgkbj?authuser=0&hl=en", "_blank");
+  }
   const closeDropDownMenu = () => setDropDownIsOpen(false);
 
   return (
@@ -41,6 +44,7 @@ export const Navigation = () => {
             padding="longText"
             kind="primary"
             className="hidden lg:flex"
+            onClick={redirect}
           >
             Get Started
           </Button>

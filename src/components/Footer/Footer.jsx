@@ -21,34 +21,6 @@ export const Footer = () => {
             <Logo kind="inverted" />
             <NavBar isMainNavbar={false} dropDownIsOpen={true} />
           </div>
-          {/* <div className="flex flex-col gap-4 text-sm">
-            <label className="text-off-white">Subscribe</label>
-            <div className="flex flex-row gap-4 max-sm:flex-wrap">
-              <input
-                type="text"
-                value={emailSubs}
-                onChange={handleInputChange}
-                className="rounded-full w-60 max-h-8 px-5 lg:py-6 py-2 text-dark-grey text-base font-normal font-sans"
-                placeholder="Enter your email"
-              ></input>
-              <Button
-                kind="transparent"
-                size="medium"
-                className="hidden lg:block"
-              >
-                Send
-              </Button>
-              <Button kind="transparent" size="small" className="lg:hidden">
-                Send
-              </Button>
-            </div>
-            <p className="text-off-white text-xs font-normal font-sans">
-              By subscribing you agree with our{" "}
-              <a className="underline" href="/privacyPolicy">
-                Privacy Policy
-              </a>
-            </p>
-          </div> */}
         </div>
         <div className="flex flex-col w-full gap-8">
           <hr className="mx-6 lg:mx-0" />
@@ -56,19 +28,19 @@ export const Footer = () => {
             <div className="flex flex-row gap-6">
               <a
                 className="underline text-off-white lg:text-sm text-xs font-normal font-sans"
-                href="/privacyPolicy"
+                href="/privacy-policy"
               >
                 Privacy Policy
               </a>
               <a
                 className="underline text-off-white lg:text-sm text-xs font-normal font-sans"
-                href="/termsOfService"
+                href="/terms-of-service"
               >
                 Terms of Service
               </a>
-              <a className="underline text-off-white lg:text-sm text-xs font-normal font-sans">
+              {/* <a className="underline text-off-white lg:text-sm text-xs font-normal font-sans">
                 Cookies Settings
-              </a>
+              </a> */}
             </div>
             <p className="text-off-white lg:text-sm text-xs font-normal font-sans">
               © 2024 GigsHub. All rights reserved.

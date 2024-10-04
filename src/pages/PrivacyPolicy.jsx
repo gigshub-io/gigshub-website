@@ -3,15 +3,11 @@ import React from "react";
 const PrivacyPolicy = () => {
   return (
     <div className="ml-2 mr-10">
-      <div className="flex flex-col items-center bg-white rounded-xl w-full max-w-7xl h-[calc(100vh-28px)] overflow-y-auto">
-        <div className="w-full px-9 mt-10">
+      <div className="flex flex-col items-center">
+        <div className="w-full px-9 mt-10 py-10">
           <h1 className="text-dark-blue text-3xl font-extrabold text-center">
             Privacy Policy for gigshub
           </h1>
-
-          <p className="text-dark-blue text-md mt-4">
-            Last updated: October 01, 2024
-          </p>
 
           <p className="text-dark-blue text-md mt-6">
             This Privacy Policy explains Our policies on the collection, use,
@@ -178,7 +174,7 @@ const PrivacyPolicy = () => {
             If you have any questions about this Privacy Policy, You can contact
             us:
             <br />
-            By email: info.gigshub@gmail.com
+            By email at thiago@gigshub.io or ali@gigshub.io.
           </p>
         </div>
       </div>

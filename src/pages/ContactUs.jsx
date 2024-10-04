@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import emailjs from 'emailjs-com'; // Import EmailJS
 import contactUsImg from "../assets/contactus-image.png";
 import whiteCircle from "../assets/white-circle.svg";
 import emailIcon from "../assets/email-icon.svg";
 import { Button } from "../components/Button";
 import { Container } from "../components/Container/Container";
+
 
 export default function ContactUs() {
   const [newUser, setNewUser] = useState({
@@ -17,7 +19,6 @@ export default function ContactUs() {
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
-
     setNewUser((prevUserData) => ({
       ...prevUserData,
       [name]: type === "checkbox" ? checked : value,
@@ -25,18 +26,35 @@ export default function ContactUs() {
   };
 
   const handleSubmit = (event) => {
-    console.log(event);
-  };
+    event.preventDefault();
 
+    // EmailJS configuration
+    const serviceId = "service_we8syma"; 
+    const templateId = "template_okyprlc"; 
+    const userId = "8UW6JcM2B69OkPyjQ"; 
+
+    const templateParams = {
+      firstName: newUser.firstName,
+      lastName: newUser.lastName,
+      email: newUser.email,
+      phoneNumber: newUser.phoneNumber,
+      message: newUser.message,
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Message sent successfully!');
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        alert('Failed to send message. Please try again later.');
+      });
+  };
   return (
     <div className="flex flex-row max-xl:flex-col">
-      <img
-        className="w-1/2 max-xl:w-full max-xl:h-[500px] max-xl:object-cover hidden sm:block"
-        src={contactUsImg}
-        alt="Contact us"
-      />
       {/* <img
-        className="w-1/2 max-xl:w-full max-xl:h-[500px] max-xl:object-cover mx-auto px-5 sm:px-20 hidden sm:block"
+        className="w-1/2 max-xl:w-full max-xl:h-[500px] max-xl:object-cover hidden sm:block"
         src={contactUsImg}
         alt="Contact us"
       /> */}
@@ -51,7 +69,7 @@ export default function ContactUs() {
           <img src={whiteCircle} alt="White circle" />
           Book a call with us through{" "}
           <a
-            href="https://calendly.com/"
+            href="https://calendly.com/bbrazthiago/30min"
             target="_blank"
             rel="noreferrer"
             className="font-bold underline"
@@ -66,7 +84,7 @@ export default function ContactUs() {
               <img src={emailIcon} alt="Email Icon" />
             </div>
             <div className="font-sans font-normal text-lg text-dark-purple">
-              hello@gigshub.io
+              ali@gigshub.io
             </div>
           </div>
         </div>
@@ -158,7 +176,7 @@ export default function ContactUs() {
               ></input>
               I accept the
               <a
-                href="TermsOfService"
+                href="/Terms-of-service"
                 target="_blank"
                 rel="noreferrer"
                 className="ml-1 font-bold underline"

@@ -14,7 +14,7 @@ import { ReactComponent as ArrowDownWhiteIcon } from "../../../assets/arrow-down
 const pageLinks = [
   {
     label: "About Us",
-    path: "/aboutUs",
+    path: "/about-us",
   },
 /*  {
     label: "Community",
@@ -31,7 +31,7 @@ const pageLinks = [
   },*/ 
   {
     label: "Contact Us",
-    path: "/contactUs",
+    path: "/contact-us",
   },
 ];
 const menuItems = [
@@ -39,7 +39,7 @@ const menuItems = [
     label: "Freelancers",
     to: "/freelancers",
   },
-  { label: "Job Seekers", to: "/jobSeekers" },
+  { label: "Job Seekers", to: "/job-seekers" },
 ];
 
 const SubDropDownMenu = ({ isMainNavbar }) => {
