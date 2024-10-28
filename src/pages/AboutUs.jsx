@@ -129,23 +129,6 @@ export default function AboutUs() {
           />
         </Container>
       </div>
-      <Container className="flex flex-col gap-20 items-start max-sm:items-center max-md:px-4">
-        <Heading className="flex w-full justify-center" title="Meet the team" />
-        <div className="flex flex-row w-full justify-center max-sm:flex-wrap gap-y-12 gap-x-12">
-          {team.map((teamMember, index) => (
-            <TeamMember
-              key={index}
-              fullName={teamMember.fullName}
-              jobTitle={teamMember.jobTitle}
-              description={teamMember.description}
-              linkedInProfile={teamMember.linkedInProfile}
-              twitterProfile={teamMember.twitterProfile}
-              webPage={teamMember.webPage}
-              imageMember={teamMember.imageMember}
-            />
-          ))}
-        </div>
-      </Container>
     </div>
   );
 }
