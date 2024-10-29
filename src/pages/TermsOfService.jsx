@@ -99,7 +99,7 @@ const TermsOfService = () => {
           <h2 className="text-dark-blue text-2xl font-bold mt-8">Contact Us</h2>
           <p className="text-dark-blue text-md mt-6">
             If you have any questions about these Terms of Service, You can
-            contact us by email at thiago@gigshub.io or ali@gigshub.io.
+            contact us by email at thiago@gigshub.io.
           </p>
         </div>
       </div>
