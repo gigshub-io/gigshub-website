@@ -23,7 +23,7 @@ export const Navigation = () => {
 
   const redirect = () => {
     window.open(
-      "https://chromewebstore.google.com/detail/autofill-extension/koohbndpkdkgpfokglpjlbfnaodkgkbj?authuser=0&hl=en",
+      "app.jobbyo.ai",
       "_blank"
     );
   };
@@ -35,10 +35,11 @@ export const Navigation = () => {
       {/* If dropdown is open, apply a fixed white overlay */}
       <div className={dropDownIsOpen ? "fixed z-10 w-full inset-0 bg-white" : ""}>
         <nav className="flex flex-wrap lg:flex-row py-6 px-6 gap-12 bg-white lg:items-center justify-between">
-        <h1 className="text-[#3F33C0] lg:text-3xl text-2xl font-bold font-sans">
+        <div onClick={closeDropDownMenu} className="cursor-pointer">
+          <h1 className="text-[#3F33C0] lg:text-3xl text-2xl font-bold font-sans">
             Jobbyo
             </h1>
-
+          </div>
           {/* Mobile menu toggle */}
           <button
             className="lg:hidden w-8 h-8 flex items-center justify-center"
