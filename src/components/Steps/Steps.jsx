@@ -33,7 +33,7 @@ const stepsData = [
 
 // Main heading text
 const bigHeading = "It's never been easier to land a job";
-const highlightedHeading = "Content-focused features developed to get you hired";
+const highlightedHeading = "Features developed to get you hired";
 const buttonText = "Create Free Resume";
 
 export const Steps = () => {
