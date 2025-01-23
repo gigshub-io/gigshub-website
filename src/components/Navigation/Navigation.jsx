@@ -10,34 +10,44 @@ import { useLocation } from "react-router-dom";
 
 export const Navigation = () => {
   const [dropDownIsOpen, setDropDownIsOpen] = useState(false);
-
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Close dropdown when route changes
     setDropDownIsOpen(false);
   }, [pathname]);
 
   const handleDropDownMenu = () => {
     setDropDownIsOpen((prev) => !prev);
   };
+
   const redirect = () => {
-    window.open("https://chromewebstore.google.com/detail/autofill-extension/koohbndpkdkgpfokglpjlbfnaodkgkbj?authuser=0&hl=en", "_blank");
-  }
+    window.open(
+      "https://chromewebstore.google.com/detail/autofill-extension/koohbndpkdkgpfokglpjlbfnaodkgkbj?authuser=0&hl=en",
+      "_blank"
+    );
+  };
+
   const closeDropDownMenu = () => setDropDownIsOpen(false);
 
   return (
     <Container>
-      <div
-        className={dropDownIsOpen && "fixed z-10 w-full inset-0 bg-off-white"}
-      >
-        <nav className="flex flex-wrap lg:flex-row py-6 px-6 gap-12 bg-off-white lg:items-center justify-between">
-          <Logo onClickFunction={closeDropDownMenu} />
+      {/* If dropdown is open, apply a fixed white overlay */}
+      <div className={dropDownIsOpen ? "fixed z-10 w-full inset-0 bg-white" : ""}>
+        <nav className="flex flex-wrap lg:flex-row py-6 px-6 gap-12 bg-white lg:items-center justify-between">
+        <h1 className="text-[#3F33C0] lg:text-3xl text-2xl font-bold font-sans">
+            Jobbyo
+            </h1>
+
+          {/* Mobile menu toggle */}
           <button
-            className={"lg:hidden w-8 h-8 flex items-center justify-center"}
+            className="lg:hidden w-8 h-8 flex items-center justify-center"
             onClick={handleDropDownMenu}
           >
             {!dropDownIsOpen ? <HamburguerIcon /> : <CloseIcon />}
           </button>
+
+          {/* Primary Nav */}
           <NavBar dropDownIsOpen={dropDownIsOpen} isMainNavbar={true} />
           <Button
             size="medium"

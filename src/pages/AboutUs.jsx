@@ -29,16 +29,16 @@ export default function AboutUs() {
     },
   ];
   return (
-    <div className="flex flex-col w-full py-16 gap-20 mb-12 bg-off-white items-center">
+    <div className="flex flex-col w-full py-16 gap-20 mb-12 bg-white items-center">
       <Container className="flex flex-col gap-20 items-center">
         <div className="flex flex-row gap-20 items-center max-xl:flex-wrap max-xl:justify-center">
           <div className="font-sans text-7xl font-bold text-dark-purple leading-textHero tracking-wider text-balance text-center max-sm:text-3xl">
-            <span className="text-light-purple">About us</span> at GigsHub
+            <span className="text-light-purple">About us</span> at Jobbyo
           </div>
           <div className="flex flex-col w-full justify-center text-balance text-center max-xl:px-32 max-md:px-14 max-sm:px-7 max-sm:text-left">
             {/* Added 'max-sm:text-left' to align text to the left on smaller screens */}
             <div className="font-sans text-lg font-normal text-dark-blue text-justify">
-              Gigshub emerged from a shared{" "}
+              Jobbyo emerged from a shared{" "}
               <span className="font-semibold">frustration </span> among us and
               countless peers—an exasperation with the tedious, soul-draining
               dance of traditional job hunting. We felt the burnout, the{" "}
@@ -46,7 +46,7 @@ export default function AboutUs() {
               the struggle to stand out in a sea of candidates.
               <br />
               <br />
-              As we navigated these challenges ourselves, the idea for Gigshub
+              As we navigated these challenges ourselves, the idea for Jobbyo
               began to take shape. What if there was a{" "}
               <span className="font-semibold">better way?</span> What if job
               seekers could find the{" "}

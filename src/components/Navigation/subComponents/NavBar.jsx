@@ -157,7 +157,7 @@ export const NavBar = ({ dropDownIsOpen, isMainNavbar }) => {
   return (
     <ul
       className={`${
-        isMainNavbar && "hidden bg-off-white"
+        isMainNavbar && "hidden "
       } lg:flex lg:flex-row lg:font-normal lg:gap-12 lg:text-base flex flex-col gap-4 ${
         dropDownIsOpen && "w-full !flex flex-col gap-6"
       }`}

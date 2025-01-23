@@ -5,7 +5,7 @@ import { Footer } from "./Footer";
 
 export default function Layout() {
   return (
-    <div className="bg-off-white">
+    <div className="bg-white">
       <Navigation />
       <Outlet />
       <Footer />

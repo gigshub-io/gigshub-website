@@ -10,13 +10,15 @@ import ctaImage from "../assets/cta-banner.png";
 
 const Home = () => {
   return (
-    <div className="flex flex-col w-full py-16 gap-32 mb-12 bg-off-white">
+    <div className="flex flex-col w-full py-16 gap-16 mb-12 bg-white">
       <Hero />
-      <SocialProof />
       <CardGallery />
+      <SocialProof />
       <Steps />
-      <TestimonialCarousel />
-      <CtaBanner className="bg-light-purple" image={ctaImage} />
+      
+      {/* <TestimonialCarousel /> */}
+       <CtaBanner  />
+      
     </div>
   );
 };

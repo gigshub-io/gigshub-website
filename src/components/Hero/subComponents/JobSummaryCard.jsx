@@ -23,7 +23,7 @@ export const JobSummaryCard = () => {
             <img
               src={logoIcon}
               className="h-logoIcon w-logoIcon ml-6"
-              alt="GigsHub Logo Icon"
+              alt="Jobbyo Logo Icon"
             />
             <img
               src={engineIcon}

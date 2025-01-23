@@ -84,7 +84,7 @@ export default function ContactUs() {
               <img src={emailIcon} alt="Email Icon" />
             </div>
             <div className="font-sans font-normal text-lg text-dark-purple">
-              thiago@gigshub.io
+              thiago@jobbyo.ai
             </div>
           </div>
         </div>

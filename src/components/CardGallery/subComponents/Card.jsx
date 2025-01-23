@@ -1,55 +1,73 @@
-import React, { useState } from "react";
-import checkIcon from "../../../assets/check-icon.svg";
-import arrowDownIcon from "../../../assets/arrow-down-white-icon.svg";
+// subComponents/Card.tsx
+import React from "react";
+import checkIcon from "../../../assets/check-icon.svg"; // optional icon
 import { classNames } from "../../../utils/classNames";
 
-export const Card = ({ heading, children }) => {
-  const ReadMore = ({ children }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const text = children;
-    const [isReadMore, setIsReadMore] = useState(true);
-    const toggleReadMore = () => {
-      setIsOpen(!isOpen);
-      setIsReadMore(!isReadMore);
-    };
-    return (
-      <div className="flex flex-col gap-4">
-        <p className="text">{isReadMore ? `${text.slice(0, 97)}...` : text}</p>
-        <div
-          className="flex flex-row gap-4 items-center"
-          onClick={toggleReadMore}
-          role="button"
-        >
-          <button className="flex font-sans text-off-white text-base font-bold tracking-wide">
-            {isReadMore ? "Read more" : " Read less"}
-          </button>
-          <div className="flex w-arrowDownWhite h-arrowDownWhite">
-            <img
-              className={classNames(
-                "duration-200 ease-in-out transition-transform",
-                isOpen && "rotate-180"
-              )}
-              src={arrowDownIcon}
-              alt="Arrow down"
-            />
-          </div>
-        </div>
-      </div>
-    );
-  };
+/**
+ * @param {{
+ *   heading: string;
+ *   children: string;
+ *   tags?: string[];
+ *   progress?: number;
+ * }}
+ */
+export const Card = ({ heading, children, tags = [], progress }) => {
+  // A simple function to clamp progress between 0 and 100.
+  const safeProgress = Math.min(Math.max(progress || 0, 0), 100);
 
   return (
-    <div className="min-w-64 max-w-lg flex flex-col gap-3 h-max p-7 bg-dark-blue rounded-2xl">
-      <div>
-        <img src={checkIcon} alt="Check Icon" />
-      </div>
-      <p className="text-off-white text-lg font-sans font-bold tracking-wide">
-        {heading}
-      </p>
+    <div
+      className="
+        flex
+        flex-col
+        justify-between
+        gap-4
+        p-5
+        rounded-xl
+        shadow-md
+        bg-white
+        w-full
+        max-w-lg
+       text-gray-600       /* Primary purple text */
+      "
+    >
+      {/* Top row: optional icon + tags */}
+      <div className="flex justify-between items-start">
+        <div className="flex items-center gap-2">
 
-      <div className="font-sans text-off-white text-sm tracking-wide font-light leading-5">
-        <ReadMore>{children}</ReadMore>
+
+          {/* Tags (only if present) */}
+          {tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 ml-2">
+              {tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="
+                    bg-[#D3FFB9]     /* Light green accent */
+                    text-[#3F33C0]   /* Purple text */
+                    text-xs
+                    font-semibold
+                    px-2
+                    py-1
+                    rounded-full
+                  "
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+
       </div>
+
+      {/* Heading */}
+      <p className="text-xl font-bold">{heading}</p>
+
+      {/* Paragraph text */}
+      <p className="text-sm leading-5 font-light tracking-wide">
+        {children}
+      </p>
     </div>
   );
 };
