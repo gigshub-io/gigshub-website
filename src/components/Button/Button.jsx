@@ -7,12 +7,12 @@
 
 // py-3 px-9 / px-4 py-2
 const sizeClasses = {
-  small: "text-xs px-6 border-[3px]",
-  medium: "text-xs px-7 py-2 border-[4px]",
-  large: "text-base px-9 py-3 border-[5px]",
+  small: "text-xs px-6",
+  medium: "text-xs px-7 py-2 ",
+  large: "text-base px-9 py-3 ",
 };
 const colorClasses = {
-  primary: "bg-purple",
+  primary: "bg-[#3F33C0]",
   transparent: "bg-transparent",
 };
 
@@ -31,7 +31,7 @@ export const Button = ({
       {...rest}
       type={type}
       onClick={onClick}
-      className={`items-center rounded-full border-solid border-pale-purple shadow-button text-white ${sizeClasses[size]} ${colorClasses[kind]} ${className}`}
+      className={`flex items-center justify-center bg-primary rounded-md font-bold text-white ${sizeClasses[size]} ${colorClasses[kind]} ${className}`}
     >
       {children}
     </button>

@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
       <div className="flex flex-col items-center">
         <div className="w-full px-9 mt-10 py-10">
           <h1 className="text-dark-blue text-3xl font-extrabold text-center">
-            Privacy Policy for gigshub
+            Privacy Policy for Jobbyo
           </h1>
 
           <p className="text-dark-blue text-md mt-6">
@@ -42,7 +42,7 @@ const PrivacyPolicy = () => {
                 access our Service or parts of our Service.
               </li>
               <li>
-                <strong>Company:</strong> Refers to gigshub, the official app
+                <strong>Company:</strong> Refers to Jobbyo, the official app
                 used for autofilling job applications, updating resumes, and
                 contacting HR via LinkedIn and Gmail.
               </li>
@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
                 an identified or identifiable individual.
               </li>
               <li>
-                <strong>Service:</strong> The gigshub application and Chrome
+                <strong>Service:</strong> The Jobbyo application and Chrome
                 extension.
               </li>
               <li>
@@ -174,7 +174,7 @@ const PrivacyPolicy = () => {
             If you have any questions about this Privacy Policy, You can contact
             us:
             <br />
-            By email at thiago@gigshub.io or ali@gigshub.io.
+            By email at thiago@jobbyo.ai.
           </p>
         </div>
       </div>

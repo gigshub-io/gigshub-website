@@ -16,37 +16,37 @@ import { Container } from "../Container";
 
 const slides = [
   {
-    testimonial: `"Gigshub transformed my job search! As a busy professional looking to switch careers, I was overwhelmed by the sheer number of applications. The smart job matching and one-click apply features saved me hours every week."`,
+    testimonial: `"Jobbyo transformed my job search! As a busy professional looking to switch careers, I was overwhelmed by the sheer number of applications. The smart job matching and one-click apply features saved me hours every week."`,
     avatar: t4,
     name: "Emily Johnson",
     description: "Marketing Manager, TechCorp",
   },
   {
-    testimonial: `"Finding the right job was always a struggle until I started using Gigshub. The personalised job matches were spot on."`,
+    testimonial: `"Finding the right job was always a struggle until I started using Jobbyo. The personalised job matches were spot on."`,
     avatar: avatarImage,
     name: "Michael Smith",
     description: "Software Engineer, Innovatech",
   },
   {
-    testimonial: `"Gigshub made my job search so much easier! As a recent grad, I was overwhelmed with where to start. With its tailored job matches and automation, I finally felt in control and saved myself from a lot of headache and burnout."`,
+    testimonial: `"Jobbyo made my job search so much easier! As a recent grad, I was overwhelmed with where to start. With its tailored job matches and automation, I finally felt in control and saved myself from a lot of headache and burnout."`,
     avatar: t5,
     name: "Sophia Brown",
     description: "Junior Data Analyst, DataSolutions",
   },
   {
-    testimonial: `"Gigshub’s automated application process changed the game for me. No more repetitive, tedious tasks—just one click, and my applications were sent. It felt like magic."`,
+    testimonial: `"Jobbyo’s automated application process changed the game for me. No more repetitive, tedious tasks—just one click, and my applications were sent. It felt like magic."`,
     avatar: t1,
     name: "James Wilson",
     description: "Operations Specialist, LogiTech",
   },
   {
-    testimonial: `"Thanks to Gigshub, I found my dream job in a fraction of the time it usually takes. The platform’s user-friendly interface and personalized job recommendations were exactly what I needed. I can’t imagine job hunting any other way."`,
+    testimonial: `"Thanks to Jobbyo, I found my dream job in a fraction of the time it usually takes. The platform’s user-friendly interface and personalized job recommendations were exactly what I needed. I can’t imagine job hunting any other way."`,
     avatar: t3,
     name: "Oliver Martinez",
     description: "Product Designer, CreativeWorks",
   },
   {
-    testimonial: `"Gigshub was a game changer for me. The smart job-matching algorithm not only saved me time but also helped me find roles that were a perfect fit for my skills and experience. The process was so seamless and stress-free."`,
+    testimonial: `"Jobbyo was a game changer for me. The smart job-matching algorithm not only saved me time but also helped me find roles that were a perfect fit for my skills and experience. The process was so seamless and stress-free."`,
     avatar: t2,
     name: "Liam Davis",
     description: "Financial Analyst, FinTech Solutions",
@@ -56,7 +56,7 @@ const slides = [
 export const TestimonialCarousel = () => {
   const titleText = "Join thousands of satisfied customers";
   const descriptionText =
-    "Don't just take our word for it. Hear what our customers have to say about their experience with GigsHub.";
+    "Don't just take our word for it. Hear what our customers have to say about their experience with Jobbyo.";
   return (
     <section className="overflow-x-hidden w-screen">
       <Container>
