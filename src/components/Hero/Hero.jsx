@@ -1,6 +1,10 @@
 import React from "react";
 
 export const Hero = () => {
+  const redirect = () => {
+    window.open("https://app.jobbyo.ai", "_blank");
+  };
+  
   return (
     <section className="bg-white py-12">
       <div className="max-w-4xl mx-auto text-center px-4">
@@ -17,7 +21,7 @@ export const Hero = () => {
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
-          <button className="px-8 py-3 bg-[#3F33C0] text-white font-semibold rounded-md">
+          <button onClick={redirect} className="px-8 py-3 bg-[#3F33C0] text-white font-semibold rounded-md">
             Get Started—It's Free
           </button>
 
@@ -38,9 +42,10 @@ export const Hero = () => {
 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          className="mt-4"
+          className="mt-4 rounded-lg"  
         ></iframe>
-      </div></div>
+      </div>
+      </div>
     </section>
   );
 };

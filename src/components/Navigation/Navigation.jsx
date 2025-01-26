@@ -22,11 +22,9 @@ export const Navigation = () => {
   };
 
   const redirect = () => {
-    window.open(
-      "app.jobbyo.ai",
-      "_blank"
-    );
+    window.open("https://app.jobbyo.ai", "_blank");
   };
+  
 
   const closeDropDownMenu = () => setDropDownIsOpen(false);
 
@@ -36,9 +34,9 @@ export const Navigation = () => {
       <div className={dropDownIsOpen ? "fixed z-10 w-full inset-0 bg-white" : ""}>
         <nav className="flex flex-wrap lg:flex-row py-6 px-6 gap-12 bg-white lg:items-center justify-between">
         <div onClick={closeDropDownMenu} className="cursor-pointer">
-          <h1 className="text-[#3F33C0] lg:text-3xl text-2xl font-bold font-sans">
+          <a href="/" ><h1 className="text-[#3F33C0] lg:text-3xl text-2xl font-bold font-sans">
             Jobbyo
-            </h1>
+            </h1></a>
           </div>
           {/* Mobile menu toggle */}
           <button
