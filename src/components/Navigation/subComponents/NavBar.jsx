@@ -19,10 +19,7 @@ const redirect = () => {
 
 // Updated pageLinks array
 const pageLinks = [
-  {
-    label: "Community",
-    path: "https://discord.gg/Vm5xVXFU"
-  },
+  
   {
     label: "Pricing",
     path: "/pricing",
@@ -30,6 +27,11 @@ const pageLinks = [
   {
     label: "Contact Us",
     path: "/contact-us",
+  },
+  {
+    label: "Community",
+    path: "https://discord.gg/Vm5xVXFU",
+    target: "_blank", // Open in a new tab
   },
 ];
 
@@ -49,6 +51,7 @@ export const NavBar = ({ dropDownIsOpen, isMainNavbar }) => {
           to={link.path}
           key={index}
           kind={isMainNavbar ? "primary" : "inverted"}
+          target={link.target || "_self"} // Use the target field or default to "_self"
         >
           {link.label}
         </NavLink>
