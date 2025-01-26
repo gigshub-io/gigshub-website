@@ -41,7 +41,10 @@ export const Steps = () => {
 
   // Destructure current step data
   const { title, subtitle, description, image } = stepsData[activeStep];
-
+  const redirect = () => {
+    window.open("https://app.jobbyo.ai", "_blank");
+  };
+  
   return (
     <section className="bg-white py-12">
       <Container>
@@ -68,6 +71,7 @@ export const Steps = () => {
 
           {/* CTA Button: match Hero style */}
           <button
+            onClick={redirect}
             className="
               mt-4 
               px-8 
@@ -123,7 +127,7 @@ export const Steps = () => {
               style={{
                 height: `${(100 / stepsData.length).toFixed(2)}%`,
                 transform: `translateY(${
-                  activeStep * (100 / stepsData.length)
+                  activeStep * (300 / stepsData.length)
                 }%)`,
               }}
             />
