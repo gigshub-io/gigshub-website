@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "../components/Container";
-import thai from "../assets/thai.jpg";
-import ali from "../assets/ali.jpg";
+import thiago from "../assets/thai.jpg";
+
 import aboutUsImg from "../assets/aboutus-image.png";
 import aboutUsImg2 from "../assets/aboutus-image2.png";
 import { Heading } from "../components/Heading/Heading";
@@ -15,16 +15,8 @@ export default function AboutUs() {
       description:
         "Thiago, a 28-year-old Brazilian-born driven by a passion for automating processes with innovative tech solutions, AI, and entrepreneurship. He loves solving complex challenges with simple solutions. When he's not behind a screen, you'll find him exploring new cultures and traveling the world.",
       linkedInProfile: "https://www.linkedin.com/in/thain%C3%A1-braz/",
-      imageMember: thai,
-    },
-    {
-      fullName: "Ali",
-      jobTitle: "CMO",
-      description:
-        "Ali, a 24-year-old Somali-born, London-raised marketer, is driven by a passion for solving problems and a love for all things digital. When he's not tackling marketing challenges, he's enduring the ups and downs of being a Chelsea fan or playing his favourite video games.",
-      linkedInProfile: "https://www.linkedin.com/",
-      imageMember: ali,
-    },
+      imageMember: thiago,
+    }
   ];
 
   return (
