@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../Button";
 import { Container } from "../Container";
-import { Logo } from "../Logo";
+import Logo from "../../assets/PNG-FILE.png";
 import { NavBar } from "./subComponents";
 import { ReactComponent as HamburguerIcon } from "../../assets/hamburguer-icon.svg";
 import { ReactComponent as CloseIcon } from "../../assets/close-icon.svg";
@@ -34,9 +34,7 @@ export const Navigation = () => {
       <div className={dropDownIsOpen ? "fixed z-10 w-full inset-0 bg-white" : ""}>
         <nav className="flex flex-wrap lg:flex-row py-6 px-6 gap-12 bg-white lg:items-center justify-between">
         <div onClick={closeDropDownMenu} className="cursor-pointer">
-          <a href="/" ><h1 className="text-[#3F33C0] lg:text-3xl text-2xl font-bold font-sans">
-            Jobbyo
-            </h1></a>
+        <a href="/" > <img alt="Logo" className="h-logo" src={Logo}></img></a>
           </div>
           {/* Mobile menu toggle */}
           <button
