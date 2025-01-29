@@ -51,7 +51,7 @@ export const NavBar = ({ dropDownIsOpen, isMainNavbar }) => {
           to={link.path}
           key={index}
           kind={isMainNavbar ? "primary" : "inverted"}
-          target={link.target || "_self"} // Use the target field or default to "_self"
+          target={link.target || "_self"} 
         >
           {link.label}
         </NavLink>
