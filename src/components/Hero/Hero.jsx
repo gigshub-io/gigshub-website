@@ -22,7 +22,7 @@ export const Hero = () => {
         {/* Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
           <button onClick={redirect} className="px-8 py-3 bg-[#3F33C0] text-white font-semibold rounded-md">
-            Get Started — It's Free
+            Get Started—It's Free
           </button>
 
         </div>
