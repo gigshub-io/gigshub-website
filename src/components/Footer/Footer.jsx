@@ -3,12 +3,6 @@ import { Container } from "../Container";
 import { NavBar } from "../Navigation/subComponents/NavBar";
 
 export const Footer = () => {
-  const [emailSubs, setEmailSubs] = useState("");
-
-  const handleInputChange = (entry) => {
-    const value = entry.target.value;
-    setEmailSubs(value);
-  };
 
   return (
     // Use your primary brand purple for background

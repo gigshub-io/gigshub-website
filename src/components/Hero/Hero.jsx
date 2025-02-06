@@ -10,12 +10,12 @@ export const Hero = () => {
       <div className="max-w-4xl mx-auto text-center px-4">
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-          More Interviews, No Applications
+        The CV tool that gets you hired
         </h1>
 
         {/* Subtitle */}
         <p className="mt-4 text-lg md:text-xl text-gray-600">
-          We automate applications, tailor CVs, and get you ideal matches—
+          We tailor your CV and get you ideal job matches—
           so you can focus on what truly matters: acing interviews.
         </p>
 
